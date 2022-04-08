@@ -1,0 +1,917 @@
+:root {
+    --lila: rgb(190, 153, 212);
+    --blancoespecial: rgba(253, 247, 247, 0.9);
+    --divider: #BDBDBD;
+    --rosita: #eee0e3;
+}
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Lobster&family=Ubuntu:wght@300&display=swap');
+
+html {
+    font-size: 62.5%;
+    box-sizing: border-box;
+    margin: 0 auto;
+    width: 98%;
+}
+
+body {
+    /* background-color:rgb(253, 247, 247); */
+    padding: 0%;
+    margin: 0%;
+    display: grid;
+    flex-direction: column;
+    grid-template-columns: 100%;
+    grid-template-rows: 6% 87% 8%;
+    row-gap: 0%;
+    background-image: url(../img/bg-phone.png);
+    background-attachment: fixed;
+    background-position: right 1%;
+    min-width: 100%;
+
+}
+
+/* ----parametros en común entre mediaqueries (index)---- */
+.section--minishop .minishop--imgleft {
+    width: 50%;
+    border-radius: 5%;
+}
+
+.section--minishop .minishop--imgright {
+    width: 50%;
+    border-radius: 5%;
+}
+
+.main__text--index {
+    text-align: center;
+    margin: 0% 0% 10% 0%;
+}
+
+
+
+/* Desktop index*/
+@media (min-width:1024px) {
+    body {
+        /* background-color:rgb(253, 247, 247); */
+        padding: 0%;
+        margin: 0%;
+        display: grid;
+        flex-direction: column;
+        grid-template-columns: 100%;
+        grid-template-rows: 6% 81% 11%;
+        row-gap: 0%;
+        background-image: url(../img/bg-phone.png);
+        background-attachment: fixed;
+        background-position: right 1%;
+        min-width: 100%;
+
+    }
+
+    .navbar {
+        display: grid;
+        grid-template-columns: 15% 15% 40% 15% 15%;
+        grid-template-rows: auto;
+        justify-items: center;
+        align-items: center;
+        background-color: var(--blancoespecial);
+        box-shadow: 0 15px 25px rgba(0, 0, 0, 0.288);
+        border-radius: 10px;
+    }
+
+    .navbar a {
+        list-style: none;
+        text-decoration: none;
+        /* font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; */
+        font-family: 'Ubuntu', sans-serif;
+        color: var(--lila);
+        font-size: 1.7rem;
+    }
+
+    .navbar a img {
+        position: relative;
+        left: 25%;
+
+    }
+
+    .navbar__li--logo {
+        width: 50%;
+    }
+
+    .navbar__burger, .navbar__cart {
+        display: none;
+    }
+
+    .main__img--banner {
+        position: relative;
+        width: 100%;
+        margin-top: 1%;
+        box-shadow: 0 15px 25px rgba(0, 0, 0, 0.26);
+        border-radius: 10px;
+    }
+
+    .main__img--bannerphone {
+        width: 100%;
+        display: none;
+    }
+
+    .main--index {
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: 30% 42% 30%;
+        gap: 1%;
+    }
+
+    .title--section {
+        font-size: 4rem;
+        font-family: 'Lobster', cursive;
+        color: var(--blancoespecial);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .section--minishop {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 1%;
+    }
+
+    .minishop__container {
+        position: relative;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
+    .minishop__container .card {
+        position: relative;
+        width: 300px;
+        height: 400px;
+        padding-top: 5%;
+        margin: 100px 100px 80px 100px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: rgba(255, 255, 255, 0.25);
+        box-shadow: 0 15px 25px rgba(0, 0, 0, 0.05);
+        border-radius: 10px;
+        backdrop-filter: blur(15px);
+        border: 1px solid rgba(255, 255, 255, 0.5);
+        border-top: 1px solid rgba(255, 255, 255, 0.25);
+        border-left: 1px solid rgba(255, 255, 255, 0.25);
+    }
+
+    .minishop__container .card .imgBx {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .minishop__container .card .imgBx img {
+        max-width: 100%;
+        position: relative;
+        transition: 0.5s ease-in-out;
+    }
+
+    .minishop__container .card:hover .imgBx img {
+        transform: translate(0px, -30px);
+    }
+
+    .minishop--subtitles {
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        color: var(--blancoespecial);
+        font-size: 2rem;
+    }
+
+    .minishop__container .card a {
+        position: relative;
+        top: -20px;
+        display: inline-block;
+        padding: 3% 6%;
+        background-color: rgba(255, 255, 255, 0.342);
+        backdrop-filter: blur(2px);
+        border-radius: 3px;
+        font-size: 2rem;
+        text-decoration: none;
+        font-family: 'Ubuntu', sans-serif;
+        box-shadow: 0 15px 25px rgba(0, 0, 0, 0.05);
+        text-transform: uppercase;
+    }
+
+    .titles {
+        grid-area: titles;
+        font-size: 4rem;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        color: var(--blancoespecial);
+        margin: 0%;
+    }
+
+    .texts {
+        grid-area: texts;
+        font-size: 1.5rem;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        color: #eee0e3;
+        margin: 0%;
+    }
+
+    .footer {
+        display: grid;
+        grid-template-areas:
+            "redes     tel     mail     copyright"
+            "redesdata teldata maildata copyright";
+        grid-template-columns: 25% 25% 25% 25%;
+        grid-template-rows: 50% 50%;
+        background-color: #fdfdfd;
+        justify-items: center;
+        align-items: center;
+        box-shadow: 0 15px 35px rgba(0, 0, 0, 0.05);
+        border-radius: 5px;
+        border: 1px solid rgba(255, 255, 255, 0.25);
+        border-top: 1px solid rgba(255, 255, 255, 0.5);
+        border-left: 1px solid rgba(255, 255, 255, 0.5);
+    }
+
+    .footer__element--title {
+        font-size: 1.7rem;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+    }
+
+    .footer__element--titleespecial {
+        font-size: 1.2rem;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        align-items: start;
+    }
+
+    .footer__element--text {
+        font-size: 1.5rem;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    }
+
+    .medialinks a {
+        display: flex;
+    }
+
+    .iconsmedia svg {
+        display: inline-flex;
+        width: 100px;
+        height: 100px;
+    }
+
+    .redes {
+        grid-area: redes;
+    }
+
+    .redesdata {
+        grid-area: redesdata;
+    }
+
+    .mail {
+        grid-area: mail;
+    }
+
+    .maildata {
+        grid-area: maildata;
+    }
+
+    .tel {
+        grid-area: tel;
+    }
+
+    .teldata {
+        grid-area: teldata;
+    }
+
+    .copyright {
+        grid-area: copyright
+    }
+}
+
+/* Mobile index*/
+@media (max-width: 767px) {
+    body {
+        /* background-color:rgb(253, 247, 247); */
+        font-family: 'Bebas Neue', cursive;
+        padding: 0%;
+        margin: 0%;
+        display: grid;
+        flex-direction: column;
+        grid-template-columns: auto;
+        grid-template-rows: 5% 69% 24%;
+    }
+
+    .navbar {
+        display: grid;
+        grid-template-columns: 30% 40% 30%;
+        justify-items: center;
+        align-items: center;
+        background-color: var(--blancoespecial);
+        box-shadow: 0 15px 35px rgba(0, 0, 0, 0.308);
+        border-radius: 5px;
+        border: 1px solid rgba(255, 255, 255, 0.25);
+        border-top: 1px solid rgba(255, 255, 255, 0.5);
+        border-left: 1px solid rgba(255, 255, 255, 0.5);
+
+    }
+
+    .navbar__li--logo {
+        width: 60%;
+        position: relative;
+        left: 20%;
+    }
+
+    .navbar__phone--burger, .navbar__phone--cart {
+        width: 20%;
+        position: relative;
+        left: 40%;
+    }
+
+    .navbar--shop, .navbar--about, .navbar--more, .navbar--contact {
+        display: none;
+    }
+
+    .navbar__burger, .navbar__cart {
+        display: auto;
+        display: flex;
+        justify-items: center;
+    }
+
+    .title--section {
+        font-size: 2rem;
+        font-family: 'Lobster', cursive;
+        color: var(--blancoespecial);
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        height: min-content;
+        margin: 0%;
+    }
+
+    .titles {
+        margin: 0%;
+        grid-area: titles;
+        font-size: 2.5rem;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        color: var(--blancoespecial);
+    }
+
+    .texts {
+        grid-area: texts;
+        font-size: 1.3rem;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        color: #eee0e3;
+    }
+
+    .main__minishop {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .section--minishop {
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        align-items: center;
+        margin-top: 1%;
+    }
+
+    .displayphone {
+        display: none;
+        visibility: hidden;
+    }
+
+    .minishop__container {
+        position: relative;
+        display: inline-flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-wrap: wrap;
+        margin-bottom: 10%;
+        width: 100%;
+        height: 100%;
+    }
+
+    .minishop__container .card {
+        position: relative;
+        width: 250px;
+        height: 350px;
+        padding-top: 5%;
+        margin: 50px 10px 8px 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: rgba(255, 255, 255, 0.25);
+        box-shadow: 0 15px 25px rgba(0, 0, 0, 0.05);
+        border-radius: 10px;
+        backdrop-filter: blur(15px);
+        border: 1px solid rgba(255, 255, 255, 0.5);
+        border-top: 1px solid rgba(255, 255, 255, 0.25);
+        border-left: 1px solid rgba(255, 255, 255, 0.25);
+    }
+
+    .minishop__container .card .imgBx {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .minishop__container .card .imgBx img {
+        max-width: 90%;
+        position: relative;
+        transition: 0.5s ease-in-out;
+    }
+
+    .minishop__container .card:hover .imgBx img {
+        transform: translate(0px, -20px);
+    }
+
+    .minishop--subtitles {
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        color: var(--blancoespecial);
+        font-size: 2rem;
+
+    }
+
+    .minishop__container .card a {
+        position: relative;
+        top: -20px;
+        display: inline-block;
+        padding: 3% 6%;
+        background-color: rgba(255, 255, 255, 0.842);
+        backdrop-filter: blur(2px);
+        border-radius: 3px;
+        font-size: 2rem;
+        text-decoration: none;
+        font-family: 'Ubuntu', sans-serif;
+        box-shadow: 0 15px 25px rgba(0, 0, 0, 0.05);
+        text-transform: uppercase;
+        color: var(--lila);
+    }
+
+    .main__img--banner {
+        display: none;
+    }
+
+    .main__img--bannerphone {
+        display: block;
+        width: 100%;
+        box-shadow: 0 15px 25px rgba(0, 0, 0, 0.26);
+        border-radius: 10px;
+    }
+
+    .main--index {
+        display: grid;
+        grid-template-rows: 33% 33% 33%;
+
+    }
+
+    .footer {
+        display: grid;
+        grid-template-areas:
+            "redes redesdata"
+            "tel teldata"
+            "mail maildata"
+            "copyright copyright";
+        grid-template-columns: 50% 50%;
+        grid-template-rows: 25% 25% 25% 25%;
+        background-color: var(--blancoespecial);
+        height: 50%;
+        box-shadow: 0 15px 35px rgba(0, 0, 0, 0.575);
+        border-radius: 5px;
+        border: 1px solid rgba(255, 255, 255, 0.25);
+        border-top: 1px solid rgba(255, 255, 255, 0.5);
+        border-left: 1px solid rgba(255, 255, 255, 0.5);
+
+    }
+
+    .footer__element--title {
+        display: flex;
+        font-size: 1.5rem;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        margin: 0%;
+        justify-items: flex-start;
+        align-items: center;
+
+    }
+
+    .footer__element--titleespecial {
+        font-size: 1.2rem;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        align-items: center;
+        text-align: center;
+    }
+
+    .medialinks a {
+        display: flex;
+
+    }
+
+    .iconsmedia svg {
+        display: inline-flex;
+        width: 70px;
+        height: 70px;
+    }
+
+    .redesdata {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .footer__element--text {
+        font-size: 1.5rem;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        display: flex;
+        text-align: center;
+        align-items: center;
+    }
+
+    .redes {
+        grid-area: redes;
+    }
+
+    .redesdata {
+        grid-area: redesdata;
+    }
+
+    .mail {
+        grid-area: mail;
+    }
+
+    .maildata {
+        grid-area: maildata;
+    }
+
+    .tel {
+        grid-area: tel;
+    }
+
+    .teldata {
+        grid-area: teldata;
+    }
+
+    .copyright {
+        grid-area: copyright
+    }
+}
+
+
+
+/* Desktop about */
+@media (min-width:1024px) {
+    body {
+        /* background-color:rgb(253, 247, 247); */
+        font-family: 'Bebas Neue', cursive;
+        padding: 0%;
+        margin: 0%;
+        display: grid;
+        flex-direction: column;
+        grid-template-columns: 100%;
+        grid-template-rows: 6% 90% 10%;
+        row-gap: 0%;
+        background-image: url(../img/bg-phone.png);
+        background-attachment: fixed;
+        background-position: right 1%;
+        min-width: 100%;
+
+    }
+
+    .navbar {
+        display: grid;
+        grid-template-columns: 15% 15% 40% 15% 15%;
+        grid-template-rows: auto;
+        justify-items: center;
+        align-items: center;
+        background-color: var(--blancoespecial);
+        box-shadow: 0 15px 25px rgba(0, 0, 0, 0.288);
+        border-radius: 10px;
+    }
+
+    .navbar a {
+        list-style: none;
+        text-decoration: none;
+        /* font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; */
+        font-family: 'Ubuntu', sans-serif;
+        color: var(--lila);
+        font-size: 1.7rem;
+    }
+
+    .navbar a img {
+        position: relative;
+        left: 25%;
+
+    }
+
+    .navbar__li--logo {
+        width: 50%;
+    }
+
+    .navbar__burger, .navbar__cart {
+        display: none;
+    }
+
+    .section__atajos {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        position: relative;
+        font-size: 1.6rem;
+        height: 50px;
+        text-decoration: none;
+        list-style: none;
+    }
+
+    .main--about {
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: 30% 10% 74%;
+        row-gap: 1%;
+        position: relative;
+        bottom: 3%;
+    }
+
+    .main__img--about {
+        position: relative;
+        top: 15%;
+    }
+
+    .section--1 {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        grid-template-areas:
+            "img  titlestexts"
+            "img  titlestexts";
+        gap: 0%;
+        margin-bottom: 5%;
+        background-color: rgba(0, 0, 0, 0.05);
+
+    }
+
+    .section--2 {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        grid-template-areas:
+            "titlestexts  img"
+            "titlestexts  img";
+        gap: 0%;
+        margin-top: 5%;
+        background-color: rgba(0, 0, 0, 0.05);
+        border-radius: 10px;
+
+    }
+
+    .section--3 {
+        grid-template-columns: 50% 50%;
+        grid-template-areas:
+            "titles"
+            "texts";
+        gap: 0%;
+        text-align: center;
+        margin: 10%;
+    }
+
+    .titles {
+        grid-area: titles;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        color: var(--blancoespecial);
+        margin: 10% 0%;
+        font-size: 3rem;
+        padding: 3%;
+    }
+
+    .texts {
+        grid-area: texts;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        color: #eee0e3;
+        margin: 10% 0%;
+        font-size: 1.5rem;
+        padding: 3%;
+    }
+
+    .atajos {
+        color: var(--lila);
+        background-color: aliceblue;
+        box-shadow: 0 5px 5px rgba(0, 0, 0, 0.26);
+        border-radius: 5px;
+        padding: 2%;
+    }
+
+    .titlestexts {
+        grid-area: titlestexts;
+    }
+
+    .footer {
+        display: grid;
+        grid-template-areas:
+            "redes     tel     mail     copyright"
+            "redesdata teldata maildata copyright";
+        grid-template-columns: 25% 25% 25% 25%;
+        grid-template-rows: 50% 50%;
+        background-color: #fdfdfd;
+        justify-items: center;
+        align-items: center;
+        box-shadow: 0 15px 35px rgba(0, 0, 0, 0.05);
+        border-radius: 5px;
+        border: 1px solid rgba(255, 255, 255, 0.25);
+        border-top: 1px solid rgba(255, 255, 255, 0.5);
+        border-left: 1px solid rgba(255, 255, 255, 0.5);
+    }
+
+    .footer__element--title {
+        font-size: 1.7rem;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+    }
+
+    .footer__element--titleespecial {
+        font-size: 1.2rem;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        align-items: start;
+    }
+
+    .footer__element--text {
+        font-size: 1.5rem;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    }
+
+    .medialinks a {
+        display: flex;
+    }
+
+    .iconsmedia svg {
+        display: inline-flex;
+        width: 100px;
+        height: 100px;
+    }
+
+    .atajos {
+        color: var(--lila);
+        background-color: aliceblue;
+        box-shadow: 0 5px 5px rgba(0, 0, 0, 0.26);
+        border-radius: 5px;
+        padding: 2%;
+    }
+
+
+    .redes {
+        grid-area: redes;
+    }
+
+    .redesdata {
+        grid-area: redesdata;
+    }
+
+    .mail {
+        grid-area: mail;
+    }
+
+    .maildata {
+        grid-area: maildata;
+    }
+
+    .tel {
+        grid-area: tel;
+    }
+
+    .teldata {
+        grid-area: teldata;
+    }
+
+    .copyright {
+        grid-area: copyright
+    }
+}
+
+/* Mobile about */
+@media (max-width: 767px) {
+    body {
+        font-family: 'Bebas Neue', cursive;
+        padding: 0%;
+        margin: 0%;
+        display: grid;
+        flex-direction: column;
+        grid-template-columns: 100%;
+        grid-template-rows: 5% 76% 14%;
+        row-gap: 0%;
+        background-image: url(../img/bg-phone.png);
+        background-attachment: fixed;
+        background-position: right 1%;
+        min-width: 100%;
+
+    }
+
+    .main--about {
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: 19% 1% 80%;
+        row-gap: 1%;
+        position: relative;
+        bottom: 3%;
+    }
+
+    .main__img--about {
+        position: relative;
+        top: 15%;
+    }
+
+    .section__atajos {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-around;
+        position: relative;
+        font-size: 1.6rem;
+        height: 50px;
+        text-decoration: none;
+        list-style: none;
+        padding-bottom: 40%;
+    }
+
+    .main__text--about {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 0%;
+    }
+
+    .titles {
+        grid-area: titles;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        color: var(--blancoespecial);
+        margin: 10% 0%;
+        font-size: 2.5rem;
+        margin: 0%;
+
+
+    }
+
+    .texts {
+        grid-area: texts;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        color: #eee0e3;
+        margin: 10% 0%;
+        font-size: 1.3rem;
+    }
+
+    .section--1, .section--2 {
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: 1.5fr 0.5fr 0.5fr;
+        grid-template-areas:
+            "img"
+            "titles"
+            "texts";
+        justify-items: center;
+        align-items: center;
+        text-align: center;
+        padding: 10%;
+    }
+
+    .section--1 h3, p, .section--2 h3, p, .section--3 h3, p {
+        text-align: center;
+        font-size: 2rem;
+        width: 100%;
+    }
+
+    .section--3 {
+        grid-template-columns: 50% 50%;
+        grid-template-areas:
+            "titles"
+            "texts";
+        gap: 0%;
+        text-align: center;
+        margin: 1%;
+        font-size: 3rem;
+        align-self: flex-end;
+        position: relative;
+        bottom: 6%;
+
+    }
+
+    .section--img {
+        grid-area: img;
+        box-shadow: 0 15px 25px rgba(0, 0, 0, 0.26);
+        border-radius: 10px;
+        width: 100%;
+    }
+
+
+
+    .atajos {
+        color: var(--lila);
+        background-color: aliceblue;
+        box-shadow: 0 5px 5px rgba(0, 0, 0, 0.26);
+        border-radius: 5px;
+        padding: 2%;
+    }
+
+}
