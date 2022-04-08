@@ -12,7 +12,17 @@ html {
     margin: 0 auto;
     width: 98%;
 }
-
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
 body {
     /* background-color:rgb(253, 247, 247); */
     padding: 0%;
@@ -22,7 +32,11 @@ body {
     grid-template-columns: 100%;
     grid-template-rows: 6% 87% 8%;
     row-gap: 0%;
-    background-image: url(../img/bg-phone.png);
+
+    background: linear-gradient(-45deg, #ee7750, #e73c7e, #23a6d5, #23d5ab);
+	background-size: 400% 400%;
+	animation: gradient 50s ease infinite;
+
     background-attachment: fixed;
     background-position: right 1%;
     min-width: 100%;
@@ -58,7 +72,11 @@ body {
         grid-template-columns: 100%;
         grid-template-rows: 6% 81% 11%;
         row-gap: 0%;
-        background-image: url(../img/bg-phone.png);
+
+        background: linear-gradient(-45deg, #ee7750, #e73c7e, #23a6d5, #23d5ab);
+	    background-size: 400% 400%;
+	    animation: gradient 50s ease infinite;
+
         background-attachment: fixed;
         background-position: right 1%;
         min-width: 100%;
@@ -295,7 +313,6 @@ body {
 /* Mobile index*/
 @media (max-width: 767px) {
     body {
-        /* background-color:rgb(253, 247, 247); */
         font-family: 'Bebas Neue', cursive;
         padding: 0%;
         margin: 0%;
@@ -485,7 +502,7 @@ body {
             "copyright copyright";
         grid-template-columns: 50% 50%;
         grid-template-rows: 25% 25% 25% 25%;
-        background-color: var(--blancoespecial);
+        background-color: rgba(253, 247, 247, 0.3);
         height: 50%;
         box-shadow: 0 15px 35px rgba(0, 0, 0, 0.575);
         border-radius: 5px;
@@ -570,7 +587,6 @@ body {
 /* Desktop about */
 @media (min-width:1024px) {
     body {
-        /* background-color:rgb(253, 247, 247); */
         font-family: 'Bebas Neue', cursive;
         padding: 0%;
         margin: 0%;
@@ -579,7 +595,11 @@ body {
         grid-template-columns: 100%;
         grid-template-rows: 6% 90% 10%;
         row-gap: 0%;
-        background-image: url(../img/bg-phone.png);
+
+        background: linear-gradient(-45deg, #ee7750, #e73c7e, #23a6d5, #23d5ab);
+        background-size: 400% 400%;
+        animation: gradient 50s ease infinite;
+        
         background-attachment: fixed;
         background-position: right 1%;
         min-width: 100%;
@@ -717,7 +737,7 @@ body {
             "redesdata teldata maildata copyright";
         grid-template-columns: 25% 25% 25% 25%;
         grid-template-rows: 50% 50%;
-        background-color: #fdfdfd;
+        background-color: #fdfdfdb7;
         justify-items: center;
         align-items: center;
         box-shadow: 0 15px 35px rgba(0, 0, 0, 0.05);
@@ -803,7 +823,11 @@ body {
         grid-template-columns: 100%;
         grid-template-rows: 5% 76% 14%;
         row-gap: 0%;
-        background-image: url(../img/bg-phone.png);
+        
+        background: linear-gradient(-45deg, #ee7750, #e73c7e, #23a6d5, #23d5ab);
+        background-size: 400% 400%;
+        animation: gradient 50s ease infinite;
+            
         background-attachment: fixed;
         background-position: right 1%;
         min-width: 100%;
