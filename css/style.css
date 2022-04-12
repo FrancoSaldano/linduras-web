@@ -39,7 +39,7 @@ body {
 
     background: linear-gradient(-45deg, #ee7750, #e73c7e, #23a6d5, #23d5ab);
 	background-size: 400% 400%;
-	animation: gradient 50s ease infinite;
+	animation: gradient 20s ease infinite;
 
     background-attachment: fixed;
     background-position: right 1%;
@@ -55,11 +55,11 @@ body {
         display: grid;
         flex-direction: column;
         grid-template-columns: 100%;
-        grid-template-rows: 8% 79% 11%;
+        grid-template-rows: 8% 90% 11%;
         row-gap: 0%;
         background: linear-gradient(-45deg, #ee7750, #e73c7e, #23a6d5, #23d5ab);
         background-size: 400% 400%;
-        animation: gradient 50s ease infinite;
+        animation: gradient 20s ease infinite;
         background-attachment: fixed;
         background-position: right 1%;
         min-width: 100%;
@@ -101,22 +101,20 @@ body {
     }
 
     .main__img--banner {
-        position: relative;
+        position: block;
         width: 100%;
-        margin-top: 1%;
         box-shadow: 0 15px 25px rgba(0, 0, 0, 0.26);
         border-radius: 10px;
     }
 
     .main__img--bannerphone {
-        width: 100%;
-        display: none;
+        display: none !important;
     }
 
     .main--index {
         display: grid;
         grid-template-columns: 100%;
-        grid-template-rows: 37% 48% 33%;
+        grid-template-rows: 35% 44% 38%;
         gap: 1%;
     }
 
@@ -229,7 +227,7 @@ body {
             "redesdata teldata maildata copyright";
         grid-template-columns: 25% 25% 25% 25%;
         grid-template-rows: 50% 50%;
-        background-color: #fdfdfd;
+        background-color: rgba(253, 247, 247, 0.76);
         justify-items: center;
         align-items: center;
         box-shadow: 0 15px 35px rgba(0, 0, 0, 0.05);
@@ -328,7 +326,7 @@ body {
     }
 
     .navbar__phone--burger, .navbar__phone--cart {
-        width: 20%;
+        width: 25%;
         position: relative;
         left: 40%;
     }
@@ -338,7 +336,6 @@ body {
     }
 
     .navbar__burger, .navbar__cart {
-        display: auto;
         display: flex;
         justify-items: center;
     }
@@ -464,7 +461,7 @@ body {
     }
 
     .main__img--banner {
-        display: none;
+        display: none !important;
     }
 
     .main__img--bannerphone {
@@ -476,7 +473,8 @@ body {
 
     .main--index {
         display: grid;
-        grid-template-rows: 37% 37% 25%;
+        grid-template-rows: 34% 37% 22%;
+        row-gap: 1%;
 
     }
 
@@ -489,7 +487,7 @@ body {
             "copyright copyright";
         grid-template-columns: 50% 50%;
         grid-template-rows: 25% 25% 25% 25%;
-        background-color: var(--blancoespecial);
+        background-color: rgba(253, 247, 247, 0.76);
         height: 50%;
         box-shadow: 0 15px 35px rgba(0, 0, 0, 0.575);
         border-radius: 5px;
@@ -584,12 +582,6 @@ body {
     text-align: center;
     margin: 0% 0% 10% 0%;
 }
-
-/* ------------------------------------------------------- */
-
-/* Desktop about*/
-
-/* Desktop about */
 
 
 
