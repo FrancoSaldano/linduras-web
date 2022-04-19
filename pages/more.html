@@ -1,24 +1,24 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>about | linduras.shop</title>
+    <title>more | linduras.shop</title>
     <!-- link bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <!--  -->
-    <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/normalize.css">
+    <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/palettelist.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
 </head>
 
-<body>
+<body class="body--more">
     <header>
         <nav class="navbar">
             <a class="navbar--shop" href="../pages/shop.html">Tienda</a>
@@ -36,97 +36,24 @@
             <a class="navbar--contact" href="../pages/contact.html">Contact</a>
         </nav>
     </header>
-    <main class="main--about">
-        <!-- Carusel -->
-        <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
-            <div class="carousel-indicators">
-                <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active"
-                    aria-current="true" aria-label="Slide 1"></button>
-                <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    <main class="main--more container">
+            <div class="container__flag">
+                <a class="flags" href="#">
+                    <h2>SORTEOS</h2>
+                </a>
+                <a class="flags" href="#">
+                    <h2>LO NUEVO</h2>
+                </a>
+                <a class="flags" href="#">
+                    <h2>REDES</h2>
+                </a>
+                <a class="flags" href="#">
+                    <h2>IDEAS</h2>
+                </a>
             </div>
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <img class="d-block w-10 main__img--banner" src="../img/aboutbanner.svg" alt="">
-                    <img class="d-block w-10 main__img--bannerphone" src="../img/about-banner-phone.png"
-                        alt="imagen-de-fondo">
-                    <div class="container">
-                        <div class="carousel-caption text-start">
-
-                        </div>
-                    </div>
-                </div>
-                <div class="carousel-item">
-                    <img class="d-block w-10 main__img--banner" src="../img/aboutbanner.svg" alt="">
-                    <img class="d-block w-10 main__img--bannerphone" src="../img/about-banner-phone.png"
-                        alt="imagen-de-fondo">
-                    <div class="container">
-                        <div class="carousel-caption">
-
-                        </div>
-                    </div>
-                </div>
-                <div class="carousel-item">
-                    <img class="d-block w-10 main__img--banner" src="../img/aboutbanner.svg" alt="">
-                    <img class="d-block w-10 main__img--bannerphone" src="../img/about-banner-phone.png"
-                        alt="imagen-de-fondo">
-                    <div class="container">
-                        <div class="carousel-caption text-end">
-
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-            </button>
-        </div>
-        <!--  -->
-        <section class="section__atajos">
-            <a class="atajos" href="#section-1">ir a fundadora</a>
-            <a class="atajos" href="#section-2">ir a co-fundador</a>
-            <a class="atajos" href="#section-3">¿como nacío?</a>
-        </section>
-        <section class="main__text--about">
-            <div class="row featurette m-5" id="section-1">
-                <div class="col-md-7 text-center" >
-                    <h2 class="featurette-heading titles">Me llamo Agustina soy la fundadora y artista de linduras.shop
-                    </h2>
-                    <p class="lead texts">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus consectetur
-                        tenetur officia aut reiciendis vel a id explicabo fuga officiis.</p>
-                </div>
-                <div class="col-md-5">
-                    <img class=" img section--img " src="../img/fundadora.png" alt="imagen-de-la-dueña">
-                </div>
-            </div>
-            <div class="row featurette m-5" id="section-2">
-                <div class="col-md-7 order-md-2 text-center">
-                    <h2 class="featurette-heading titles">Yo soy Hernán , soy co-fundador y desarrolador web en
-                        linduras.shop</h2>
-                    <p class="lead texts">Another featurette? Of course. More placeholder content here to give you an
-                        idea of how this layout would work with some actual real-world content in place.</p>
-                </div>
-                <div class="col-md-5 order-md-1">
-                    <img class=" img section--img" src="../img/cofundador.png" alt="imagen-del-socio">
-                </div>
-            </div>
-            <div class="px-4 py-5 text-center" id="section-3">
-                <div class="py-5">
-                    <h1 class="display-5 titles">¿Cómo nació linduras?</h1>
-                    <div class="col-lg-6 mx-auto">
-                        <p class="fs-5 mb-4 texts">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum, voluptate laudantium! Veniam aliquid quis atque, sequi molestias impedit assumenda ducimus. Ratione hic rerum consequuntur possimus accusantium laudantium, maxime a quaerat sed labore consequatur aliquid, esse eius fugiat blanditiis minus at, dolorem odit aperiam. Eum dolores omnis rerum vero harum odio quas, accusantium iusto consequatur incidunt iste, sint deserunt, blanditiis quia porro? Facere ipsa ducimus dolore animi. Beatae, modi! Labore fuga aliquid maxime enim ex, sapiente veniam. Rem, quis. Nostrum explicabo, ducimus sequi dignissimos laudantium nisi quia debitis, ratione, cum dolore excepturi omnis maxime sit neque voluptates harum illo rerum blanditiis.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
     </main>
     <footer class="footer">
-        <h6 class="footer__element--title redes primary-text-color">Redes Sociales</h6>
+        <h6 class="footer__element--title redes primary-text-color">Te invitamos a seguirnos!</h6>
         <div class="redesdata">
             <a class="iconsmedia" href="#insta">
                 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" zoomAndPan="magnify"
@@ -181,15 +108,15 @@
                 </svg>
             </a>
         </div>
-        <h6 class="footer__element--title mail primary-text-color">Mail</h6>
         <a class="footer__element--text  maildata secondary-text-color" href="mailto:">linduras.shop@gmail.com</a>
-        <h6 class="footer__element--title tel primary-text-color">Teléfono</h6>
         <a class="footer__element--text  teldata secondary-text-color" href="tel:+">11 12345678</a>
         <p class="footer__element--titleespecial copyright divider-color ">Copyright 2022 - Linduras.Shop - Todos los
             derechos reservados.</p>
     </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
 </body>
 
 </html>

@@ -1,11 +1,3 @@
-:root {
-    --lila: rgb(190, 153, 212);
-    --blancoespecial: rgba(253, 247, 247, 0.9);
-    --divider: #BDBDBD;
-    --rosita: #eee0e3;
-}
-@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Lobster&family=Ubuntu:wght@300&display=swap');
-
 html {
     font-size: 62.5%;
     box-sizing: border-box;
@@ -24,63 +16,24 @@ html {
     }
 }
 body {
-    /* background-color:rgb(253, 247, 247); */
-    padding: 0%;
-    margin: 0%;
-    display: grid;
-    flex-direction: column;
-    grid-template-columns: 100%;
-    grid-template-rows: 6% 87% 8%;
-    row-gap: 0%;
-
     background: linear-gradient(-45deg, #ee7750, #e73c7e, #23a6d5, #23d5ab);
 	background-size: 400% 400%;
 	animation: gradient 20s ease infinite;
-
     background-attachment: fixed;
     background-position: right 1%;
     min-width: 100%;
-
+    font-family: $text__font;
 }
 
-/* ----parametros en común entre mediaqueries (index)---- */
-.section--minishop .minishop--imgleft {
-    width: 50%;
-    border-radius: 5%;
-}
-
-.section--minishop .minishop--imgright {
-    width: 50%;
-    border-radius: 5%;
-}
-
-.main__text--index {
-    text-align: center;
-    margin: 0% 0% 10% 0%;
-}
-
-
-
-/* Desktop about */
 @media (min-width:1024px) {
     body {
-        font-family: 'Bebas Neue', cursive;
         padding: 0%;
         margin: 0%;
         display: grid;
         flex-direction: column;
         grid-template-columns: 100%;
-        grid-template-rows: 8% 95% 10%;
+        grid-template-rows: 7% 100% 10%;
         row-gap: 0%;
-
-        background: linear-gradient(-45deg, #ee7750, #e73c7e, #23a6d5, #23d5ab);
-        background-size: 400% 400%;
-        animation: gradient 20s ease infinite;
-        
-        background-attachment: fixed;
-        background-position: right 1%;
-        min-width: 100%;
-
     }
 
     .navbar {
@@ -90,29 +43,25 @@ body {
         justify-items: center;
         align-items: center;
         background-color: var(--blancoespecial);
-        box-shadow: 0 15px 35px rgba(0, 0, 0, 0.308);
-        border-radius: 5px;
-        border: 1px solid rgba(255, 255, 255, 0.25);
-        border-top: 1px solid rgba(255, 255, 255, 0.5);
-        border-left: 1px solid rgba(255, 255, 255, 0.5);
-    }
+        box-shadow: 0 15px 25px rgba(0, 0, 0, 0.288);
+        border-radius: 10px;
 
-    .navbar a {
-        list-style: none;
-        text-decoration: none;
-        font-family: 'Ubuntu', sans-serif;
-        color: var(--lila);
-        font-size: 1.7rem;
-    }
+        a {
+            list-style: none;
+            text-decoration: none;
+            font-family: $text__font;
+            color: var(--lila);
+            font-size: $subtitlesize__font;
 
-    .navbar a img {
-        position: relative;
-        left: 25%;
-
+            img{
+                position: relative;
+                left: 35%;
+            }
+        }
     }
 
     .navbar__li--logo {
-        width: 50%;
+        width: 25%;
     }
 
     .navbar__burger, .navbar__cart {
@@ -135,23 +84,23 @@ body {
         align-items: center;
         justify-content: space-around;
         position: relative;
-        font-size: 1.6rem;
-        height: 50px;
         text-decoration: none;
         list-style: none;
+        height: 50px;
+        font-size: $specialsize__font;
     }
     .atajos {
-        color: var(--lila);
-        background-color: aliceblue;
         box-shadow: 0 5px 5px rgba(0, 0, 0, 0.26);
         border-radius: 5px;
         padding: 2%;
+        background-color: aliceblue;
+        color: var(--lila);
     }
 
     .main--about {
         display: grid;
         grid-template-columns: 100%;
-        grid-template-rows: 30% 3% 76%;
+        grid-template-rows: 27% 6% 66%;
         row-gap: 1%;
         align-items: center;
     }
@@ -194,23 +143,29 @@ body {
         gap: 0%;
         text-align: center;
     }
+    .section--img {
+        grid-area: img;
+        box-shadow: 0 15px 25px rgba(0, 0, 0, 0.26);
+        border-radius: 10px;
+        width: 100%;
+    }
 
     .titles {
         display: grid;
         grid-area: titles;
-        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-        color: var(--blancoespecial);
-        font-size: 3rem;
         padding: 3%;
+        color: var(--blancoespecial);
+        font-family: $title__font;
+        font-size: $titlesize__font;
     }
 
     .texts {
         display: grid;
-        grid-area: texts;
-        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-        color: #eee0e3;
-        font-size: 1.5rem;
         padding: 3%;
+        grid-area: texts;
+        color: #eee0e3;
+        font-size: $textsize__font;
+        font-family: $text__font;
     }
 
 
@@ -221,10 +176,11 @@ body {
     .footer {
         display: grid;
         grid-template-areas:
-            "redes     tel     mail     copyright"
-            "redesdata teldata maildata copyright";
-        grid-template-columns: 25% 25% 25% 25%;
-        grid-template-rows: 50% 50%;
+        "redes     redes     redes"
+        "redesdata teldata   maildata"
+        "copyright copyright copyright";
+    grid-template-columns: 33% 33% 33%;
+    grid-template-rows: 25% 25% 25%;
         background-color: rgba(253, 247, 247, 0.76);
         justify-items: center;
         align-items: center;
@@ -238,20 +194,19 @@ body {
     }
 
     .footer__element--title {
-        font-size: 1.7rem;
-        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-
+        font-size: $textsize__font;
+        font-family: $text__font;
     }
 
     .footer__element--titleespecial {
-        font-size: 1.2rem;
-        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        font-size: $textsize__font;
+        font-family:$text__font ;
         align-items: start;
     }
 
     .footer__element--text {
-        font-size: 1.5rem;
-        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        font-size: $textsize__font;
+        font-family: $text__font;
     }
 
     .medialinks a {
@@ -293,28 +248,19 @@ body {
     }
 }
 
-/* Mobile about */
 @media (max-width: 767px) {
     body {
-        font-family: 'Bebas Neue', cursive;
         padding: 0%;
         margin: 0%;
         display: grid;
         flex-direction: column;
         grid-template-columns: 100%;
-        grid-template-rows: 6% 80% 24%;
+        grid-template-rows: 6% 90% 24%;
         row-gap: 0%;
-        background: linear-gradient(-45deg, #ee7750, #e73c7e, #23a6d5, #23d5ab);
-        background-size: 400% 400%;
-        animation: gradient 20s ease infinite;
-        background-attachment: fixed;
-        background-position: right 1%;
-        min-width: 100%;
-
     }
     .navbar {
         display: grid;
-        grid-template-columns: 30% 40% 30%;
+        grid-template-columns: 35% 35% 30%;
         justify-items: center;
         align-items: center;
         background-color: var(--blancoespecial);
@@ -326,12 +272,11 @@ body {
 
     }
 
-    .navbar__li--logo {
-        width: 60%;
+    .navbar__li--logo{
+        width: 80%;
         position: relative;
-        left: 20%;
+        left: 10%;
     }
-
     .navbar__phone--burger, .navbar__phone--cart {
         width: 20%;
         position: relative;
@@ -350,7 +295,7 @@ body {
     .main--about {
         display: grid;
         grid-template-columns: 100%;
-        grid-template-rows: 19% 6% 110%;
+        grid-template-rows: 22% 6% 80%;
         row-gap: 1%;
     }
 
@@ -369,7 +314,7 @@ body {
         align-items: flex-start;
         justify-content: space-around;
         position: relative;
-        font-size: 1.6rem;
+        font-size: $specialsize__font--phone;
         height: 50px;
         text-decoration: none;
         list-style: none;
@@ -385,10 +330,10 @@ body {
 
     .titles {
         grid-area: titles;
-        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        font-family: $title__font;
         color: var(--blancoespecial);
         margin: 10% 0%;
-        font-size: 2.5rem;
+        font-size: $titlesize__font--phone;
         margin: 0%;
 
 
@@ -396,10 +341,10 @@ body {
 
     .texts {
         grid-area: texts;
-        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        font-family: $text__font;
         color: #eee0e3;
         margin: 10% 0%;
-        font-size: 1.3rem;
+        font-size: $textsize__font--phone;
     }
 
     .section--1, .section--2 {
@@ -418,7 +363,7 @@ body {
 
     .section--1 h3, p, .section--2 h3, p, .section--3 h3, p {
         text-align: center;
-        font-size: 2rem;
+        font-size: $textsize__font--phone;
         width: 100%;
     }
 
@@ -429,7 +374,6 @@ body {
             "texts";
         gap: 0%;
         text-align: center;
-        font-size: 3rem;
         align-self: flex-end;
     }
 
@@ -453,9 +397,9 @@ body {
     .footer {
         display: grid;
         grid-template-areas:
-            "redes redesdata"
-            "tel teldata"
-            "mail maildata"
+            "redes redes"
+            "redesdata redesdata" 
+            "teldata maildata"   
             "copyright copyright";
         grid-template-columns: 50% 50%;
         grid-template-rows: 25% 25% 25% 25%;
@@ -470,20 +414,20 @@ body {
 
     .footer__element--title {
         display: flex;
-        font-size: 1.5rem;
-        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
         margin: 0%;
         justify-items: flex-start;
         align-items: center;
         color: var(--lila);
+        font-size: $titlesize__font--phone;
+        font-family: $text__font;
     }
 
     .footer__element--titleespecial {
-        font-size: 1.2rem;
-        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
         align-items: center;
         text-align: center;
         color: var(--lila);
+        font-size: $specialsize__font;
+        font-family: $text__font;
     }
 
     .medialinks a {
@@ -503,8 +447,8 @@ body {
     }
 
     .footer__element--text {
-        font-size: 1.5rem;
-        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        font-size: $textsize__font--phone;
+        font-family: $text__font;
         display: flex;
         text-align: center;
         align-items: center;

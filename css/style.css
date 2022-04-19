@@ -1,4 +1,3 @@
-@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Dancing+Script&family=Lobster&family=Ubuntu:wght@300&display=swap");
 :root {
   --lila: rgb(190, 153, 212);
@@ -26,29 +25,22 @@ html {
     background-position: 0% 50%; } }
 
 body {
-  padding: 0%;
-  margin: 0%;
-  display: grid;
-  flex-direction: column;
-  grid-template-columns: 100%;
-  grid-template-rows: 6% 87% 8%;
-  row-gap: 0%;
   background: linear-gradient(-45deg, #ee7750, #e73c7e, #23a6d5, #23d5ab);
   background-size: 400% 400%;
   animation: gradient 20s ease infinite;
   background-attachment: fixed;
   background-position: right 1%;
-  min-width: 100%; }
+  min-width: 100%;
+  font-family: "Ubuntu", sans-serif; }
 
-/* Desktop index*/
 @media (min-width: 1024px) {
-  body {
+  .body--more {
     padding: 0%;
     margin: 0%;
     display: grid;
     flex-direction: column;
     grid-template-columns: 100%;
-    grid-template-rows: 8% 90% 11%;
+    grid-template-rows: 20% 70% 25%;
     row-gap: 0%; }
   .navbar {
     display: grid;
@@ -62,14 +54,430 @@ body {
     .navbar a {
       list-style: none;
       text-decoration: none;
-      font-family: 'Ubuntu', sans-serif;
+      font-family: "Ubuntu", sans-serif;
       color: var(--lila);
       font-size: 1.7rem; }
       .navbar a img {
         position: relative;
-        left: 25%; }
+        left: 35%; }
   .navbar__li--logo {
-    width: 50%; }
+    width: 25%; }
+  .navbar__burger,
+  .navbar__cart {
+    display: none; }
+  .main--more {
+    display: flex;
+    align-items: center;
+    justify-content: center; }
+  .container__flag {
+    box-sizing: content-box;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 25% 25% 25% 25%;
+    align-items: stretch;
+    justify-items: center; }
+  .container__flag a {
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    padding: 10% 300%;
+    background-color: rgba(255, 255, 255, 0.25);
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.05);
+    border-radius: 10px;
+    backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-top: 1px solid rgba(255, 255, 255, 0.25); }
+  .flags h2 {
+    font-size: 4rem;
+    font-family: "Lobster", cursive;
+    border-radius: 20px; }
+  .titles {
+    grid-area: titles;
+    font-family: "Lobster", cursive;
+    color: var(--blancoespecial);
+    margin: 10% 0%;
+    font-size: 4rem;
+    margin: 0%; }
+  .texts {
+    grid-area: texts;
+    font-family: "Ubuntu", sans-serif;
+    color: #eee0e3;
+    margin: 10% 0%;
+    font-size: 2rem; }
+  .footer {
+    display: grid;
+    grid-template-areas: "redes     redes     redes" "redesdata teldata   maildata" "copyright copyright copyright";
+    grid-template-columns: 33% 33% 33%;
+    grid-template-rows: 25% 25% 25%;
+    background-color: rgba(253, 247, 247, 0.76);
+    justify-items: center;
+    align-items: center;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.05);
+    border-radius: 5px;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    border-top: 1px solid rgba(255, 255, 255, 0.5);
+    border-left: 1px solid rgba(255, 255, 255, 0.5); }
+  .footer__element--title,
+  .footer__element--titleespecial {
+    font-size: 1.7rem;
+    font-family: "Lobster", cursive; }
+  .footer__element--titleespecial {
+    align-items: start; }
+  .footer__element--text {
+    font-size: 2rem;
+    font-family: "Ubuntu", sans-serif; }
+  .medialinks a {
+    display: flex; }
+  .iconsmedia svg {
+    display: inline-flex;
+    width: 100px;
+    height: 100px; }
+  .redes {
+    grid-area: redes; }
+  .redesdata {
+    grid-area: redesdata; }
+  .mail {
+    grid-area: mail; }
+  .maildata {
+    grid-area: maildata; }
+  .tel {
+    grid-area: tel; }
+  .teldata {
+    grid-area: teldata; }
+  .copyright {
+    grid-area: copyright; } }
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+  margin: 0 auto;
+  width: 98%; }
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%; }
+  50% {
+    background-position: 100% 50%; }
+  100% {
+    background-position: 0% 50%; } }
+
+body {
+  background: linear-gradient(-45deg, #ee7750, #e73c7e, #23a6d5, #23d5ab);
+  background-size: 400% 400%;
+  animation: gradient 20s ease infinite;
+  background-attachment: fixed;
+  background-position: right 1%;
+  min-width: 100%;
+  font-family: "Ubuntu", sans-serif; }
+
+@media (min-width: 1024px) {
+  .body--contact {
+    padding: 0%;
+    margin: 0%;
+    display: grid;
+    flex-direction: column;
+    grid-template-columns: 100%;
+    grid-template-rows: 17% 80% 25%;
+    row-gap: 0%; }
+  .navbar {
+    display: grid;
+    grid-template-columns: 15% 15% 40% 15% 15%;
+    grid-template-rows: auto;
+    justify-items: center;
+    align-items: center;
+    background-color: var(--blancoespecial);
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.288);
+    border-radius: 10px; }
+    .navbar a {
+      list-style: none;
+      text-decoration: none;
+      font-family: "Ubuntu", sans-serif;
+      color: var(--lila);
+      font-size: 1.7rem; }
+      .navbar a img {
+        position: relative;
+        left: 35%; }
+  .navbar__li--logo {
+    width: 25%; }
+  .navbar__burger,
+  .navbar__cart {
+    display: none; }
+  .section__form {
+    background-color: aliceblue;
+    font-size: 2rem;
+    padding: 2%;
+    color: #212121; }
+  textarea {
+    resize: none;
+    width: 1200px; }
+  .main__img--banner {
+    overflow: hidden;
+    top: 0%;
+    z-index: -1;
+    width: 100%; }
+  .main__text {
+    margin: 0% 20% 30% 20%; }
+  .titles {
+    grid-area: titles;
+    font-family: "Lobster", cursive;
+    color: var(--blancoespecial);
+    margin: 10% 0%;
+    font-size: 4rem;
+    margin: 0%; }
+  .texts {
+    grid-area: texts;
+    font-family: "Ubuntu", sans-serif;
+    color: #eee0e3;
+    margin: 10% 0%;
+    font-size: 2rem; }
+  .footer {
+    display: grid;
+    grid-template-areas: "redes     redes     redes" "redesdata teldata   maildata" "copyright copyright copyright";
+    grid-template-columns: 33% 33% 33%;
+    grid-template-rows: 25% 25% 25%;
+    background-color: rgba(253, 247, 247, 0.76);
+    justify-items: center;
+    align-items: center;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.05);
+    border-radius: 5px;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    border-top: 1px solid rgba(255, 255, 255, 0.5);
+    border-left: 1px solid rgba(255, 255, 255, 0.5); }
+  .footer__element--title,
+  .footer__element--titleespecial {
+    font-size: 1.7rem;
+    font-family: "Lobster", cursive; }
+  .footer__element--titleespecial {
+    align-items: start; }
+  .footer__element--text {
+    font-size: 2rem;
+    font-family: "Ubuntu", sans-serif; }
+  .medialinks a {
+    display: flex; }
+  .iconsmedia svg {
+    display: inline-flex;
+    width: 100px;
+    height: 100px; }
+  .redes {
+    grid-area: redes; }
+  .redesdata {
+    grid-area: redesdata; }
+  .mail {
+    grid-area: mail; }
+  .maildata {
+    grid-area: maildata; }
+  .tel {
+    grid-area: tel; }
+  .teldata {
+    grid-area: teldata; }
+  .copyright {
+    grid-area: copyright; } }
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+  margin: 0 auto;
+  width: 98%; }
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%; }
+  50% {
+    background-position: 100% 50%; }
+  100% {
+    background-position: 0% 50%; } }
+
+body {
+  background: linear-gradient(-45deg, #ee7750, #e73c7e, #23a6d5, #23d5ab);
+  background-size: 400% 400%;
+  animation: gradient 20s ease infinite;
+  background-attachment: fixed;
+  background-position: right 1%;
+  min-width: 100%;
+  font-family: "Ubuntu", sans-serif; }
+
+@media (min-width: 1024px) {
+  .body--shop {
+    padding: 0%;
+    margin: 0%;
+    display: grid;
+    flex-direction: column;
+    grid-template-columns: 100%;
+    grid-template-rows: 11% 90% 15%;
+    row-gap: 0%; }
+  .navbar {
+    display: grid;
+    grid-template-columns: 15% 15% 40% 15% 15%;
+    grid-template-rows: auto;
+    justify-items: center;
+    align-items: center;
+    background-color: var(--blancoespecial);
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.288);
+    border-radius: 10px; }
+    .navbar a {
+      list-style: none;
+      text-decoration: none;
+      font-family: "Ubuntu", sans-serif;
+      color: var(--lila);
+      font-size: 1.7rem; }
+      .navbar a img {
+        position: relative;
+        left: 35%; }
+  .navbar__li--logo {
+    width: 25%; }
+  .navbar__burger,
+  .navbar__cart {
+    display: none; }
+  .section--filters nav form select option {
+    font-family: "Ubuntu", sans-serif;
+    font-size: 2rem;
+    color: var(--lila); }
+  .navselector {
+    background-color: #fdf7f7;
+    padding: 2%; }
+  .navselector form {
+    display: inline;
+    position: relative;
+    float: right;
+    width: 25%; }
+  .navselector form select {
+    padding: 0.5%; }
+  .options {
+    display: inline; }
+  article {
+    display: inline;
+    overflow: hidden;
+    box-sizing: content-box; }
+  .card__shop {
+    display: inline;
+    padding: 0%; }
+  .card__shop img,
+  .card__shop--lefter img,
+  .card__shop--righter img {
+    padding: 0%; }
+  .card__shop--lefter {
+    display: inline;
+    padding: 0%; }
+  .card__shop--righter {
+    display: inline;
+    padding: 0%; }
+  .card__product {
+    width: 16.47%; }
+  .card__desc {
+    display: inline; }
+  .main__img--banner {
+    overflow: hidden;
+    top: 0%;
+    z-index: -1;
+    width: 100%; }
+  .titles {
+    grid-area: titles;
+    font-family: "Lobster", cursive;
+    color: var(--blancoespecial);
+    margin: 10% 0%;
+    font-size: 4rem;
+    margin: 0%; }
+  .texts {
+    grid-area: texts;
+    font-family: "Ubuntu", sans-serif;
+    color: #eee0e3;
+    margin: 10% 0%;
+    font-size: 2rem; }
+  .footer {
+    display: grid;
+    grid-template-areas: "redes     redes     redes" "redesdata teldata   maildata" "copyright copyright copyright";
+    grid-template-columns: 33% 33% 33%;
+    grid-template-rows: 25% 25% 25%;
+    background-color: rgba(253, 247, 247, 0.76);
+    justify-items: center;
+    align-items: center;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.05);
+    border-radius: 5px;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    border-top: 1px solid rgba(255, 255, 255, 0.5);
+    border-left: 1px solid rgba(255, 255, 255, 0.5); }
+  .footer__element--title,
+  .footer__element--titleespecial {
+    font-size: 1.7rem;
+    font-family: "Lobster", cursive; }
+  .footer__element--titleespecial {
+    align-items: start; }
+  .footer__element--text {
+    font-size: 2rem;
+    font-family: "Ubuntu", sans-serif; }
+  .medialinks a {
+    display: flex; }
+  .iconsmedia svg {
+    display: inline-flex;
+    width: 100px;
+    height: 100px; }
+  .redes {
+    grid-area: redes; }
+  .redesdata {
+    grid-area: redesdata; }
+  .mail {
+    grid-area: mail; }
+  .maildata {
+    grid-area: maildata; }
+  .tel {
+    grid-area: tel; }
+  .teldata {
+    grid-area: teldata; }
+  .copyright {
+    grid-area: copyright; } }
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+  margin: 0 auto;
+  width: 98%; }
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%; }
+  50% {
+    background-position: 100% 50%; }
+  100% {
+    background-position: 0% 50%; } }
+
+body {
+  background: linear-gradient(-45deg, #ee7750, #e73c7e, #23a6d5, #23d5ab);
+  background-size: 400% 400%;
+  animation: gradient 20s ease infinite;
+  background-attachment: fixed;
+  background-position: right 1%;
+  min-width: 100%;
+  font-family: "Ubuntu", sans-serif; }
+
+@media (min-width: 1024px) {
+  body {
+    padding: 0%;
+    margin: 0%;
+    display: grid;
+    flex-direction: column;
+    grid-template-columns: 100%;
+    grid-template-rows: 6% 70% 20%;
+    row-gap: 0%; }
+  .navbar {
+    display: grid;
+    grid-template-columns: 15% 15% 40% 15% 15%;
+    grid-template-rows: auto;
+    justify-items: center;
+    align-items: center;
+    background-color: var(--blancoespecial);
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.288);
+    border-radius: 10px; }
+    .navbar a {
+      list-style: none;
+      text-decoration: none;
+      font-family: "Ubuntu", sans-serif;
+      color: var(--lila);
+      font-size: 1.7rem; }
+      .navbar a img {
+        position: relative;
+        left: 35%; }
+  .navbar__li--logo {
+    width: 25%; }
   .navbar__burger,
   .navbar__cart {
     display: none; }
@@ -83,7 +491,7 @@ body {
   .main--index {
     display: grid;
     grid-template-columns: 100%;
-    grid-template-rows: 33% 19% 38%;
+    grid-template-rows: 20% 25% 55%;
     gap: 1%; }
   .title--section {
     font-size: 4rem;
@@ -92,17 +500,21 @@ body {
     display: flex;
     justify-content: center;
     align-items: center; }
+  .main__minishop {
+    display: flex;
+    flex-direction: column;
+    align-items: center; }
   .section--minishop {
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
-    margin-top: 1%; }
+    margin-top: 1%;
+    flex-wrap: wrap; }
   .minishop__container {
     position: relative;
     display: inline-flex;
     justify-content: center;
-    align-items: center;
-    flex-wrap: wrap; }
+    align-items: center; }
     .minishop__container .card {
       position: relative;
       width: 300px;
@@ -142,14 +554,14 @@ body {
     background-color: rgba(255, 255, 255, 0.342);
     backdrop-filter: blur(2px);
     border-radius: 3px;
-    font-size: 1.7rem;
-    text-decoration: none;
-    font-family: "Ubuntu", sans-serif;
     box-shadow: 0 15px 25px rgba(0, 0, 0, 0.05);
-    text-transform: uppercase; }
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 2rem;
+    font-family: "Ubuntu", sans-serif; }
   .minishop--subtitles {
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     color: var(--blancoespecial);
+    font-family: "Lobster", cursive;
     font-size: 1.7rem; }
   .titles {
     grid-area: titles;
@@ -163,12 +575,12 @@ body {
     font-family: "Ubuntu", sans-serif;
     color: #eee0e3;
     margin: 10% 0%;
-    font-size: 1.7rem; }
+    font-size: 2rem; }
   .footer {
     display: grid;
-    grid-template-areas: "redes     tel     mail     copyright" "redesdata teldata maildata copyright";
-    grid-template-columns: 25% 25% 25% 25%;
-    grid-template-rows: 50% 50%;
+    grid-template-areas: "redes     redes     redes" "redesdata teldata   maildata" "copyright copyright copyright";
+    grid-template-columns: 33% 33% 33%;
+    grid-template-rows: 25% 25% 25%;
     background-color: rgba(253, 247, 247, 0.76);
     justify-items: center;
     align-items: center;
@@ -177,16 +589,14 @@ body {
     border: 1px solid rgba(255, 255, 255, 0.25);
     border-top: 1px solid rgba(255, 255, 255, 0.5);
     border-left: 1px solid rgba(255, 255, 255, 0.5); }
-  .footer__element--title {
+  .footer__element--title, .footer__element--titleespecial {
     font-size: 1.7rem;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; }
+    font-family: "Lobster", cursive; }
   .footer__element--titleespecial {
-    font-size: 1.7rem;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     align-items: start; }
   .footer__element--text {
-    font-size: 1.7rem;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; }
+    font-size: 2rem;
+    font-family: "Ubuntu", sans-serif; }
   .medialinks a {
     display: flex; }
   .iconsmedia svg {
@@ -208,7 +618,6 @@ body {
   .copyright {
     grid-area: copyright; } }
 
-/* Mobile index*/
 @media (max-width: 767px) {
   body {
     font-family: "Ubuntu", sans-serif;
@@ -217,7 +626,18 @@ body {
     display: grid;
     flex-direction: column;
     grid-template-columns: auto;
-    grid-template-rows: 6% 68% 23%; }
+    grid-template-rows: 6% 50% 23%; }
+  .main__img--banner {
+    display: none !important; }
+  .main__img--bannerphone {
+    display: block;
+    width: 100%;
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.26);
+    border-radius: 10px; }
+  .main--index {
+    display: grid;
+    grid-template-rows: 20% 20% 38%;
+    row-gap: 3%; }
   .navbar {
     display: grid;
     grid-template-columns: 30% 40% 30%;
@@ -230,9 +650,9 @@ body {
     border-top: 1px solid rgba(255, 255, 255, 0.5);
     border-left: 1px solid rgba(255, 255, 255, 0.5); }
   .navbar__li--logo {
-    width: 60%;
+    width: 80%;
     position: relative;
-    left: 20%; }
+    left: 9%; }
   .navbar__phone--burger,
   .navbar__phone--cart {
     width: 25%;
@@ -248,8 +668,8 @@ body {
     display: flex;
     justify-items: center; }
   .title--section {
-    font-size: 2rem;
-    font-family: 'Lobster', cursive;
+    font-size: 2.5rem;
+    font-family: "Lobster", cursive;
     color: var(--blancoespecial);
     display: flex;
     justify-content: center;
@@ -258,17 +678,16 @@ body {
     margin: 0%; }
   .titles {
     grid-area: titles;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family: "Lobster", cursive;
+    margin: 0%;
     color: var(--blancoespecial);
-    margin: 10% 0%;
-    font-size: 2rem;
-    margin: 0%; }
+    font-size: 2.5rem; }
   .texts {
     grid-area: texts;
-    font-family: "Ubuntu", sans-serif;
-    color: #eee0e3;
     margin: 10% 0%;
-    font-size: 1.1rem; }
+    color: #eee0e3;
+    font-family: "Ubuntu", sans-serif;
+    font-size: 1.5rem; }
   .main__minishop {
     display: flex;
     flex-direction: column;
@@ -330,30 +749,19 @@ body {
     background-color: rgba(255, 255, 255, 0.842);
     backdrop-filter: blur(2px);
     border-radius: 3px;
-    font-size: 2rem;
     text-decoration: none;
-    font-family: "Ubuntu", sans-serif;
     box-shadow: 0 15px 25px rgba(0, 0, 0, 0.05);
     text-transform: uppercase;
-    color: var(--lila); }
+    color: var(--lila);
+    font-family: "Ubuntu", sans-serif;
+    font-size: 2.5rem; }
   .minishop--subtitles {
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     color: var(--blancoespecial);
+    font-family: "Lobster", cursive;
     font-size: 1.5rem; }
-  .main__img--banner {
-    display: none !important; }
-  .main__img--bannerphone {
-    display: block;
-    width: 100%;
-    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.26);
-    border-radius: 10px; }
-  .main--index {
-    display: grid;
-    grid-template-rows: 37% 24% 41%;
-    row-gap: 1%; }
   .footer {
     display: grid;
-    grid-template-areas: "redes redesdata" "tel teldata" "mail maildata" "copyright copyright";
+    grid-template-areas: "redes redes" "redesdata redesdata"  "teldata maildata"    "copyright copyright";
     grid-template-columns: 50% 50%;
     grid-template-rows: 25% 25% 25% 25%;
     background-color: rgba(253, 247, 247, 0.76);
@@ -365,16 +773,349 @@ body {
     border-left: 1px solid rgba(255, 255, 255, 0.5); }
   .footer__element--title {
     display: flex;
-    font-size: 1.5rem;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     margin: 0%;
     justify-items: flex-start;
-    align-items: center; }
-  .footer__element--titleespecial {
-    font-size: 1.2rem;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     align-items: center;
+    font-family: "Lobster", cursive;
+    font-size: 1.5rem; }
+  .footer__element--titleespecial {
+    text-align: center;
+    align-items: center;
+    font-size: 1.5rem;
+    font-family: "Lobster", cursive; }
+  .medialinks a {
+    display: flex; }
+  .iconsmedia svg {
+    display: inline-flex;
+    width: 70px;
+    height: 70px; }
+  .redesdata {
+    display: flex;
+    justify-content: space-between; }
+  .footer__element--text {
+    display: flex;
+    text-align: center;
+    align-items: center;
+    font-size: 1.5rem;
+    font-family: "Ubuntu", sans-serif; }
+  .redes {
+    grid-area: redes; }
+  .redesdata {
+    grid-area: redesdata; }
+  .mail {
+    grid-area: mail; }
+  .maildata {
+    grid-area: maildata; }
+  .tel {
+    grid-area: tel; }
+  .teldata {
+    grid-area: teldata; }
+  .copyright {
+    grid-area: copyright; } }
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+  margin: 0 auto;
+  width: 98%; }
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%; }
+  50% {
+    background-position: 100% 50%; }
+  100% {
+    background-position: 0% 50%; } }
+
+body {
+  background: linear-gradient(-45deg, #ee7750, #e73c7e, #23a6d5, #23d5ab);
+  background-size: 400% 400%;
+  animation: gradient 20s ease infinite;
+  background-attachment: fixed;
+  background-position: right 1%;
+  min-width: 100%;
+  font-family: "Ubuntu", sans-serif; }
+
+@media (min-width: 1024px) {
+  body {
+    padding: 0%;
+    margin: 0%;
+    display: grid;
+    flex-direction: column;
+    grid-template-columns: 100%;
+    grid-template-rows: 7% 100% 10%;
+    row-gap: 0%; }
+  .navbar {
+    display: grid;
+    grid-template-columns: 15% 15% 40% 15% 15%;
+    grid-template-rows: auto;
+    justify-items: center;
+    align-items: center;
+    background-color: var(--blancoespecial);
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.288);
+    border-radius: 10px; }
+    .navbar a {
+      list-style: none;
+      text-decoration: none;
+      font-family: "Ubuntu", sans-serif;
+      color: var(--lila);
+      font-size: 1.7rem; }
+      .navbar a img {
+        position: relative;
+        left: 35%; }
+  .navbar__li--logo {
+    width: 25%; }
+  .navbar__burger, .navbar__cart {
+    display: none; }
+  .main__img--bannerphone {
+    display: none !important; }
+  .main__img--banner {
+    display: block;
+    width: 100%;
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.26);
+    border-radius: 10px; }
+  .section__atajos {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    position: relative;
+    text-decoration: none;
+    list-style: none;
+    height: 50px;
+    font-size: 1.6rem; }
+  .atajos {
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.26);
+    border-radius: 5px;
+    padding: 2%;
+    background-color: aliceblue;
+    color: var(--lila); }
+  .main--about {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 27% 6% 66%;
+    row-gap: 1%;
+    align-items: center; }
+  .section--backgroundcolor {
+    background-color: rgba(0, 0, 0, 0.05);
+    border-radius: 10px; }
+  .section--1 {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-areas: "img  titlestexts" "img  titlestexts";
+    gap: 0%;
+    margin-bottom: 5%;
+    background-color: rgba(0, 0, 0, 0.05); }
+  .section--2 {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-areas: "titlestexts  img" "titlestexts  img";
+    gap: 0%;
+    margin-top: 5%;
+    background-color: rgba(0, 0, 0, 0.05);
+    border-radius: 10px; }
+  .section--3 {
+    grid-template-columns: 50% 50%;
+    grid-template-areas: "titles" "texts";
+    gap: 0%;
     text-align: center; }
+  .section--img {
+    grid-area: img;
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.26);
+    border-radius: 10px;
+    width: 100%; }
+  .titles {
+    display: grid;
+    grid-area: titles;
+    padding: 3%;
+    color: var(--blancoespecial);
+    font-family: "Lobster", cursive;
+    font-size: 4rem; }
+  .texts {
+    display: grid;
+    padding: 3%;
+    grid-area: texts;
+    color: #eee0e3;
+    font-size: 2rem;
+    font-family: "Ubuntu", sans-serif; }
+  .titlestexts {
+    grid-area: titlestexts; }
+  .footer {
+    display: grid;
+    grid-template-areas: "redes     redes     redes" "redesdata teldata   maildata" "copyright copyright copyright";
+    grid-template-columns: 33% 33% 33%;
+    grid-template-rows: 25% 25% 25%;
+    background-color: rgba(253, 247, 247, 0.76);
+    justify-items: center;
+    align-items: center;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.05);
+    border-radius: 5px;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    border-top: 1px solid rgba(255, 255, 255, 0.5);
+    border-left: 1px solid rgba(255, 255, 255, 0.5);
+    position: static;
+    bottom: 0%; }
+  .footer__element--title {
+    font-size: 2rem;
+    font-family: "Ubuntu", sans-serif; }
+  .footer__element--titleespecial {
+    font-size: 2rem;
+    font-family: "Ubuntu", sans-serif;
+    align-items: start; }
+  .footer__element--text {
+    font-size: 2rem;
+    font-family: "Ubuntu", sans-serif; }
+  .medialinks a {
+    display: flex; }
+  .iconsmedia svg {
+    display: inline-flex;
+    width: 100px;
+    height: 100px; }
+  .redes {
+    grid-area: redes; }
+  .redesdata {
+    grid-area: redesdata; }
+  .mail {
+    grid-area: mail; }
+  .maildata {
+    grid-area: maildata; }
+  .tel {
+    grid-area: tel; }
+  .teldata {
+    grid-area: teldata; }
+  .copyright {
+    grid-area: copyright; } }
+
+@media (max-width: 767px) {
+  body {
+    padding: 0%;
+    margin: 0%;
+    display: grid;
+    flex-direction: column;
+    grid-template-columns: 100%;
+    grid-template-rows: 6% 90% 24%;
+    row-gap: 0%; }
+  .navbar {
+    display: grid;
+    grid-template-columns: 35% 35% 30%;
+    justify-items: center;
+    align-items: center;
+    background-color: var(--blancoespecial);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.308);
+    border-radius: 5px;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    border-top: 1px solid rgba(255, 255, 255, 0.5);
+    border-left: 1px solid rgba(255, 255, 255, 0.5); }
+  .navbar__li--logo {
+    width: 80%;
+    position: relative;
+    left: 10%; }
+  .navbar__phone--burger, .navbar__phone--cart {
+    width: 20%;
+    position: relative;
+    left: 40%; }
+  .navbar--shop, .navbar--about, .navbar--more, .navbar--contact {
+    display: none; }
+  .navbar__burger, .navbar__cart {
+    display: flex;
+    justify-items: center; }
+  .main--about {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 22% 6% 80%;
+    row-gap: 1%; }
+  .main__img--banner {
+    display: none !important; }
+  .main__img--bannerphone {
+    display: block;
+    width: 100%;
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.26);
+    border-radius: 10px; }
+  .section__atajos {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-around;
+    position: relative;
+    font-size: 1.3rem;
+    height: 50px;
+    text-decoration: none;
+    list-style: none;
+    padding-bottom: 40%; }
+  .main__text--about {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0%; }
+  .titles {
+    grid-area: titles;
+    font-family: "Lobster", cursive;
+    color: var(--blancoespecial);
+    margin: 10% 0%;
+    font-size: 2.5rem;
+    margin: 0%; }
+  .texts {
+    grid-area: texts;
+    font-family: "Ubuntu", sans-serif;
+    color: #eee0e3;
+    margin: 10% 0%;
+    font-size: 1.5rem; }
+  .section--1, .section--2 {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 1.5fr 1fr;
+    grid-template-areas: "img" "titles" "texts";
+    justify-items: center;
+    align-items: center;
+    text-align: center;
+    padding: 5%; }
+  .section--1 h3, p, .section--2 h3, p, .section--3 h3, p {
+    text-align: center;
+    font-size: 1.5rem;
+    width: 100%; }
+  .section--3 {
+    grid-template-columns: 50% 50%;
+    grid-template-areas: "titles" "texts";
+    gap: 0%;
+    text-align: center;
+    align-self: flex-end; }
+  .section--img {
+    grid-area: img;
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.26);
+    border-radius: 10px;
+    width: 90%;
+    position: relative;
+    left: 20px; }
+  .atajos {
+    color: var(--lila);
+    background-color: aliceblue;
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.26);
+    border-radius: 5px;
+    padding: 2%; }
+  .footer {
+    display: grid;
+    grid-template-areas: "redes redes" "redesdata redesdata"  "teldata maildata"    "copyright copyright";
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 25% 25% 25% 25%;
+    background-color: rgba(253, 247, 247, 0.76);
+    height: 50%;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.575);
+    border-radius: 5px;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    border-top: 1px solid rgba(255, 255, 255, 0.5);
+    border-left: 1px solid rgba(255, 255, 255, 0.5); }
+  .footer__element--title {
+    display: flex;
+    margin: 0%;
+    justify-items: flex-start;
+    align-items: center;
+    color: var(--lila);
+    font-size: 2.5rem;
+    font-family: "Ubuntu", sans-serif; }
+  .footer__element--titleespecial {
+    align-items: center;
+    text-align: center;
+    color: var(--lila);
+    font-size: 1.6rem;
+    font-family: "Ubuntu", sans-serif; }
   .medialinks a {
     display: flex; }
   .iconsmedia svg {
@@ -386,7 +1127,7 @@ body {
     justify-content: space-between; }
   .footer__element--text {
     font-size: 1.5rem;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family: "Ubuntu", sans-serif;
     display: flex;
     text-align: center;
     align-items: center; }
@@ -405,11 +1146,11 @@ body {
   .copyright {
     grid-area: copyright; } }
 
-/* ----parametros en común entre mediaqueries (index)---- */
 .section--minishop .minishop--imgleft, .minishop--imgright {
   width: 50%;
   border-radius: 5%; }
 
 .main__text--index {
   text-align: center;
-  margin: 0% 0% 10% 0%; }
+  margin: 0% 0% 10% 0%;
+  padding: 4%; }
