@@ -35,8 +35,8 @@ body {
         display: grid;
         flex-direction: column;
         grid-template-columns: 100%;
-        grid-template-rows: 11% 90% 15%;
-        row-gap: 0%;
+        grid-template-rows: 5% 90% 15%;
+        row-gap: 3%;
     }
 
 
@@ -72,67 +72,36 @@ body {
     .navbar__cart {
         display: none;
     }
-    .section--filters nav form select option{
-        font-family: $text__font;
-        font-size: $textsize__font;
-        color: var(--lila);
+    .section--filters{
+        background-color: rgba(26, 26, 26, 0.295);
+        box-shadow: 0 15px 25px rgba(0, 0, 0, 0.288);
+        border-radius: 10px;
+    }
+    .btn--select{
+        background-color: rgba(255, 255, 255, 0.25);
+        box-shadow: 0 15px 25px rgba(0, 0, 0, 0.288);
+        border-radius: 10px;
+        color:rgba(255, 255, 255, 0.5);
+    }
+    .section--shop{
+        background-color: rgba(238, 238, 238, 0.295);
+        box-shadow: 0 15px 25px rgba(0, 0, 0, 0.288);
+        border-radius: 10px;
+        article {
+            display: inline;
+            box-sizing: content-box;
+        }
     }
 
-    .navselector {
-        background-color: rgb(253, 247, 247);
-        padding: 2%;
-    }
-
-    .navselector form {
-        display: inline;
-        position: relative;
-        float: right;
-        width: 25%;
-    }
-
-    .navselector form select {
-        padding: 0.5%;
-    }
-
-    .options {
-        display: inline;
-    }
-
-    article {
-        display: inline;
-        overflow: hidden;
+    .card__shop{
         box-sizing: content-box;
+        overflow: hidden;
+        width: 100%;
+        .card__product {
+            width: 100%;
+            border-radius: 5px;
+        }
     }
-
-    .card__shop {
-        display: inline;
-        padding: 0%;
-    }
-
-    .card__shop img,
-    .card__shop--lefter img,
-    .card__shop--righter img {
-        padding: 0%;
-    }
-
-    .card__shop--lefter {
-        display: inline;
-        padding: 0%;
-    }
-
-    .card__shop--righter {
-        display: inline;
-        padding: 0%;
-    }
-
-    .card__product {
-        width: 16.47%;
-    }
-
-    .card__desc {
-        display: inline;
-    }
-
     .main__img--banner {
         overflow: hidden;
         top: 0%;
@@ -153,9 +122,8 @@ body {
 
     .texts {
         grid-area: texts;
-        font-family: $text__font;
         color: #eee0e3;
-        margin: 10% 0%;
+        font-family: $text__font;
         font-size: $textsize__font;
     }
 

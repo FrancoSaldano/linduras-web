@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -16,6 +17,15 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
 </head>
+<style>
+    .section--filters {
+        --bs-rows: 3
+    }
+    .row{
+        --bs-gutter-x:1rem;   
+    }
+</style>
+
 <body class="body--shop">
     <header>
         <nav class="navbar">
@@ -84,94 +94,174 @@
                 <span class="visually-hidden">Next</span>
             </button>
         </div>
-        <!--  -->
-        <section class="section--filters container" >
-            <nav class="navselector">
-                <form>
-                    <select name="types" id="">
-                        <option class="options" value="" hidden> Categorias </option>
-                        <option class="options" value="minicomida">Mini comida</option>
-                        <option class="options" value="amor">Amor</option>
-                        <option class="options" value="amistad">Amistad!</option>
-                    </select>
-                    <select name="types" id="">
-                        <option class="options" value="" hidden> Tipos </option>
-                        <option class="options" value="anillos">Anillos</option>
-                        <option class="options" value="pulseras">Pulseras</option>
-                        <option class="options" value="collares">Collares</option>
-                    </select>
-                    <select name="types" id="">
-                        <option class="options" value="" hidden> Ordenar por </option>
-                        <option class="options" value="anillos">Lo más nuevo</option>
-                        <option class="options" value="pulseras">El precio más bajo</option>
-                        <option class="options" value="collares">El precio más alto</option>
-                    </select>
-                </form>
-                <label for="browser"></label>
-                <input type="search" name="browser" id="shop-search" placeholder="¿Qué estás buscando?">
-            </nav>
+        <section class="section--filters container-fluid row g-3 mt-5">
+            <div class="col-md-6 p-4">
+                <input type="search" name="browser" class="col-6 p-2 float-md-start texts m-0" id="shop-search"
+                    placeholder="¿Qué estás buscando?">
+            </div>
+            <div class=" col-md-6 p-4">
+                <button class="btn btn-outline-secondary dropdown-toggle float-end texts btn--select m-0 p-2"
+                    type="button" data-bs-toggle="dropdown" aria-expanded="false">Categorias</button>
+                <ul class="dropdown-menu dropdown-menu-end">
+                    <li><a class="dropdown-item texts m-0" href="#">Action</a></li>
+                    <li><a class="dropdown-item texts m-0" href="#">Another action</a></li>
+                    <li><a class="dropdown-item texts m-0" href="#">Something else here</a></li>
+                    <li>
+                        <hr class="dropdown-divider">
+                    </li>
+                    <li><a class="dropdown-item texts m-0" href="#">Separated link</a></li>
+                </ul>
+                <button class="btn btn-outline-secondary dropdown-toggle float-end texts btn--select m-0 p-2"
+                    type="button" data-bs-toggle="dropdown" aria-expanded="false">Tipos</button>
+                <ul class="dropdown-menu dropdown-menu-end">
+                    <li><a class="dropdown-item texts m-0" href="#">Action</a></li>
+                    <li><a class="dropdown-item texts m-0" href="#">Another action</a></li>
+                    <li><a class="dropdown-item texts m-0" href="#">Something else here</a></li>
+                    <li>
+                        <hr class="dropdown-divider">
+                    </li>
+                    <li><a class="dropdown-item" href="#">Separated link</a></li>
+                </ul>
+                <button class="btn btn-outline-secondary dropdown-toggle float-end texts btn--select m-0 p-2"
+                    type="button" data-bs-toggle="dropdown" aria-expanded="false">Ordenar por</button>
+                <ul class="dropdown-menu dropdown-menu-end p-3">
+                    <li><a class="dropdown-item texts m-0" href="#">Action</a></li>
+                    <li><a class="dropdown-item texts m-0" href="#">Another action</a></li>
+                    <li><a class="dropdown-item texts m-0" href="#">Something else here</a></li>
+                    <li>
+                        <hr class="dropdown-divider">
+                    </li>
+                    <li><a class="dropdown-item" href="#">Separated link</a></li>
+                </ul>
+            </div>
         </section>
-        <section class="section--shop container">
-            <article>
-                <div class="card__shop--lefter">
-                    <img class="card__product" src="../img/brazalete-corazon.jpeg" alt="aros-con-forma-de-hamburguesa">
-                </div>
-            </article>
-            <article>
-                <div class="card__shop">
-                    <img class="card__product" src="../img/brazalete-toxico.jpeg" alt="aros-con-forma-de-hamburguesa">
-                </div>
-            </article>
-            <article>
-                <div class="card__shop">
-                    <img class="card__product" src="../img/corazonLGTB.jpeg" alt="aros-con-forma-de-hamburguesa">
-                </div>
-            </article>
-            <article>
-                <div class="card__shop">
-                    <img class="card__product" src="../img/llavero-corazonlego.jpeg" alt="aros-con-forma-de-hamburguesa">
-                </div>
-            </article>
-            <article>
-                <div class="card__shop">
-                    <img class="card__product" src="../img/llavero-corazonlego.jpeg" alt="aros-con-forma-de-hamburguesa">
-                </div>
-            </article>
-            <article>
-                <div class="card__shop--righter">
-                    <img class="card__product" src="../img/llavero-paltas.jpeg" alt="aros-con-forma-de-hamburguesa">
-                </div>
-            </article>
-            <article>
-                <div class="card__shop--lefter">
-                    <img class="card__product" src="../img/brazalete-corazon.jpeg" alt="aros-con-forma-de-hamburguesa">
-                </div>
-            </article>
-            <article>
-                <div class="card__shop">
-                    <img class="card__product" src="../img/brazalete-toxico.jpeg" alt="aros-con-forma-de-hamburguesa">
-                </div>
-            </article>
-            <article>
-                <div class="card__shop">
-                    <img class="card__product" src="../img/corazonLGTB.jpeg" alt="aros-con-forma-de-hamburguesa">
-                </div>
-            </article>
-            <article>
-                <div class="card__shop">
-                    <img class="card__product" src="../img/llavero-corazonlego.jpeg" alt="aros-con-forma-de-hamburguesa">
-                </div>
-            </article>
-            <article>
-                <div class="card__shop">
-                    <img class="card__product" src="../img/llavero-corazonlego.jpeg" alt="aros-con-forma-de-hamburguesa">
-                </div>
-            </article>
-            <article>
-                <div class="card__shop--righter">
-                    <img class="card__product" src="../img/llavero-paltas.jpeg" alt="aros-con-forma-de-hamburguesa">
-                </div>
-            </article>
+        <section class="section--shop grid container-fluid mt-5">
+            <div class="container-fluid row mb-1 p-0 justify-content-between">
+                <article class="col-md-2 mt-5 justify-content-center">
+                    <a href="#">
+                        <div class="card__shop">
+                            <img class="card__product" src="../img/brazalete-corazon.jpeg"
+                                alt="aros-con-forma-de-hamburguesa">
+                        </div>
+                    </a>
+                </article>
+                <article class="col-md-2 mt-5">
+                    <a href="#">
+                        <div class="card__shop">
+                            <img class="card__product" src="../img/brazalete-toxico.jpeg"
+                                alt="aros-con-forma-de-hamburguesa">
+                        </div>
+                    </a>
+                </article>
+                <article class="col-md-2 mt-5">
+                    <a href="#">
+                        <div class="card__shop ">
+                            <img class="card__product" src="../img/corazonLGTB.jpeg"
+                                alt="aros-con-forma-de-hamburguesa">
+                        </div>
+                    </a>
+                </article>
+                <article class="col-md-2 mt-5">
+                    <a href="#">
+                        <div class="card__shop ">
+                            <img class="card__product" src="../img/llavero-corazonlego.jpeg"
+                                alt="aros-con-forma-de-hamburguesa">
+                        </div>
+                    </a>
+                </article>
+                <article class="col-md-2 mt-5">
+                    <a href="#">
+                        <div class="card__shop ">
+                            <img class="card__product" src="../img/llavero-corazonlego.jpeg"
+                                alt="aros-con-forma-de-hamburguesa">
+                        </div>
+                    </a>
+                </article>
+            </div>
+            <div class="container-fluid row mb-1 p-0 justify-content-around">
+                <article class="col-md-2 mt-5">
+                    <a href="#">
+                        <div class="card__shop">
+                            <img class="card__product" src="../img/brazalete-corazon.jpeg"
+                                alt="aros-con-forma-de-hamburguesa">
+                        </div>
+                    </a>
+                </article>
+                <article class="col-md-2 mt-5">
+                    <a href="#">
+                        <div class="card__shop">
+                            <img class="card__product" src="../img/brazalete-toxico.jpeg"
+                                alt="aros-con-forma-de-hamburguesa">
+                        </div>
+                    </a>
+                </article>
+                <article class="col-md-2 mt-5">
+                    <a href="#">
+                        <div class="card__shop ">
+                            <img class="card__product" src="../img/corazonLGTB.jpeg"
+                                alt="aros-con-forma-de-hamburguesa">
+                        </div>
+                    </a>
+                </article>
+                <article class="col-md-2 mt-5">
+                    <a href="#">
+                        <div class="card__shop ">
+                            <img class="card__product" src="../img/llavero-corazonlego.jpeg"
+                                alt="aros-con-forma-de-hamburguesa">
+                        </div>
+                    </a>
+                </article>
+                <article class="col-md-2 mt-5">
+                    <a href="#">
+                        <div class="card__shop ">
+                            <img class="card__product" src="../img/llavero-corazonlego.jpeg"
+                                alt="aros-con-forma-de-hamburguesa">
+                        </div>
+                    </a>
+                </article>
+            </div>
+            <div class="container-fluid row mb-1 p-0 justify-content-around">
+                <article class="col-md-2 mt-5">
+                    <a href="#">
+                        <div class="card__shop">
+                            <img class="card__product" src="../img/brazalete-corazon.jpeg"
+                                alt="aros-con-forma-de-hamburguesa">
+                        </div>
+                    </a>
+                </article>
+                <article class="col-md-2 mt-5">
+                    <a href="#">
+                        <div class="card__shop">
+                            <img class="card__product" src="../img/brazalete-toxico.jpeg"
+                                alt="aros-con-forma-de-hamburguesa">
+                        </div>
+                    </a>
+                </article>
+                <article class="col-md-2 mt-5">
+                    <a href="#">
+                        <div class="card__shop ">
+                            <img class="card__product" src="../img/corazonLGTB.jpeg"
+                                alt="aros-con-forma-de-hamburguesa">
+                        </div>
+                    </a>
+                </article>
+                <article class="col-md-2 mt-5">
+                    <a href="#">
+                        <div class="card__shop ">
+                            <img class="card__product" src="../img/llavero-corazonlego.jpeg"
+                                alt="aros-con-forma-de-hamburguesa">
+                        </div>
+                    </a>
+                </article>
+                <article class="col-md-2 mt-5">
+                    <a href="#">
+                        <div class="card__shop ">
+                            <img class="card__product" src="../img/llavero-corazonlego.jpeg"
+                                alt="aros-con-forma-de-hamburguesa">
+                        </div>
+                    </a>
+                </article>
+            </div>
         </section>
 
     </main>
@@ -241,4 +331,5 @@
         integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
         crossorigin="anonymous"></script>
 </body>
+
 </html>
