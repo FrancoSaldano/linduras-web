@@ -22,18 +22,19 @@
         --bs-rows: 3
     }
     .row{
-        --bs-gutter-x:1rem;   
+        --bs-gutter-x:0.5rem;   
     }
 </style>
 
 <body class="body--shop">
     <header>
-        <nav class="navbar">
+        <nav class="navbar sticky-md-top fixed-top">
             <a class="navbar--shop" href="../pages/shop.html">Tienda</a>
             <a class="navbar--about" href="../pages/about.html">Nosotros</a>
-            <a class="navbar__burger" href="../index.html">
-                <img class="navbar__phone--burger" src="../img/burger-icon.svg" alt="logo-de-inicio" width="50px">
-            </a>
+            <button class="navbar-toggler navbar__burger" type="button" data-bs-target="#collapse--navitems"
+                data-bs-toggle="collapse" aria-controls="collapse--navitems" aria-expanded="false"> <img
+                    class="navbar__phone--burger" src="../img/burger-icon.svg" alt="logo-de-inicio" width="50px">
+            </button>
             <a class="navbar__li--especial" href="../index.html">
                 <img class="navbar__li--logo" src="../img/linduras shop.svg" alt="logo-de-inicio">
             </a>
@@ -42,10 +43,28 @@
             </a>
             <a class="navbar--more" href="../pages/more.html">More</a>
             <a class="navbar--contact" href="../pages/contact.html">Contact</a>
+            <div class="collapse navbar-collapse" id="collapse--navitems">
+                <ul class="navbar-nav me-auto mb-2 mb-md-0">
+                    <li class="nav-item">
+                        <a class="nav-link active p-5" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link p-5" href="../pages/shop.html">Tienda</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link p-5" href="../pages/more.html">More</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link p-5" href="../pages/about.html">Nosotros</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link p-5" href="../pages/contact.html">Contact</a>
+                    </li>
+                </ul>
+            </div>
         </nav>
     </header>
     <main>
-        <!-- Carusel -->
         <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-indicators">
                 <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active"
@@ -94,12 +113,12 @@
                 <span class="visually-hidden">Next</span>
             </button>
         </div>
-        <section class="section--filters container-fluid row g-3 mt-5">
-            <div class="col-md-6 p-4">
-                <input type="search" name="browser" class="col-6 p-2 float-md-start texts m-0" id="shop-search"
+        <section class="section--filters container-expand row g-3 mt-5">
+            <div class="col-md-6 col-12 p-4">
+                <input type="search" name="browser" class="col-12 p-2 float-md-start texts m-0" id="shop-search"
                     placeholder="¿Qué estás buscando?">
             </div>
-            <div class=" col-md-6 p-4">
+            <div class="col-md-6 col-12 justify-content-around p-4">
                 <button class="btn btn-outline-secondary dropdown-toggle float-end texts btn--select m-0 p-2"
                     type="button" data-bs-toggle="dropdown" aria-expanded="false">Categorias</button>
                 <ul class="dropdown-menu dropdown-menu-end">
@@ -135,9 +154,9 @@
                 </ul>
             </div>
         </section>
-        <section class="section--shop grid container-fluid mt-5">
-            <div class="container-fluid row mb-1 p-0 justify-content-between">
-                <article class="col-md-2 mt-5 justify-content-center">
+        <section class="section--shop grid container-fluid align-content-around p-5 pt-0 mt-5">
+            <div class="container-fluid row mb-1 p-0 justify-content-evenly">
+                <article class="col-md-2 col-6 mt-md-2 mt-5">
                     <a href="#">
                         <div class="card__shop">
                             <img class="card__product" src="../img/brazalete-corazon.jpeg"
@@ -145,7 +164,7 @@
                         </div>
                     </a>
                 </article>
-                <article class="col-md-2 mt-5">
+                <article class="col-md-2 col-6 mt-md-2 mt-5">
                     <a href="#">
                         <div class="card__shop">
                             <img class="card__product" src="../img/brazalete-toxico.jpeg"
@@ -153,7 +172,7 @@
                         </div>
                     </a>
                 </article>
-                <article class="col-md-2 mt-5">
+                <article class="col-md-2 col-6 mt-md-2 mt-5">
                     <a href="#">
                         <div class="card__shop ">
                             <img class="card__product" src="../img/corazonLGTB.jpeg"
@@ -161,7 +180,7 @@
                         </div>
                     </a>
                 </article>
-                <article class="col-md-2 mt-5">
+                <article class="col-md-2 col-6 mt-md-2 mt-5">
                     <a href="#">
                         <div class="card__shop ">
                             <img class="card__product" src="../img/llavero-corazonlego.jpeg"
@@ -169,7 +188,7 @@
                         </div>
                     </a>
                 </article>
-                <article class="col-md-2 mt-5">
+                <article class="col-md-2 mt-2 displayphone">
                     <a href="#">
                         <div class="card__shop ">
                             <img class="card__product" src="../img/llavero-corazonlego.jpeg"
@@ -178,8 +197,8 @@
                     </a>
                 </article>
             </div>
-            <div class="container-fluid row mb-1 p-0 justify-content-around">
-                <article class="col-md-2 mt-5">
+            <div class="container-fluid row mb-1 p-0 justify-content-evenly">
+                <article class="col-md-2 col-6 mt-md-2 mt-5">
                     <a href="#">
                         <div class="card__shop">
                             <img class="card__product" src="../img/brazalete-corazon.jpeg"
@@ -187,7 +206,7 @@
                         </div>
                     </a>
                 </article>
-                <article class="col-md-2 mt-5">
+                <article class="col-md-2 col-6 mt-md-2 mt-5">
                     <a href="#">
                         <div class="card__shop">
                             <img class="card__product" src="../img/brazalete-toxico.jpeg"
@@ -195,7 +214,7 @@
                         </div>
                     </a>
                 </article>
-                <article class="col-md-2 mt-5">
+                <article class="col-md-2 col-6 mt-md-2 mt-5">
                     <a href="#">
                         <div class="card__shop ">
                             <img class="card__product" src="../img/corazonLGTB.jpeg"
@@ -203,7 +222,7 @@
                         </div>
                     </a>
                 </article>
-                <article class="col-md-2 mt-5">
+                <article class="col-md-2 col-6 mt-md-2 mt-5">
                     <a href="#">
                         <div class="card__shop ">
                             <img class="card__product" src="../img/llavero-corazonlego.jpeg"
@@ -211,7 +230,7 @@
                         </div>
                     </a>
                 </article>
-                <article class="col-md-2 mt-5">
+                <article class="col-md-2 mt-2 displayphone">
                     <a href="#">
                         <div class="card__shop ">
                             <img class="card__product" src="../img/llavero-corazonlego.jpeg"
@@ -220,7 +239,7 @@
                     </a>
                 </article>
             </div>
-            <div class="container-fluid row mb-1 p-0 justify-content-around">
+            <div class="container-fluid row mb-1 p-0 justify-content-evenly displayphone">
                 <article class="col-md-2 mt-5">
                     <a href="#">
                         <div class="card__shop">
@@ -263,7 +282,6 @@
                 </article>
             </div>
         </section>
-
     </main>
     <footer class="footer">
         <h6 class="footer__element--title redes primary-text-color">Te invitamos a seguirnos!</h6>

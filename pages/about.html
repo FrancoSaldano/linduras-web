@@ -18,14 +18,15 @@
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
 </head>
 
-<body>
+<body class="body--about">
     <header>
-        <nav class="navbar">
+        <nav class="navbar sticky-md-top fixed-top">
             <a class="navbar--shop" href="../pages/shop.html">Tienda</a>
             <a class="navbar--about" href="../pages/about.html">Nosotros</a>
-            <a class="navbar__burger" href="../index.html">
-                <img class="navbar__phone--burger" src="../img/burger-icon.svg" alt="logo-de-inicio" width="50px">
-            </a>
+            <button class="navbar-toggler navbar__burger" type="button" data-bs-target="#collapse--navitems"
+                data-bs-toggle="collapse" aria-controls="collapse--navitems" aria-expanded="false"> <img
+                    class="navbar__phone--burger" src="../img/burger-icon.svg" alt="logo-de-inicio" width="50px">
+            </button>
             <a class="navbar__li--especial" href="../index.html">
                 <img class="navbar__li--logo" src="../img/linduras shop.svg" alt="logo-de-inicio">
             </a>
@@ -34,6 +35,25 @@
             </a>
             <a class="navbar--more" href="../pages/more.html">More</a>
             <a class="navbar--contact" href="../pages/contact.html">Contact</a>
+            <div class="collapse navbar-collapse" id="collapse--navitems">
+                <ul class="navbar-nav me-auto mb-2 mb-md-0">
+                    <li class="nav-item p-5">
+                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item p-5">
+                        <a class="nav-link" href="../pages/shop.html">Tienda</a>
+                    </li>
+                    <li class="nav-item p-5">
+                        <a class="nav-link" href="../pages/more.html">More</a>
+                    </li>
+                    <li class="nav-item p-5">
+                        <a class="nav-link" href="../pages/about.html">Nosotros</a>
+                    </li>
+                    <li class="nav-item p-5">
+                        <a class="nav-link" href="../pages/contact.html">Contact</a>
+                    </li>
+                </ul>
+            </div>
         </nav>
     </header>
     <main class="main--about">
@@ -119,7 +139,7 @@
                 <div class="py-5">
                     <h1 class="display-5 titles">¿Cómo nació linduras?</h1>
                     <div class="col-lg-6 mx-auto">
-                        <p class="fs-5 mb-4 texts">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum, voluptate laudantium! Veniam aliquid quis atque, sequi molestias impedit assumenda ducimus. Ratione hic rerum consequuntur possimus accusantium laudantium, maxime a quaerat sed labore consequatur aliquid, esse eius fugiat blanditiis minus at, dolorem odit aperiam. Eum dolores omnis rerum vero harum odio quas, accusantium iusto consequatur incidunt iste, sint deserunt, blanditiis quia porro? Facere ipsa ducimus dolore animi. Beatae, modi! Labore fuga aliquid maxime enim ex, sapiente veniam. Rem, quis. Nostrum explicabo, ducimus sequi dignissimos laudantium nisi quia debitis, ratione, cum dolore excepturi omnis maxime sit neque voluptates harum illo rerum blanditiis.</p>
+                        <p class="mb-4 texts">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum, voluptate laudantium! Veniam aliquid quis atque, sequi molestias impedit assumenda ducimus. Ratione hic rerum consequuntur possimus accusantium laudantium, maxime a quaerat sed labore consequatur aliquid, esse eius fugiat blanditiis minus at, dolorem odit aperiam. Eum dolores omnis rerum vero harum odio quas, accusantium iusto consequatur incidunt iste, sint deserunt, blanditiis quia porro? Facere ipsa ducimus dolore animi. Beatae, modi! Labore fuga aliquid maxime enim ex, sapiente veniam. Rem, quis. Nostrum explicabo, ducimus sequi dignissimos laudantium nisi quia debitis, ratione, cum dolore excepturi omnis maxime sit neque voluptates harum illo rerum blanditiis.</p>
                     </div>
                 </div>
             </div>
@@ -181,9 +201,7 @@
                 </svg>
             </a>
         </div>
-        <h6 class="footer__element--title mail primary-text-color">Mail</h6>
         <a class="footer__element--text  maildata secondary-text-color" href="mailto:">linduras.shop@gmail.com</a>
-        <h6 class="footer__element--title tel primary-text-color">Teléfono</h6>
         <a class="footer__element--text  teldata secondary-text-color" href="tel:+">11 12345678</a>
         <p class="footer__element--titleespecial copyright divider-color ">Copyright 2022 - Linduras.Shop - Todos los
             derechos reservados.</p>

@@ -1,74 +1,10 @@
-html {
-    font-size: 62.5%;
-    box-sizing: border-box;
-    margin: 0 auto;
-    width: 98%;
+.body--index {
+    @extend .bodys;
 }
-@keyframes gradient {
-    0% {
-        background-position: 0% 50%;
-    }
-
-    50% {
-        background-position: 100% 50%;
-    }
-
-    100% {
-        background-position: 0% 50%;
-    }
-}
-body {
-    background: linear-gradient(-45deg, #ee7750, #e73c7e, #23a6d5, #23d5ab);
-    background-size: 400% 400%;
-    animation: gradient 20s ease infinite;
-    background-attachment: fixed;
-    background-position: right 1%;
-    min-width: 100%;
-    font-family: $text__font;
-}
-
 @media (min-width:1024px) {
-    body {
-        padding: 0%;
-        margin: 0%;
-        display: grid;
-        flex-direction: column;
-        grid-template-columns: 100%;
-        grid-template-rows: 6% 70% 20%;
-        row-gap: 0%;
-    }
-
-    .navbar {
-        display: grid;
-        grid-template-columns: 15% 15% 40% 15% 15%;
-        grid-template-rows: auto;
-        justify-items: center;
-        align-items: center;
-        background-color: var(--blancoespecial);
-        box-shadow: 0 15px 25px rgba(0, 0, 0, 0.288);
-        border-radius: 10px;
-
-        a {
-            list-style: none;
-            text-decoration: none;
-            font-family: $text__font;
-            color: var(--lila);
-            font-size: $subtitlesize__font;
-
-                img{
-                    position: relative;
-                    left: 35%;
-            }
-        }
-    }
-
-    .navbar__li--logo {
-        width: 25%;
-    }
-
-    .navbar__burger,
-    .navbar__cart {
-        display: none;
+    .body--index {
+        @include grid-column-gap--0;
+        grid-template-rows: 7% 90% 10%;
     }
 
     .main__img--banner {
@@ -85,18 +21,19 @@ body {
     .main--index {
         display: grid;
         grid-template-columns: 100%;
-        grid-template-rows: 20% 25% 55%;
+        grid-template-rows: 24% 23% 52%;
         gap: 1%;
     }
 
     .title--section {
-        font-size: $titlesize__font;
+        font-size: map-get($style-desktop ,titlesize);
         font-family: $title__font;
-        color: var(--blancoespecial);
+        color: map-get($colors,blancoespecial);
         display: flex;
         justify-content: center;
         align-items: center;
     }
+
     .main__minishop {
         display: flex;
         flex-direction: column;
@@ -134,9 +71,10 @@ body {
             border: 1px solid rgba(255, 255, 255, 0.5);
             border-top: 1px solid rgba(255, 255, 255, 0.25);
             border-left: 1px solid rgba(255, 255, 255, 0.25);
-                &:hover .imgBx img {
-                    transform: translate(0px, -30px);
-                }
+
+            &:hover .imgBx img {
+                transform: translate(0px, -30px);
+            }
 
             .imgBx {
                 position: relative;
@@ -167,26 +105,30 @@ body {
         box-shadow: 0 15px 25px rgba(0, 0, 0, 0.05);
         text-decoration: none;
         text-transform: uppercase;
-        font-size: $textsize__font;
+        font-size: map-get($style-desktop ,textsize);
         font-family: $text__font;
+    }
+    .section--minishop .minishop--imgleft,
+    .minishop--imgright {
+        width: 50%;
+        border-radius: 5%;
     }
 
     .minishop--subtitles {
-        color: var(--blancoespecial);
+        color: map-get($colors,blancoespecial);
         font-family: $subtitle__font;
-        font-size: $subtitlesize__font;
+        font-size: map-get($style-desktop ,subtitlesize);
     }
 
 
     .titles {
         grid-area: titles;
-        font-family: $title__font;
-        color: var(--blancoespecial);
         margin: 10% 0%;
-        font-size:$titlesize__font;
         margin: 0%;
-
-
+        justify-content: center;
+        color: map-get($colors, blancoespecial);
+        font-family:$title__font;
+        font-size: map-get($style-desktop ,titlesize);
     }
 
     .texts {
@@ -194,15 +136,15 @@ body {
         font-family: $text__font;
         color: #eee0e3;
         margin: 10% 0%;
-        font-size: $textsize__font;
+        font-size: map-get($style-desktop ,textsize);
     }
 
     .footer {
         display: grid;
         grid-template-areas:
-        "redes     redes     redes"
-        "redesdata teldata   maildata"
-        "copyright copyright copyright";
+            "redes     redes     redes"
+            "redesdata teldata   maildata"
+            "copyright copyright copyright";
         grid-template-columns: 33% 33% 33%;
         grid-template-rows: 25% 25% 25%;
         background-color: rgba(253, 247, 247, 0.76);
@@ -215,11 +157,13 @@ body {
         border-left: 1px solid rgba(255, 255, 255, 0.5);
     }
 
-    .footer__element--title, .footer__element--titleespecial {
+    .footer__element--title,
+    .footer__element--titleespecial {
         font-size: $subtitlesize__font;
-        font-family: $subtitle__font;
+        font-family: $text__font;
     }
-    .footer__element--titleespecial{
+
+    .footer__element--titleespecial {
         align-items: start;
     }
 
@@ -266,16 +210,12 @@ body {
         grid-area: copyright
     }
 }
-
 @media (max-width: 767px) {
-    body {
-        font-family: $text__font;
-        padding: 0%;
-        margin: 0%;
+    .body--index {
         display: grid;
         flex-direction: column;
         grid-template-columns: auto;
-        grid-template-rows: 6% 50% 23%;
+        grid-template-rows: 7% 110% 23%;
     }
     .main__img--banner {
         display: none !important;
@@ -294,44 +234,10 @@ body {
         row-gap: 3%;
 
     }
-    .navbar {
-        display: grid;
-        grid-template-columns: 30% 40% 30%;
-        justify-items: center;
-        align-items: center;
-        background-color: var(--blancoespecial);
-        box-shadow: 0 15px 35px rgba(0, 0, 0, 0.308);
-        border-radius: 5px;
-        border: 1px solid rgba(255, 255, 255, 0.25);
-        border-top: 1px solid rgba(255, 255, 255, 0.5);
-        border-left: 1px solid rgba(255, 255, 255, 0.5);
 
-    }
-
-    .navbar__li--logo {
-        width: 80%;
-        position: relative;
-        left: 9%;
-    }
-
-    .navbar__phone--burger,
-    .navbar__phone--cart {
-        width: 25%;
-        position: relative;
-        left: 40%;
-    }
-
-    .navbar--shop,
-    .navbar--about,
-    .navbar--more,
-    .navbar--contact {
-        display: none;
-    }
-
-    .navbar__burger,
-    .navbar__cart {
-        display: flex;
-        justify-items: center;
+    .main__text--index {
+        padding: 4%;
+        text-align: center !important
     }
 
     .title--section {
@@ -447,6 +353,12 @@ body {
         font-size: $titlesize__font--phone;
     }
 
+    .section--minishop .minishop--imgleft,
+    .minishop--imgright {
+        width: 50%;
+        border-radius: 5%;
+    }
+
     .minishop--subtitles {
         color: var(--blancoespecial);
         font-family: $subtitle__font;
@@ -457,8 +369,8 @@ body {
         display: grid;
         grid-template-areas:
             "redes redes"
-            "redesdata redesdata" 
-            "teldata maildata"   
+            "redesdata redesdata"
+            "teldata maildata"
             "copyright copyright";
         grid-template-columns: 50% 50%;
         grid-template-rows: 25% 25% 25% 25%;

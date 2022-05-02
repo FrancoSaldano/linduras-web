@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="ACCESORIOS,PORCELANA FRIA,LINDO,MINIATURA,LINDURAS">
+    <meta name="description" content="Arte en porcelana fría o pulseras,lo que tú quieras. Linduras provee un catalogo unico y personalizado de accesorios hermosos para vos.">
     <title>contact | linduras.shop</title>
     <link rel="stylesheet" href="./css/normalize.css">
 
@@ -19,12 +21,13 @@
 </head>
 <body class="body--contact">
     <header>
-        <nav class="navbar">
+        <nav class="navbar sticky-md-top fixed-top">
             <a class="navbar--shop" href="../pages/shop.html">Tienda</a>
             <a class="navbar--about" href="../pages/about.html">Nosotros</a>
-            <a class="navbar__burger" href="../index.html">
-                <img class="navbar__phone--burger" src="../img/burger-icon.svg" alt="logo-de-inicio" width="50px">
-            </a>
+            <button class="navbar-toggler navbar__burger" type="button" data-bs-target="#collapse--navitems"
+                data-bs-toggle="collapse" aria-controls="collapse--navitems" aria-expanded="false"> <img
+                    class="navbar__phone--burger" src="../img/burger-icon.svg" alt="logo-de-inicio" width="50px">
+            </button>
             <a class="navbar__li--especial" href="../index.html">
                 <img class="navbar__li--logo" src="../img/linduras shop.svg" alt="logo-de-inicio">
             </a>
@@ -33,10 +36,30 @@
             </a>
             <a class="navbar--more" href="../pages/more.html">More</a>
             <a class="navbar--contact" href="../pages/contact.html">Contact</a>
+            <div class="collapse navbar-collapse" id="collapse--navitems">
+                <ul class="navbar-nav me-auto mb-2 mb-md-0">
+                    <li class="nav-item">
+                        <a class="nav-link p-5 active" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link p-5" href="../pages/shop.html">Tienda</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link p-5" href="../pages/more.html">More</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link p-5" href="../pages/about.html">Nosotros</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link p-5" href="../pages/contact.html">Contact</a>
+                    </li>
+                </ul>
+            </div>
         </nav>
     </header>
 
      <section class="container section__form">
+         <h1 class="title text-center">Contactate con nosotros!</h1>
         <form class="form-floating row g-3 flex-row justify-content-center p-5">
             <div class="col-md-6">
                 <label for="inputname" class="form-label texts m-0">Nombre</label>
@@ -52,7 +75,7 @@
             </div>
             <div class="col-md-8">
                 <label for="floatingTextarea" class="texts m-0">Dejanos tu mensaje aqui!</label>
-                <textarea class="input--contact textarea texts p-3 m-0"id="floatingTextarea"></textarea>
+                <textarea class="input--contact textarea texts p-3 m-0" id="floatingTextarea"></textarea>
             </div>
             <button type="submit" class="d-block btn titles btn--send p-3 m-5">Enviar</button>
           </form>

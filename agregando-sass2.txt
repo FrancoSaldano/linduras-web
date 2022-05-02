@@ -1,0 +1,8 @@
+Todo lo mencionado se puede ver en "_structure.scss"
+
+1- Utilicé un extend para los body de cada sección de la pagina web.
+2- A su vez en los mismos utilice un mixin sin varible para el rowgap con 0% y un mixin con variable 
+    para un rowgap personalizado.
+3- Los maps se utilizaron en "_typography.scss" para llevar los estilos correspondientes y obtenidos mediante "map-get"
+    al navbar en "_structure.scss".
+

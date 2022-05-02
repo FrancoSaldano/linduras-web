@@ -1,19 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Lobster&family=Ubuntu:wght@300&display=swap');
 @import "colors";
 @import "typography";
 @import "structure";
-@import "pages/more";
 @import "pages/contact";
-@import "pages/shop";
 @import "pages/home";
+@import "pages/shop";
 @import "pages/about";
-
-
-.section--minishop .minishop--imgleft , .minishop--imgright {
-    width: 50%;
-    border-radius: 5%;
-}
-.main__text--index {
-    text-align: center;
-    margin: 0% 0% 10% 0%;
-    padding: 4%;
-}
+@import "pages/more";

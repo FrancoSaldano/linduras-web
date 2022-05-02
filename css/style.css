@@ -34,14 +34,6 @@ body {
   font-family: "Ubuntu", sans-serif; }
 
 @media (min-width: 1024px) {
-  .body--more {
-    padding: 0%;
-    margin: 0%;
-    display: grid;
-    flex-direction: column;
-    grid-template-columns: 100%;
-    grid-template-rows: 20% 70% 25%;
-    row-gap: 0%; }
   .navbar {
     display: grid;
     grid-template-columns: 15% 15% 40% 15% 15%;
@@ -59,51 +51,12 @@ body {
       font-size: 1.7rem; }
       .navbar a img {
         position: relative;
-        left: 35%; }
+        left: 38%; }
   .navbar__li--logo {
     width: 25%; }
   .navbar__burger,
   .navbar__cart {
     display: none; }
-  .main--more {
-    display: flex;
-    align-items: center;
-    justify-content: center; }
-  .container__flag {
-    box-sizing: content-box;
-    display: grid;
-    grid-template-columns: 100%;
-    grid-template-rows: 25% 25% 25% 25%;
-    align-items: stretch;
-    justify-items: center; }
-  .container__flag a {
-    text-decoration: none;
-    display: flex;
-    justify-content: center;
-    padding: 10% 300%;
-    background-color: rgba(255, 255, 255, 0.25);
-    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.05);
-    border-radius: 10px;
-    backdrop-filter: blur(15px);
-    border: 1px solid rgba(255, 255, 255, 0.5);
-    border-top: 1px solid rgba(255, 255, 255, 0.25); }
-  .flags h2 {
-    font-size: 4rem;
-    font-family: "Lobster", cursive;
-    border-radius: 20px; }
-  .titles {
-    grid-area: titles;
-    font-family: "Lobster", cursive;
-    color: var(--blancoespecial);
-    margin: 10% 0%;
-    font-size: 4rem;
-    margin: 0%; }
-  .texts {
-    grid-area: texts;
-    font-family: "Ubuntu", sans-serif;
-    color: #eee0e3;
-    margin: 10% 0%;
-    font-size: 2rem; }
   .footer {
     display: grid;
     grid-template-areas: "redes     redes     redes" "redesdata teldata   maildata" "copyright copyright copyright";
@@ -120,7 +73,7 @@ body {
   .footer__element--title,
   .footer__element--titleespecial {
     font-size: 1.7rem;
-    font-family: "Lobster", cursive; }
+    font-family: "Ubuntu", sans-serif; }
   .footer__element--titleespecial {
     align-items: start; }
   .footer__element--text {
@@ -147,28 +100,54 @@ body {
   .copyright {
     grid-area: copyright; } }
 
-html {
-  font-size: 62.5%;
-  box-sizing: border-box;
-  margin: 0 auto;
-  width: 98%; }
-
-@keyframes gradient {
-  0% {
-    background-position: 0% 50%; }
-  50% {
-    background-position: 100% 50%; }
-  100% {
-    background-position: 0% 50%; } }
-
-body {
-  background: linear-gradient(-45deg, #ee7750, #e73c7e, #23a6d5, #23d5ab);
-  background-size: 400% 400%;
-  animation: gradient 20s ease infinite;
-  background-attachment: fixed;
-  background-position: right 1%;
-  min-width: 100%;
-  font-family: "Ubuntu", sans-serif; }
+@media (max-width: 767px) {
+  .navbar {
+    display: grid;
+    grid-template-columns: 30% 40% 30%;
+    justify-items: center;
+    align-items: center;
+    background-color: var(--blancoespecial);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.308);
+    border-radius: 5px;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    border-top: 1px solid rgba(255, 255, 255, 0.5);
+    border-left: 1px solid rgba(255, 255, 255, 0.5); }
+  .navbar__li--logo {
+    width: 80%;
+    position: relative;
+    left: 9%; }
+  .navbar__phone--burger,
+  .navbar__phone--cart {
+    width: 25%;
+    position: relative;
+    left: 40%; }
+  .navbar--shop,
+  .navbar--about,
+  .navbar--more,
+  .navbar--contact {
+    display: none; }
+  .navbar__burger,
+  .navbar__cart {
+    display: flex;
+    justify-items: center; }
+  .navbar div ul li a {
+    list-style: none;
+    text-decoration: none;
+    font-family: "Ubuntu", sans-serif;
+    color: var(--lila);
+    font-size: 1.7rem; }
+  .titles {
+    grid-area: titles;
+    font-family: "Lobster", cursive;
+    margin: 0%;
+    color: var(--blancoespecial);
+    font-size: 2.5rem; }
+  .texts {
+    grid-area: texts;
+    margin: 10% 0%;
+    color: #eee0e3;
+    font-family: "Ubuntu", sans-serif;
+    font-size: 1.5rem; } }
 
 @media (min-width: 1024px) {
   .body--contact {
@@ -179,29 +158,6 @@ body {
     grid-template-columns: 100%;
     grid-template-rows: 15% 65% 20%;
     row-gap: 3%; }
-  .navbar {
-    display: grid;
-    grid-template-columns: 15% 15% 40% 15% 15%;
-    grid-template-rows: auto;
-    justify-items: center;
-    align-items: center;
-    background-color: var(--blancoespecial);
-    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.288);
-    border-radius: 10px; }
-    .navbar a {
-      list-style: none;
-      text-decoration: none;
-      font-family: "Ubuntu", sans-serif;
-      color: var(--lila);
-      font-size: 1.7rem; }
-      .navbar a img {
-        position: relative;
-        left: 35%; }
-  .navbar__li--logo {
-    width: 25%; }
-  .navbar__burger,
-  .navbar__cart {
-    display: none; }
   .section__form {
     background-color: rgba(26, 26, 26, 0.295);
     box-shadow: 0 15px 25px rgba(0, 0, 0, 0.363);
@@ -240,243 +196,46 @@ body {
     font-family: "Ubuntu", sans-serif;
     color: #eee0e3;
     margin: 10% 0%;
-    font-size: 2rem; }
-  .footer {
-    display: grid;
-    grid-template-areas: "redes     redes     redes" "redesdata teldata   maildata" "copyright copyright copyright";
-    grid-template-columns: 33% 33% 33%;
-    grid-template-rows: 25% 25% 25%;
-    background-color: rgba(253, 247, 247, 0.76);
-    justify-items: center;
-    align-items: center;
-    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.05);
-    border-radius: 5px;
-    border: 1px solid rgba(255, 255, 255, 0.25);
-    border-top: 1px solid rgba(255, 255, 255, 0.5);
-    border-left: 1px solid rgba(255, 255, 255, 0.5); }
-  .footer__element--title,
-  .footer__element--titleespecial {
-    font-size: 1.7rem;
-    font-family: "Lobster", cursive; }
-  .footer__element--titleespecial {
-    align-items: start; }
-  .footer__element--text {
-    font-size: 2rem;
-    font-family: "Ubuntu", sans-serif; }
-  .medialinks a {
-    display: flex; }
-  .iconsmedia svg {
-    display: inline-flex;
-    width: 100px;
-    height: 100px; }
-  .redes {
-    grid-area: redes; }
-  .redesdata {
-    grid-area: redesdata; }
-  .mail {
-    grid-area: mail; }
-  .maildata {
-    grid-area: maildata; }
-  .tel {
-    grid-area: tel; }
-  .teldata {
-    grid-area: teldata; }
-  .copyright {
-    grid-area: copyright; } }
+    font-size: 2rem; } }
 
-html {
-  font-size: 62.5%;
-  box-sizing: border-box;
-  margin: 0 auto;
-  width: 98%; }
-
-@keyframes gradient {
-  0% {
-    background-position: 0% 50%; }
-  50% {
-    background-position: 100% 50%; }
-  100% {
-    background-position: 0% 50%; } }
-
-body {
-  background: linear-gradient(-45deg, #ee7750, #e73c7e, #23a6d5, #23d5ab);
-  background-size: 400% 400%;
-  animation: gradient 20s ease infinite;
-  background-attachment: fixed;
-  background-position: right 1%;
-  min-width: 100%;
-  font-family: "Ubuntu", sans-serif; }
-
-@media (min-width: 1024px) {
-  .body--shop {
+@media (max-width: 767px) {
+  .body--contact {
     padding: 0%;
     margin: 0%;
     display: grid;
     flex-direction: column;
     grid-template-columns: 100%;
-    grid-template-rows: 5% 90% 15%;
+    grid-template-rows: 20% 75% 50%;
     row-gap: 3%; }
-  .navbar {
-    display: grid;
-    grid-template-columns: 15% 15% 40% 15% 15%;
-    grid-template-rows: auto;
-    justify-items: center;
-    align-items: center;
-    background-color: var(--blancoespecial);
-    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.288);
-    border-radius: 10px; }
-    .navbar a {
-      list-style: none;
-      text-decoration: none;
-      font-family: "Ubuntu", sans-serif;
-      color: var(--lila);
-      font-size: 1.7rem; }
-      .navbar a img {
-        position: relative;
-        left: 35%; }
-  .navbar__li--logo {
-    width: 25%; }
-  .navbar__burger,
-  .navbar__cart {
-    display: none; }
-  .section--filters {
+  .section__form {
     background-color: rgba(26, 26, 26, 0.295);
-    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.288);
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.363);
     border-radius: 10px; }
-  .btn--select {
+  .textarea {
+    resize: vertical;
+    width: 100%;
+    max-height: 150px;
+    min-height: 90px; }
+  .btn--send {
     background-color: rgba(255, 255, 255, 0.25);
     box-shadow: 0 15px 25px rgba(0, 0, 0, 0.288);
     border-radius: 10px;
     color: rgba(255, 255, 255, 0.5); }
-  .section--shop {
-    background-color: rgba(238, 238, 238, 0.295);
+  .input--contact {
+    background-color: rgba(255, 255, 255, 0.25);
     box-shadow: 0 15px 25px rgba(0, 0, 0, 0.288);
-    border-radius: 10px; }
-    .section--shop article {
-      display: inline;
-      box-sizing: content-box; }
-  .card__shop {
-    box-sizing: content-box;
-    overflow: hidden;
-    width: 100%; }
-    .card__shop .card__product {
-      width: 100%;
-      border-radius: 5px; }
-  .main__img--banner {
-    overflow: hidden;
-    top: 0%;
-    z-index: -1;
-    width: 100%; }
-  .titles {
-    grid-area: titles;
-    font-family: "Lobster", cursive;
-    color: var(--blancoespecial);
-    margin: 10% 0%;
-    font-size: 4rem;
-    margin: 0%; }
-  .texts {
-    grid-area: texts;
-    color: #eee0e3;
-    font-family: "Ubuntu", sans-serif;
-    font-size: 2rem; }
-  .footer {
-    display: grid;
-    grid-template-areas: "redes     redes     redes" "redesdata teldata   maildata" "copyright copyright copyright";
-    grid-template-columns: 33% 33% 33%;
-    grid-template-rows: 25% 25% 25%;
-    background-color: rgba(253, 247, 247, 0.76);
-    justify-items: center;
-    align-items: center;
-    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.05);
-    border-radius: 5px;
-    border: 1px solid rgba(255, 255, 255, 0.25);
-    border-top: 1px solid rgba(255, 255, 255, 0.5);
-    border-left: 1px solid rgba(255, 255, 255, 0.5); }
-  .footer__element--title,
-  .footer__element--titleespecial {
-    font-size: 1.7rem;
-    font-family: "Lobster", cursive; }
-  .footer__element--titleespecial {
-    align-items: start; }
-  .footer__element--text {
-    font-size: 2rem;
-    font-family: "Ubuntu", sans-serif; }
-  .medialinks a {
-    display: flex; }
-  .iconsmedia svg {
-    display: inline-flex;
-    width: 100px;
-    height: 100px; }
-  .redes {
-    grid-area: redes; }
-  .redesdata {
-    grid-area: redesdata; }
-  .mail {
-    grid-area: mail; }
-  .maildata {
-    grid-area: maildata; }
-  .tel {
-    grid-area: tel; }
-  .teldata {
-    grid-area: teldata; }
-  .copyright {
-    grid-area: copyright; } }
-
-html {
-  font-size: 62.5%;
-  box-sizing: border-box;
-  margin: 0 auto;
-  width: 98%; }
-
-@keyframes gradient {
-  0% {
-    background-position: 0% 50%; }
-  50% {
-    background-position: 100% 50%; }
-  100% {
-    background-position: 0% 50%; } }
-
-body {
-  background: linear-gradient(-45deg, #ee7750, #e73c7e, #23a6d5, #23d5ab);
-  background-size: 400% 400%;
-  animation: gradient 20s ease infinite;
-  background-attachment: fixed;
-  background-position: right 1%;
-  min-width: 100%;
-  font-family: "Ubuntu", sans-serif; }
+    border-radius: 10px;
+    color: rgba(49, 49, 49, 0.9); } }
 
 @media (min-width: 1024px) {
-  body {
+  .body--index {
     padding: 0%;
     margin: 0%;
     display: grid;
     flex-direction: column;
     grid-template-columns: 100%;
-    grid-template-rows: 6% 70% 20%;
+    grid-template-rows: 7% 90% 10%;
     row-gap: 0%; }
-  .navbar {
-    display: grid;
-    grid-template-columns: 15% 15% 40% 15% 15%;
-    grid-template-rows: auto;
-    justify-items: center;
-    align-items: center;
-    background-color: var(--blancoespecial);
-    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.288);
-    border-radius: 10px; }
-    .navbar a {
-      list-style: none;
-      text-decoration: none;
-      font-family: "Ubuntu", sans-serif;
-      color: var(--lila);
-      font-size: 1.7rem; }
-      .navbar a img {
-        position: relative;
-        left: 35%; }
-  .navbar__li--logo {
-    width: 25%; }
-  .navbar__burger,
-  .navbar__cart {
-    display: none; }
   .main__img--banner {
     position: block;
     width: 100%;
@@ -487,7 +246,7 @@ body {
   .main--index {
     display: grid;
     grid-template-columns: 100%;
-    grid-template-rows: 20% 25% 55%;
+    grid-template-rows: 24% 23% 52%;
     gap: 1%; }
   .title--section {
     font-size: 4rem;
@@ -555,6 +314,10 @@ body {
     text-transform: uppercase;
     font-size: 2rem;
     font-family: "Ubuntu", sans-serif; }
+  .section--minishop .minishop--imgleft,
+  .minishop--imgright {
+    width: 50%;
+    border-radius: 5%; }
   .minishop--subtitles {
     color: var(--blancoespecial);
     font-family: "Lobster", cursive;
@@ -565,7 +328,8 @@ body {
     color: var(--blancoespecial);
     margin: 10% 0%;
     font-size: 4rem;
-    margin: 0%; }
+    margin: 0%;
+    justify-content: center; }
   .texts {
     grid-area: texts;
     font-family: "Ubuntu", sans-serif;
@@ -585,9 +349,10 @@ body {
     border: 1px solid rgba(255, 255, 255, 0.25);
     border-top: 1px solid rgba(255, 255, 255, 0.5);
     border-left: 1px solid rgba(255, 255, 255, 0.5); }
-  .footer__element--title, .footer__element--titleespecial {
+  .footer__element--title,
+  .footer__element--titleespecial {
     font-size: 1.7rem;
-    font-family: "Lobster", cursive; }
+    font-family: "Ubuntu", sans-serif; }
   .footer__element--titleespecial {
     align-items: start; }
   .footer__element--text {
@@ -615,14 +380,14 @@ body {
     grid-area: copyright; } }
 
 @media (max-width: 767px) {
-  body {
+  .body--index {
     font-family: "Ubuntu", sans-serif;
     padding: 0%;
     margin: 0%;
     display: grid;
     flex-direction: column;
     grid-template-columns: auto;
-    grid-template-rows: 6% 50% 23%; }
+    grid-template-rows: 7% 110% 23%; }
   .main__img--banner {
     display: none !important; }
   .main__img--bannerphone {
@@ -634,35 +399,9 @@ body {
     display: grid;
     grid-template-rows: 20% 20% 38%;
     row-gap: 3%; }
-  .navbar {
-    display: grid;
-    grid-template-columns: 30% 40% 30%;
-    justify-items: center;
-    align-items: center;
-    background-color: var(--blancoespecial);
-    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.308);
-    border-radius: 5px;
-    border: 1px solid rgba(255, 255, 255, 0.25);
-    border-top: 1px solid rgba(255, 255, 255, 0.5);
-    border-left: 1px solid rgba(255, 255, 255, 0.5); }
-  .navbar__li--logo {
-    width: 80%;
-    position: relative;
-    left: 9%; }
-  .navbar__phone--burger,
-  .navbar__phone--cart {
-    width: 25%;
-    position: relative;
-    left: 40%; }
-  .navbar--shop,
-  .navbar--about,
-  .navbar--more,
-  .navbar--contact {
-    display: none; }
-  .navbar__burger,
-  .navbar__cart {
-    display: flex;
-    justify-items: center; }
+  .main__text--index {
+    padding: 4%;
+    text-align: center !important; }
   .title--section {
     font-size: 2.5rem;
     font-family: "Lobster", cursive;
@@ -751,13 +490,17 @@ body {
     color: var(--lila);
     font-family: "Ubuntu", sans-serif;
     font-size: 2.5rem; }
+  .section--minishop .minishop--imgleft,
+  .minishop--imgright {
+    width: 50%;
+    border-radius: 5%; }
   .minishop--subtitles {
     color: var(--blancoespecial);
     font-family: "Lobster", cursive;
     font-size: 1.5rem; }
   .footer {
     display: grid;
-    grid-template-areas: "redes redes" "redesdata redesdata"  "teldata maildata"    "copyright copyright";
+    grid-template-areas: "redes redes" "redesdata redesdata" "teldata maildata" "copyright copyright";
     grid-template-columns: 50% 50%;
     grid-template-rows: 25% 25% 25% 25%;
     background-color: rgba(253, 247, 247, 0.76);
@@ -809,60 +552,136 @@ body {
   .copyright {
     grid-area: copyright; } }
 
-html {
-  font-size: 62.5%;
-  box-sizing: border-box;
-  margin: 0 auto;
-  width: 98%; }
-
-@keyframes gradient {
-  0% {
-    background-position: 0% 50%; }
-  50% {
-    background-position: 100% 50%; }
-  100% {
-    background-position: 0% 50%; } }
-
-body {
-  background: linear-gradient(-45deg, #ee7750, #e73c7e, #23a6d5, #23d5ab);
-  background-size: 400% 400%;
-  animation: gradient 20s ease infinite;
-  background-attachment: fixed;
-  background-position: right 1%;
-  min-width: 100%;
-  font-family: "Ubuntu", sans-serif; }
-
 @media (min-width: 1024px) {
-  body {
+  .body--shop {
     padding: 0%;
     margin: 0%;
     display: grid;
     flex-direction: column;
     grid-template-columns: 100%;
-    grid-template-rows: 7% 100% 10%;
-    row-gap: 0%; }
-  .navbar {
-    display: grid;
-    grid-template-columns: 15% 15% 40% 15% 15%;
-    grid-template-rows: auto;
-    justify-items: center;
-    align-items: center;
-    background-color: var(--blancoespecial);
+    grid-template-rows: 5% 90% 15%;
+    row-gap: 3%; }
+  .section--filters {
+    background-color: rgba(26, 26, 26, 0.295);
     box-shadow: 0 15px 25px rgba(0, 0, 0, 0.288);
     border-radius: 10px; }
-    .navbar a {
-      list-style: none;
-      text-decoration: none;
-      font-family: "Ubuntu", sans-serif;
-      color: var(--lila);
-      font-size: 1.7rem; }
-      .navbar a img {
-        position: relative;
-        left: 35%; }
-  .navbar__li--logo {
-    width: 25%; }
-  .navbar__burger, .navbar__cart {
-    display: none; }
+  .btn--select {
+    background-color: rgba(255, 255, 255, 0.25);
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.288);
+    border-radius: 10px;
+    color: rgba(255, 255, 255, 0.5); }
+  .section--shop {
+    background-color: rgba(238, 238, 238, 0.295);
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.288);
+    border-radius: 10px; }
+    .section--shop article {
+      display: inline;
+      box-sizing: content-box; }
+  .card__shop {
+    box-sizing: content-box;
+    overflow: hidden;
+    width: 100%; }
+    .card__shop .card__product {
+      width: 100%;
+      border-radius: 5px; }
+  .main__img--banner {
+    overflow: hidden;
+    top: 0%;
+    z-index: -1;
+    width: 100%; }
+  .titles {
+    grid-area: titles;
+    font-family: "Lobster", cursive;
+    color: var(--blancoespecial);
+    margin: 10% 0%;
+    font-size: 4rem;
+    margin: 0%; }
+  .texts {
+    grid-area: texts;
+    color: #eee0e3;
+    font-family: "Ubuntu", sans-serif;
+    font-size: 2rem; }
+  .footer {
+    display: grid;
+    grid-template-areas: "redes     redes     redes" "redesdata teldata   maildata" "copyright copyright copyright";
+    grid-template-columns: 33% 33% 33%;
+    grid-template-rows: 25% 25% 25%;
+    background-color: rgba(253, 247, 247, 0.76);
+    justify-items: center;
+    align-items: center;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.05);
+    border-radius: 5px;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    border-top: 1px solid rgba(255, 255, 255, 0.5);
+    border-left: 1px solid rgba(255, 255, 255, 0.5); }
+  .footer__element--title,
+  .footer__element--titleespecial {
+    font-size: 1.7rem;
+    font-family: "Lobster", cursive; }
+  .footer__element--titleespecial {
+    align-items: start; }
+  .footer__element--text {
+    font-size: 2rem;
+    font-family: "Ubuntu", sans-serif; }
+  .medialinks a {
+    display: flex; }
+  .iconsmedia svg {
+    display: inline-flex;
+    width: 100px;
+    height: 100px; }
+  .redes {
+    grid-area: redes; }
+  .redesdata {
+    grid-area: redesdata; }
+  .mail {
+    grid-area: mail; }
+  .maildata {
+    grid-area: maildata; }
+  .tel {
+    grid-area: tel; }
+  .teldata {
+    grid-area: teldata; }
+  .copyright {
+    grid-area: copyright; } }
+
+@media (max-width: 767px) {
+  .body--shop {
+    padding: 0%;
+    margin: 0%;
+    display: grid;
+    flex-direction: column;
+    grid-template-columns: 100%;
+    grid-template-rows: 7% 95% 23%;
+    row-gap: 0%; }
+  .section--filters {
+    background-color: rgba(26, 26, 26, 0.295);
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.288);
+    border-radius: 10px; }
+  .section--shop {
+    background-color: rgba(238, 238, 238, 0.295);
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.288);
+    border-radius: 10px; }
+  .card__shop {
+    box-sizing: content-box;
+    overflow: hidden;
+    width: 100%; }
+    .card__shop .card__product {
+      width: 100%;
+      border-radius: 5px; }
+  .card__product {
+    width: 50%; }
+  .displayphone {
+    display: none; } }
+
+@media (min-width: 1024px) {
+  .body--about {
+    padding: 0%;
+    margin: 0%;
+    display: grid;
+    flex-direction: column;
+    grid-template-columns: 100%;
+    grid-template-rows: 7.5% 100% 10%;
+    row-gap: 0%; }
   .main__img--bannerphone {
     display: none !important; }
   .main__img--banner {
@@ -888,9 +707,8 @@ body {
   .main--about {
     display: grid;
     grid-template-columns: 100%;
-    grid-template-rows: 27% 6% 66%;
-    row-gap: 1%;
-    align-items: center; }
+    grid-template-rows: 24% 6% 66%;
+    row-gap: 1%; }
   .section--backgroundcolor {
     background-color: rgba(0, 0, 0, 0.05);
     border-radius: 10px; }
@@ -982,38 +800,14 @@ body {
     grid-area: copyright; } }
 
 @media (max-width: 767px) {
-  body {
+  .body--about {
     padding: 0%;
     margin: 0%;
     display: grid;
     flex-direction: column;
     grid-template-columns: 100%;
-    grid-template-rows: 6% 90% 24%;
+    grid-template-rows: 7.5% 96% 19%;
     row-gap: 0%; }
-  .navbar {
-    display: grid;
-    grid-template-columns: 35% 35% 30%;
-    justify-items: center;
-    align-items: center;
-    background-color: var(--blancoespecial);
-    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.308);
-    border-radius: 5px;
-    border: 1px solid rgba(255, 255, 255, 0.25);
-    border-top: 1px solid rgba(255, 255, 255, 0.5);
-    border-left: 1px solid rgba(255, 255, 255, 0.5); }
-  .navbar__li--logo {
-    width: 80%;
-    position: relative;
-    left: 10%; }
-  .navbar__phone--burger, .navbar__phone--cart {
-    width: 20%;
-    position: relative;
-    left: 40%; }
-  .navbar--shop, .navbar--about, .navbar--more, .navbar--contact {
-    display: none; }
-  .navbar__burger, .navbar__cart {
-    display: flex;
-    justify-items: center; }
   .main--about {
     display: grid;
     grid-template-columns: 100%;
@@ -1088,7 +882,7 @@ body {
     padding: 2%; }
   .footer {
     display: grid;
-    grid-template-areas: "redes redes" "redesdata redesdata"  "teldata maildata"    "copyright copyright";
+    grid-template-areas: "redes redes" "redesdata redesdata" "teldata maildata" "copyright copyright";
     grid-template-columns: 50% 50%;
     grid-template-rows: 25% 25% 25% 25%;
     background-color: rgba(253, 247, 247, 0.76);
@@ -1142,11 +936,137 @@ body {
   .copyright {
     grid-area: copyright; } }
 
-.section--minishop .minishop--imgleft, .minishop--imgright {
-  width: 50%;
-  border-radius: 5%; }
+@media (min-width: 1024px) {
+  .body--more {
+    padding: 0%;
+    margin: 0%;
+    display: grid;
+    flex-direction: column;
+    grid-template-columns: 100%;
+    grid-template-rows: 20% 70% 25%;
+    row-gap: 0%; }
+  .main--more {
+    display: flex;
+    align-items: center;
+    justify-content: center; }
+  .container__flag {
+    display: grid;
+    box-sizing: border-box;
+    grid-template-columns: 100%;
+    grid-template-rows: 25% 25% 25% 25%;
+    justify-items: center;
+    row-gap: 2%; }
+  .container__flag a {
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    padding: 10% 250%;
+    background-color: rgba(255, 255, 255, 0.25);
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.05);
+    border-radius: 10px;
+    backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-top: 1px solid rgba(255, 255, 255, 0.25); }
+  .flags {
+    width: 100%; }
+  .flags h2 {
+    font-size: 4rem;
+    font-family: "Lobster", cursive;
+    border-radius: 20px;
+    flex-wrap: nowrap; }
+  .titles {
+    grid-area: titles;
+    font-family: "Lobster", cursive;
+    color: var(--blancoespecial);
+    margin: 10% 0%;
+    font-size: 4rem;
+    margin: 0%; }
+  .texts {
+    grid-area: texts;
+    font-family: "Ubuntu", sans-serif;
+    color: #eee0e3;
+    margin: 10% 0%;
+    font-size: 2rem; }
+  .footer {
+    display: grid;
+    grid-template-areas: "redes     redes     redes" "redesdata teldata   maildata" "copyright copyright copyright";
+    grid-template-columns: 33% 33% 33%;
+    grid-template-rows: 25% 25% 25%;
+    background-color: rgba(253, 247, 247, 0.76);
+    justify-items: center;
+    align-items: center;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.05);
+    border-radius: 5px;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    border-top: 1px solid rgba(255, 255, 255, 0.5);
+    border-left: 1px solid rgba(255, 255, 255, 0.5); }
+  .footer__element--title,
+  .footer__element--titleespecial {
+    font-size: 1.7rem;
+    font-family: "Lobster", cursive; }
+  .footer__element--titleespecial {
+    align-items: start; }
+  .footer__element--text {
+    font-size: 2rem;
+    font-family: "Ubuntu", sans-serif; }
+  .medialinks a {
+    display: flex; }
+  .iconsmedia svg {
+    display: inline-flex;
+    width: 100px;
+    height: 100px; }
+  .redes {
+    grid-area: redes; }
+  .redesdata {
+    grid-area: redesdata; }
+  .mail {
+    grid-area: mail; }
+  .maildata {
+    grid-area: maildata; }
+  .tel {
+    grid-area: tel; }
+  .teldata {
+    grid-area: teldata; }
+  .copyright {
+    grid-area: copyright; } }
 
-.main__text--index {
-  text-align: center;
-  margin: 0% 0% 10% 0%;
-  padding: 4%; }
+@media (max-width: 767px) {
+  .body--more {
+    padding: 0%;
+    margin: 0%;
+    display: grid;
+    flex-direction: column;
+    grid-template-columns: 100%;
+    grid-template-rows: 25% 65% 65%;
+    row-gap: 9%; }
+  .main--more {
+    display: flex;
+    align-items: center;
+    justify-content: center; }
+  .container__flag {
+    display: grid;
+    box-sizing: border-box;
+    grid-template-columns: 100%;
+    grid-template-rows: 25% 25% 25% 25%;
+    justify-items: center;
+    row-gap: 2%; }
+  .container__flag a {
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    padding: 10% 100%;
+    background-color: rgba(255, 255, 255, 0.25);
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.05);
+    border-radius: 10px;
+    backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-top: 1px solid rgba(255, 255, 255, 0.25); }
+  .flags {
+    width: 100%; }
+  .flags h2 {
+    font-size: 4rem;
+    font-family: "Lobster", cursive;
+    border-radius: 20px;
+    flex-wrap: nowrap; } }

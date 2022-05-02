@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
@@ -20,35 +20,52 @@
 
 <body class="body--more">
     <header>
-        <nav class="navbar">
-            <a class="navbar--shop" href="../pages/shop.html">Tienda</a>
+        <nav class="navbar sticky-md-top fixed-top">
+            <a class="navbar--shop" href="../pages/shop.html">Shop!</a>
             <a class="navbar--about" href="../pages/about.html">Nosotros</a>
-            <a class="navbar__burger" href="../index.html">
-                <img class="navbar__phone--burger" src="../img/burger-icon.svg" alt="logo-de-inicio" width="50px">
-            </a>
+            <button class="navbar-toggler navbar__burger" type="button" data-bs-target="#collapse--navitems"
+                data-bs-toggle="collapse" aria-controls="collapse--navitems" aria-expanded="false"> <img
+                    class="navbar__phone--burger" src="../img/burger-icon.svg" alt="logo-de-inicio" width="50px">
+            </button>
             <a class="navbar__li--especial" href="../index.html">
                 <img class="navbar__li--logo" src="../img/linduras shop.svg" alt="logo-de-inicio">
             </a>
             <a class="navbar__cart" href="../index.html">
                 <img class="navbar__phone--cart" src="../img/cart-icon.svg" alt="logo-de-inicio" width="50px">
             </a>
-            <a class="navbar--more" href="../pages/more.html">More</a>
-            <a class="navbar--contact" href="../pages/contact.html">Contact</a>
+            <a class="navbar--more" href="../pages/more.html">Extras</a>
+            <a class="navbar--contact" href="../pages/contact.html">Contacto</a>
+            <div class="collapse navbar-collapse" id="collapse--navitems">
+                <ul class="navbar-nav me-auto mb-2 mb-md-0">
+                    <li class="nav-item p-5">
+                        <a class="nav-link" href="../pages/shop.html">Shop!</a>
+                    </li>
+                    <li class="nav-item p-5">
+                        <a class="nav-link" href="../pages/more.html">Extras</a>
+                    </li>
+                    <li class="nav-item p-5">
+                        <a class="nav-link" href="../pages/about.html">Nosotros</a>
+                    </li>
+                    <li class="nav-item p-5">
+                        <a class="nav-link" href="../pages/contact.html">Contact</a>
+                    </li>
+                </ul>
+            </div>
         </nav>
     </header>
     <main class="main--more container">
             <div class="container__flag">
                 <a class="flags" href="#">
-                    <h2>SORTEOS</h2>
+                    <h1 class="titles">SORTEOS</h1>
                 </a>
                 <a class="flags" href="#">
-                    <h2>LO NUEVO</h2>
+                    <h1 class="titles ">NOVEDADES</h1>
                 </a>
                 <a class="flags" href="#">
-                    <h2>REDES</h2>
+                    <h1 class="titles">REDES</h1>
                 </a>
                 <a class="flags" href="#">
-                    <h2>IDEAS</h2>
+                    <h1 class="titles">IDEAS</h1>
                 </a>
             </div>
     </main>
