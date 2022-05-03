@@ -1,13 +1,4 @@
-$style-desktop: (
-    titlesize: 4rem,
-    subtitlesize: 1.7rem,
-    textsize: 2rem,
-);
-$style-phone:(
-    titlesize-p: 2.5rem,
-    subtitlesize-p: 1.5rem,
-    textsize-p: 1.5rem
-);
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Lobster&family=Ubuntu:wght@300&display=swap');
 
 $title__font: 'Lobster', cursive;
 $titlesize__font: 4rem;
@@ -23,4 +14,17 @@ $textsize__font--phone: 1.5rem;
 
 $specialsize__font: 1.6rem;
 $specialsize__font--phone: 1.3rem;
+
+$fontsdesktop: (
+  'titlesize': 4rem,
+  'subtitlesize': 1.7rem,
+  'textsize': 2rem,
+  'text__font':'Ubuntu', sans-serif:\,
+);
+$style-phone:(
+    'titlesize-p': 2.5rem,
+    'subtitlesize-p': 1.5rem,
+    'textsize-p': 1.5rem
+);
+
 

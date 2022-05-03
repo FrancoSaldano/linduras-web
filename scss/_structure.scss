@@ -24,7 +24,7 @@ html {
     background-attachment: fixed;
     background-position: right 1%;
     min-width: 100%;
-    font-family: ($style-desktop ,text__font);
+    font-family: map-get($fontsdesktop ,'text__font');
     padding: 0%;
     margin: 0%;
 }
@@ -51,7 +51,7 @@ html {
         grid-template-rows: auto;
         justify-items: center;
         align-items: center;
-        background-color: map-get($colors,"blancoespecial");
+        background-color: map-get($colors, 'blancoespecial');
         box-shadow: 0 15px 25px rgba(0, 0, 0, 0.288);
         border-radius: 10px;
 
@@ -60,7 +60,7 @@ html {
             text-decoration: none;
             font-family: $text__font;
             color: map-get($colors,'lila');
-            font-size: map-get($style-desktop, 'subtitlesize');
+            font-size: map-get($fontsdesktop, 'subtitlesize');
 
             img {
                 position: relative;
@@ -90,7 +90,7 @@ html {
         align-items: center;
         box-shadow: 0 15px 35px rgba(0, 0, 0, 0.05);
         border-radius: 5px;
-        background-color: map-get($colors,"blancoespecial");
+        background-color: map-get($colors,'blancoespecial');
         border: 1px solid rgba(255, 255, 255, 0.25);
         border-top: 1px solid rgba(255, 255, 255, 0.5);
         border-left: 1px solid rgba(255, 255, 255, 0.5);
@@ -98,7 +98,7 @@ html {
 
     .footer__element--title,
     .footer__element--titleespecial {
-        font-size: map-get($style-desktop ,'subtitlesize');
+        font-size: map-get($fontsdesktop ,'subtitlesize');
         font-family: $text__font;
     }
 
@@ -107,7 +107,7 @@ html {
     }
 
     .footer__element--text {
-        font-size: map-get($style-desktop ,'textsize');
+        font-size: map-get($fontsdesktop ,'textsize');
         font-family: $text__font;
     }
 
@@ -157,7 +157,7 @@ html {
         grid-template-columns: 30% 40% 30%;
         justify-items: center;
         align-items: center;
-        background-color: map-get($colors,blancoespecial);
+        background-color: map-get($colors,'blancoespecial');
         box-shadow: 0 15px 35px rgba(0, 0, 0, 0.308);
         border-radius: 5px;
         border: 1px solid rgba(255, 255, 255, 0.25);
@@ -195,7 +195,7 @@ html {
         list-style: none;
         text-decoration: none;
         font-family: $text__font;
-        color: map-get($colors,lila);
+        color: map-get($colors,'lila');
         font-size: map-get($style-phone, subtitlesize-p);
     }
 
@@ -204,7 +204,7 @@ html {
         grid-area: titles;
         margin: 0%;
         font-family: $title__font;
-        color: map-get($colors,blancoespecial);
+        color: map-get($colors,'blancoespecial');
         font-size: map-get($style-phone ,titlesize-p);
     }
 
