@@ -754,7 +754,7 @@ html {
     grid-template-rows: 6.5% 90% 11%; }
   .main--shop {
     display: grid;
-    grid-template-rows: 30.5% 7% 60%;
+    grid-template-rows: 30.5% 7% 62%;
     grid-template-columns: 100%;
     row-gap: 1%; }
   .section--filters {
