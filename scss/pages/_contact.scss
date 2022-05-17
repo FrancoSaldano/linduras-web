@@ -4,7 +4,7 @@
 @media (min-width:1024px) {
     .body--contact {
         @include grid-column-gap(3%);
-        grid-template-rows: 15% 65% 20%;
+        grid-template-rows: 15% 70% 20%;
     }
 
     .section__form {
@@ -33,15 +33,6 @@
         border-radius: 10px;
         color: rgba(49, 49, 49, 0.9);
     }
-
-
-    .main__img--banner {
-        overflow: hidden;
-        top: 0%;
-        z-index: -1;
-        width: 100%;
-    }
-
 
     .main__text {
         margin: 0% 20% 30% 20%;
@@ -49,25 +40,72 @@
 
     .titles {
         grid-area: titles;
-        font-family: $title__font;
-        color: var(--blancoespecial);
+        font-family: map-get($style-desktop,text__font );
+        color: map-get($colors,blancoespecial);
         margin: 10% 0%;
-        font-size: $titlesize__font;
+        font-size: map-get($style-desktop ,titlesize);
         margin: 0%;
     }
 
     .texts {
         grid-area: texts;
-        font-family: $text__font;
+        font-family: map-get($style-desktop,text__font );
         color: #eee0e3;
         margin: 10% 0%;
-        font-size: $textsize__font;
+        font-size: map-get($style-desktop, textsize );
     }
 }
+@media (min-width:768px) and (max-width:1023px){
+    .body--contact {
+        @include grid-column-gap(3%);
+        grid-template-rows: 15% 65% 23%;
+    }
+    .section__form {
+        background-color: rgba(26, 26, 26, 0.295);
+        box-shadow: 0 15px 25px rgba(0, 0, 0, 0.363);
+        border-radius: 10px;
+    }
+    .btn--send {
+        background-color: rgba(255, 255, 255, 0.25);
+        box-shadow: 0 15px 25px rgba(0, 0, 0, 0.288);
+        border-radius: 10px;
+        color: rgba(255, 255, 255, 0.5);
+    }
 
+    .input--contact {
+        background-color: rgba(255, 255, 255, 0.25);
+        box-shadow: 0 15px 25px rgba(0, 0, 0, 0.288);
+        border-radius: 10px;
+        color: rgba(49, 49, 49, 0.9);
+    }
+    .textarea {
+        resize: vertical;
+        width: 100%;
+        max-height: 150px;
+        min-height: 90px;
+    }
+    
+    .titles {
+        grid-area: titles;
+        font-family: map-get($style-desktop,text__font );
+        color: map-get($colors,blancoespecial);
+        margin: 10% 0%;
+        font-size: map-get($style-tablet ,titlesize-t) !important;
+        margin: 0%;
+    }
+
+    .texts {
+        grid-area: texts;
+        font-family: map-get($style-desktop,text__font );
+        color: #eee0e3;
+        margin: 10% 0%;
+        font-size: map-get($style-tablet , textsize-p ) !important;
+    }
+}
 @media (max-width: 767px) {
     .body--contact {
-        grid-template-rows: 20% 75% 50%;
+        @include grid-column-gap(2%);
+        grid-template-rows: 20% 83% 35%;
     }
 
     .section__form {
@@ -96,5 +134,4 @@
         border-radius: 10px;
         color: rgba(49, 49, 49, 0.9);
     }
-
 }

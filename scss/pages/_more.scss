@@ -4,7 +4,7 @@
 @media (min-width:1024px) {
     .body--more {
         @include grid-column-gap--0;
-        grid-template-rows: 20% 70% 25%;
+        grid-template-rows: 20% 70% 30%;
     }
     .main--more {
         display: flex;
@@ -39,104 +39,87 @@
         width: 100%;
     }
     .flags h1 {
-        font-size: $titlesize__font;
-        font-family: $title__font;
-        border-radius: 20px;
         flex-wrap: nowrap;
+        border-radius: 20px;
+        font-family: $title__font;
+        font-size: map-get($style-desktop, titlesize );
     }
     .titles {
         grid-area: titles;
-        font-family: $title__font;
-        color: var(--blancoespecial);
         margin: 10% 0%;
-        font-size: $titlesize__font;
         margin: 0%;
+        font-family: $title__font;
+        font-size: map-get($style-desktop,titlesize );
+        color: map-get($colors, blancoespecial );
     }
 
     .texts {
         grid-area: texts;
-        font-family: $text__font;
-        color: #eee0e3;
         margin: 10% 0%;
-        font-size: $textsize__font;
+        color: #eee0e3;
+        font-family: $text__font map-get($style-desktop , text__font);
+        font-size:  map-get($style-desktop , textsize );
     }
 
-    .footer {
+}
+@media (min-width:768px) and (max-width:1023px){
+    .body--more {
+        @include grid-column-gap--0;
+        grid-template-rows: 17% 70% 25%;
+    }
+    .container__flag {
         display: grid;
-        grid-template-areas:
-            "redes     redes     redes"
-            "redesdata teldata   maildata"
-            "copyright copyright copyright";
-        grid-template-columns: 33% 33% 33%;
-        grid-template-rows: 25% 25% 25%;
-        background-color: rgba(253, 247, 247, 0.76);
+        box-sizing: border-box;
+        grid-template-columns: 100%;
+        grid-template-rows: 25% 25% 25% 25%;
         justify-items: center;
-        align-items: center;
-        box-shadow: 0 15px 35px rgba(0, 0, 0, 0.05);
-        border-radius: 5px;
-        border: 1px solid rgba(255, 255, 255, 0.25);
-        border-top: 1px solid rgba(255, 255, 255, 0.5);
-        border-left: 1px solid rgba(255, 255, 255, 0.5);
+        row-gap: 2%;
     }
-
-    .footer__element--title,
-    .footer__element--titleespecial {
-        font-size: $subtitlesize__font;
-        font-family: $subtitle__font;
-    }
-
-    .footer__element--titleespecial {
-        align-items: start;
-    }
-
-    .footer__element--text {
-        font-size: $textsize__font;
-        font-family: $text__font;
-    }
-
-    .medialinks a {
+    
+    .container__flag a {
+        text-decoration: none;
         display: flex;
+        justify-content: center;
+        align-items: stretch;
+        padding: 6% 50%;
+        background-color: rgba(255, 255, 255, 0.25);
+        box-shadow: 0 15px 25px rgba(0, 0, 0, 0.05);
+        border-radius: 10px;
+        backdrop-filter: blur(15px);
+        border: 1px solid rgba(255, 255, 255, 0.5);
+        border-top: 1px solid rgba(255, 255, 255, 0.25);
+
+    }
+    .flags{
+        width: 100%;
+    }
+    .flags h1 {
+        flex-wrap: nowrap;
+        border-radius: 20px;
+        font-family: $title__font;
+        font-size: $titlesize__font map-get($style-tablet, title-t);
+    }
+    .titles {
+        grid-area: titles;
+        margin: 0%;
+        font-family: $title__font;
+        color: map-get($colors, blancoespecial );
+        font-size: map-get($style-tablet, titlesize-t );
     }
 
-    .iconsmedia svg {
-        display: inline-flex;
-        width: 100px;
-        height: 100px;
-    }
-
-    .redes {
-        grid-area: redes;
-    }
-
-    .redesdata {
-        grid-area: redesdata;
-    }
-
-    .mail {
-        grid-area: mail;
-    }
-
-    .maildata {
-        grid-area: maildata;
-    }
-
-    .tel {
-        grid-area: tel;
-    }
-
-    .teldata {
-        grid-area: teldata;
-    }
-
-    .copyright {
-        grid-area: copyright
+    .texts {
+        grid-area: texts;
+        margin: 10% 0%;
+        color: #eee0e3;
+        font-family: map-get($style-desktop,text__font );
+        font-size: $textsize__font map-get($style-tablet,textsize-t );
     }
 
 }
 @media (max-width: 767px) {
     .body--more {
         @include grid-column-gap(9%);
-        grid-template-rows: 25% 75% 75%;
+        grid-template-rows: 25% 75% 65%;
     }
     
     .main--more {
@@ -149,8 +132,8 @@
         box-sizing: border-box;
         grid-template-columns: 100%;
         grid-template-rows: 25% 25% 25% 25%;
-        justify-items: center;
         row-gap: 2%;
+        justify-items: center;
     }
 
     .container__flag a {
@@ -171,10 +154,10 @@
         width: 100%;
     }
     .flags h1 {
-        font-size: $titlesize__font;
-        font-family: $title__font;
-        border-radius: 20px;
         flex-wrap: nowrap;
+        border-radius: 20px;
+        font-family: $title__font;
+        font-size: $titlesize__font map-get($style-phone, titlesize-p );
     }
 
 }

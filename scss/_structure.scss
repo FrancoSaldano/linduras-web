@@ -24,7 +24,7 @@ html {
     background-attachment: fixed;
     background-position: right 1%;
     min-width: 100%;
-    font-family: map-get($fontsdesktop ,'text__font');
+    font-family: map-get($style-desktop ,'text__font');
     padding: 0%;
     margin: 0%;
 }
@@ -60,7 +60,7 @@ html {
             text-decoration: none;
             font-family: $text__font;
             color: map-get($colors,'lila');
-            font-size: map-get($fontsdesktop, 'subtitlesize');
+            font-size: map-get($style-desktop, 'subtitlesize');
 
             img {
                 position: relative;
@@ -98,7 +98,7 @@ html {
 
     .footer__element--title,
     .footer__element--titleespecial {
-        font-size: map-get($fontsdesktop ,'subtitlesize');
+        font-size: map-get($style-desktop ,'subtitlesize');
         font-family: $text__font;
     }
 
@@ -106,19 +106,20 @@ html {
         align-items: start;
     }
 
-    .footer__element--text {
-        font-size: map-get($fontsdesktop ,'textsize');
+    a.footer__element--text {
+        font-size: map-get($style-desktop ,'textsize');
         font-family: $text__font;
+        text-decoration: none;
     }
 
     .medialinks a {
         display: flex;
     }
 
-    .iconsmedia svg {
+    .iconsmedia svg{
         display: inline-flex;
-        width: 100px;
-        height: 100px;
+        width: 120px;
+        height: 120px;
     }
 
     .redes {
@@ -150,7 +151,113 @@ html {
     }
 
 }
+@media (min-width:768px) and (max-width:1023px){
+    .navbar {
+        display: grid;
+        grid-template-columns: 15% 15% 40% 15% 15%;
+        grid-template-rows: auto;
+        justify-items: center;
+        align-items: center;
+        background-color: map-get($colors, blancoespecial);
+        box-shadow: 0 15px 25px rgba(0, 0, 0, 0.288);
+        border-radius: 10px;
 
+        a {
+            list-style: none;
+            text-decoration: none;
+            font-family: map-get($style-desktop,text__font);
+            color: map-get($colors,lila);
+            font-size: map-get($style-tablet, subtitlesize-t);
+
+            img {
+                position: relative;
+                left: 38%;
+            }
+        }
+    }
+
+    .navbar__li--logo {
+        width: 30%;
+    }
+
+    .navbar__burger,
+    .navbar__cart {
+        display: none;
+    }
+
+    .footer {
+        display: grid;
+        grid-template-areas:
+            "redes     redes     redes"
+            "redesdata teldata   maildata"
+            "copyright copyright copyright";
+        grid-template-columns: 33% 33% 33%;
+        grid-template-rows: 25% 25% 25%;
+        justify-items: center;
+        align-items: center;
+        box-shadow: 0 15px 35px rgba(0, 0, 0, 0.05);
+        border-radius: 5px;
+        background-color: map-get($colors,'blancoespecial');
+        border: 1px solid rgba(255, 255, 255, 0.25);
+        border-top: 1px solid rgba(255, 255, 255, 0.5);
+        border-left: 1px solid rgba(255, 255, 255, 0.5);
+    }
+
+    .footer__element--title,
+    .footer__element--titleespecial {
+        font-size: map-get($style-tablet ,subtitlesize-t);
+        font-family: map-get($style-desktop, text__font);
+    }
+
+    .footer__element--titleespecial {
+        align-items: start;
+    }
+
+    a.footer__element--text {
+        font-size: map-get($style-tablet ,textsize-t);
+        font-family: map-get($style-desktop, text__font);
+        text-decoration: none;
+    }
+
+    .medialinks a {
+        display: flex;
+    }
+
+    .iconsmedia svg {
+        display: inline-flex;
+        width: 120px;
+        height: 120px;
+    }
+
+    .redes {
+        grid-area: redes;
+    }
+
+    .redesdata {
+        grid-area: redesdata;
+    }
+
+    .mail {
+        grid-area: mail;
+    }
+
+    .maildata {
+        grid-area: maildata;
+    }
+
+    .tel {
+        grid-area: tel;
+    }
+
+    .teldata {
+        grid-area: teldata;
+    }
+
+    .copyright {
+        grid-area: copyright
+    }
+
+}
 @media (max-width: 767px) {
     .navbar {
         display: grid;
@@ -195,7 +302,7 @@ html {
         list-style: none;
         text-decoration: none;
         font-family: $text__font;
-        color: map-get($colors,'lila');
+        color: map-get($colors,lila);
         font-size: map-get($style-phone, subtitlesize-p);
     }
 
@@ -204,7 +311,7 @@ html {
         grid-area: titles;
         margin: 0%;
         font-family: $title__font;
-        color: map-get($colors,'blancoespecial');
+        color: map-get($colors,blancoespecial);
         font-size: map-get($style-phone ,titlesize-p);
     }
 
@@ -212,7 +319,83 @@ html {
         grid-area: texts;
         margin: 10% 0%;
         color:  map-get($colors, text__color);
-        font-family: $text__font;
+        font-family: map-get($style-desktop, text__font);
         font-size: map-get($style-phone ,textsize-p);
     }
+    .footer {
+        display: grid;
+        grid-template-areas:
+            "redes     redes"
+            "redesdata redesdata"
+            "teldata   maildata"
+            "copyright copyright";
+        grid-template-columns: 50% 50%;
+        grid-template-rows: 25% 25% 25% 25%;
+        justify-items: center;
+        align-items: center;
+        box-shadow: 0 15px 35px rgba(0, 0, 0, 0.05);
+        border-radius: 5px;
+        background-color: map-get($colors,blancoespecial);
+        border: 1px solid rgba(255, 255, 255, 0.25);
+        border-top: 1px solid rgba(255, 255, 255, 0.5);
+        border-left: 1px solid rgba(255, 255, 255, 0.5);
+    }
+
+    .footer__element--title {
+        font-size: map-get($style-phone ,subtitlesize-p);
+        font-family: map-get($style-desktop, text__font );
+    }
+    .footer__element--titleespecial{
+        font-size: map-get($style-phone ,subtitlesize-p);
+        font-family: map-get($style-desktop, text__font );
+        align-items: start;
+    }
+
+    a.footer__element--text {
+        text-decoration: none;
+        font-size: map-get($style-phone ,textsize-p);
+        font-family: map-get($style-desktop, text__font );
+    }
+
+    .medialinks a {
+        display: flex;
+    }
+
+    .iconsmedia svg {
+        display: inline-flex;
+        width: 80px;
+        height: 80px;
+    }
+
+    .redes {
+        grid-area: redes;
+    }
+
+    .redesdata {
+        grid-area: redesdata;
+    }
+
+    .mail {
+        grid-area: mail;
+    }
+
+    .maildata {
+        position: relative;
+        right: 10%;
+        grid-area: maildata;
+    }
+
+    .tel {
+        grid-area: tel;
+    }
+
+    .teldata {
+        grid-area: teldata;
+    }
+
+    .copyright {
+        grid-area: copyright
+    }
+
+
 }

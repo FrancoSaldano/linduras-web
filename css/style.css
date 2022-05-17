@@ -4,6 +4,21 @@
   --blancoespecial: rgba(253, 247, 247, 0.9);
   --rosita: #eee0e3; }
 
+lila #be99d4 {
+  color: lila #be99d4; }
+
+blancoespecial rgba(253, 247, 247, 0.9) {
+  color: blancoespecial rgba(253, 247, 247, 0.9); }
+
+text__color #eee0e3 {
+  color: text__color #eee0e3; }
+
+grisespecial rgba(65, 65, 65, 0.25) {
+  color: grisespecial rgba(65, 65, 65, 0.25); }
+
+transparente rgba(0, 0, 0, 0) {
+  color: transparente rgba(0, 0, 0, 0); }
+
 html {
   font-size: 62.5%;
   box-sizing: border-box;
@@ -72,15 +87,84 @@ html {
     font-family: "Ubuntu", sans-serif; }
   .footer__element--titleespecial {
     align-items: start; }
-  .footer__element--text {
+  a.footer__element--text {
     font-size: 2rem;
-    font-family: "Ubuntu", sans-serif; }
+    font-family: "Ubuntu", sans-serif;
+    text-decoration: none; }
   .medialinks a {
     display: flex; }
   .iconsmedia svg {
     display: inline-flex;
-    width: 100px;
-    height: 100px; }
+    width: 120px;
+    height: 120px; }
+  .redes {
+    grid-area: redes; }
+  .redesdata {
+    grid-area: redesdata; }
+  .mail {
+    grid-area: mail; }
+  .maildata {
+    grid-area: maildata; }
+  .tel {
+    grid-area: tel; }
+  .teldata {
+    grid-area: teldata; }
+  .copyright {
+    grid-area: copyright; } }
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .navbar {
+    display: grid;
+    grid-template-columns: 15% 15% 40% 15% 15%;
+    grid-template-rows: auto;
+    justify-items: center;
+    align-items: center;
+    background-color: rgba(253, 247, 247, 0.9);
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.288);
+    border-radius: 10px; }
+    .navbar a {
+      list-style: none;
+      text-decoration: none;
+      font-family: "Ubuntu";
+      color: #be99d4;
+      font-size: 1.55rem; }
+      .navbar a img {
+        position: relative;
+        left: 38%; }
+  .navbar__li--logo {
+    width: 30%; }
+  .navbar__burger,
+  .navbar__cart {
+    display: none; }
+  .footer {
+    display: grid;
+    grid-template-areas: "redes     redes     redes" "redesdata teldata   maildata" "copyright copyright copyright";
+    grid-template-columns: 33% 33% 33%;
+    grid-template-rows: 25% 25% 25%;
+    justify-items: center;
+    align-items: center;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.05);
+    border-radius: 5px;
+    background-color: rgba(253, 247, 247, 0.9);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    border-top: 1px solid rgba(255, 255, 255, 0.5);
+    border-left: 1px solid rgba(255, 255, 255, 0.5); }
+  .footer__element--title,
+  .footer__element--titleespecial {
+    font-size: 1.55rem;
+    font-family: "Ubuntu"; }
+  .footer__element--titleespecial {
+    align-items: start; }
+  a.footer__element--text {
+    font-size: 1.55rem;
+    font-family: "Ubuntu";
+    text-decoration: none; }
+  .medialinks a {
+    display: flex; }
+  .iconsmedia svg {
+    display: inline-flex;
+    width: 120px;
+    height: 120px; }
   .redes {
     grid-area: redes; }
   .redesdata {
@@ -131,19 +215,65 @@ html {
     text-decoration: none;
     font-family: "Ubuntu", sans-serif;
     color: #be99d4;
-    font-size: 1.5rem; }
+    font-size: 1.45rem; }
   .titles {
     grid-area: titles;
     margin: 0%;
     font-family: "Lobster", cursive;
     color: rgba(253, 247, 247, 0.9);
-    font-size: 2.5rem; }
+    font-size: 2.7rem; }
   .texts {
     grid-area: texts;
     margin: 10% 0%;
     color: #eee0e3;
-    font-family: "Ubuntu", sans-serif;
-    font-size: 1.5rem; } }
+    font-family: "Ubuntu";
+    font-size: 1.45rem; }
+  .footer {
+    display: grid;
+    grid-template-areas: "redes     redes" "redesdata redesdata" "teldata   maildata" "copyright copyright";
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 25% 25% 25% 25%;
+    justify-items: center;
+    align-items: center;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.05);
+    border-radius: 5px;
+    background-color: rgba(253, 247, 247, 0.9);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    border-top: 1px solid rgba(255, 255, 255, 0.5);
+    border-left: 1px solid rgba(255, 255, 255, 0.5); }
+  .footer__element--title {
+    font-size: 1.45rem;
+    font-family: "Ubuntu"; }
+  .footer__element--titleespecial {
+    font-size: 1.45rem;
+    font-family: "Ubuntu";
+    align-items: start; }
+  a.footer__element--text {
+    text-decoration: none;
+    font-size: 1.45rem;
+    font-family: "Ubuntu"; }
+  .medialinks a {
+    display: flex; }
+  .iconsmedia svg {
+    display: inline-flex;
+    width: 80px;
+    height: 80px; }
+  .redes {
+    grid-area: redes; }
+  .redesdata {
+    grid-area: redesdata; }
+  .mail {
+    grid-area: mail; }
+  .maildata {
+    position: relative;
+    right: 10%;
+    grid-area: maildata; }
+  .tel {
+    grid-area: tel; }
+  .teldata {
+    grid-area: teldata; }
+  .copyright {
+    grid-area: copyright; } }
 
 @media (min-width: 1024px) {
   .body--contact {
@@ -151,7 +281,7 @@ html {
     flex-direction: column;
     grid-template-columns: 100%;
     row-gap: 3%;
-    grid-template-rows: 15% 65% 20%; }
+    grid-template-rows: 15% 70% 20%; }
   .section__form {
     background-color: rgba(26, 26, 26, 0.295);
     box-shadow: 0 15px 25px rgba(0, 0, 0, 0.363);
@@ -171,30 +301,69 @@ html {
     box-shadow: 0 15px 25px rgba(0, 0, 0, 0.288);
     border-radius: 10px;
     color: rgba(49, 49, 49, 0.9); }
-  .main__img--banner {
-    overflow: hidden;
-    top: 0%;
-    z-index: -1;
-    width: 100%; }
   .main__text {
     margin: 0% 20% 30% 20%; }
   .titles {
     grid-area: titles;
-    font-family: "Lobster", cursive;
-    color: var(--blancoespecial);
+    font-family: "Ubuntu";
+    color: rgba(253, 247, 247, 0.9);
     margin: 10% 0%;
     font-size: 4rem;
     margin: 0%; }
   .texts {
     grid-area: texts;
-    font-family: "Ubuntu", sans-serif;
+    font-family: "Ubuntu";
     color: #eee0e3;
     margin: 10% 0%;
     font-size: 2rem; } }
 
+@media (min-width: 768px) and (max-width: 1023px) {
+  .body--contact {
+    display: grid;
+    flex-direction: column;
+    grid-template-columns: 100%;
+    row-gap: 3%;
+    grid-template-rows: 15% 65% 23%; }
+  .section__form {
+    background-color: rgba(26, 26, 26, 0.295);
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.363);
+    border-radius: 10px; }
+  .btn--send {
+    background-color: rgba(255, 255, 255, 0.25);
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.288);
+    border-radius: 10px;
+    color: rgba(255, 255, 255, 0.5); }
+  .input--contact {
+    background-color: rgba(255, 255, 255, 0.25);
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.288);
+    border-radius: 10px;
+    color: rgba(49, 49, 49, 0.9); }
+  .textarea {
+    resize: vertical;
+    width: 100%;
+    max-height: 150px;
+    min-height: 90px; }
+  .titles {
+    grid-area: titles;
+    font-family: "Ubuntu";
+    color: rgba(253, 247, 247, 0.9);
+    margin: 10% 0%;
+    font-size: 3.6rem !important;
+    margin: 0%; }
+  .texts {
+    grid-area: texts;
+    font-family: "Ubuntu";
+    color: #eee0e3;
+    margin: 10% 0%;
+    font-size: !important; } }
+
 @media (max-width: 767px) {
   .body--contact {
-    grid-template-rows: 20% 75% 50%; }
+    display: grid;
+    flex-direction: column;
+    grid-template-columns: 100%;
+    row-gap: 2%;
+    grid-template-rows: 20% 83% 35%; }
   .section__form {
     background-color: rgba(26, 26, 26, 0.295);
     box-shadow: 0 15px 25px rgba(0, 0, 0, 0.363);
@@ -221,7 +390,7 @@ html {
     flex-direction: column;
     grid-template-columns: 100%;
     row-gap: 0%;
-    grid-template-rows: 7% 90% 10%; }
+    grid-template-rows: 7% 90% 8%; }
   .main__img--banner {
     position: block;
     width: 100%;
@@ -275,6 +444,9 @@ html {
       border-left: 1px solid rgba(255, 255, 255, 0.25); }
       .minishop__container .card:hover .imgBx img {
         transform: translate(0px, -30px); }
+      .minishop__container .card:hover .minishop--subtitles {
+        transform: translate(0px, -15px);
+        color: rgba(253, 247, 247, 0.9); }
       .minishop__container .card .imgBx {
         position: relative;
         width: 100%;
@@ -292,21 +464,28 @@ html {
     top: -20px;
     display: inline-block;
     padding: 3% 6%;
-    background-color: rgba(255, 255, 255, 0.342);
+    background-color: rgba(65, 65, 65, 0.25);
     backdrop-filter: blur(2px);
     border-radius: 3px;
     box-shadow: 0 15px 25px rgba(0, 0, 0, 0.05);
     text-decoration: none;
     text-transform: uppercase;
+    color: rgba(253, 247, 247, 0.9);
     font-size: 2rem;
-    font-family: "Ubuntu", sans-serif; }
+    font-family: "Lobster", cursive;
+    transition: all 150ms ease-out; }
+    .minishop__container .card a:hover {
+      background-color: rgba(253, 247, 247, 0.9);
+      color: #be99d4;
+      letter-spacing: 0.5rem; }
   .section--minishop .minishop--imgleft,
   .minishop--imgright {
     width: 50%;
     border-radius: 5%; }
   .minishop--subtitles {
-    color: rgba(253, 247, 247, 0.9);
+    transition: 0.5s ease-in-out;
     font-family: "Lobster", cursive;
+    color: rgba(0, 0, 0, 0);
     font-size: 1.7rem; }
   .titles {
     grid-area: titles;
@@ -321,56 +500,136 @@ html {
     font-family: "Ubuntu", sans-serif;
     color: #eee0e3;
     margin: 10% 0%;
-    font-size: 2rem; }
-  .footer {
+    font-size: 2rem; } }
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .body--index {
     display: grid;
-    grid-template-areas: "redes     redes     redes" "redesdata teldata   maildata" "copyright copyright copyright";
-    grid-template-columns: 33% 33% 33%;
-    grid-template-rows: 25% 25% 25%;
-    background-color: rgba(253, 247, 247, 0.76);
-    justify-items: center;
+    flex-direction: column;
+    grid-template-columns: 100%;
+    row-gap: 1%;
+    grid-template-rows: 3% 95% 5.5%; }
+  .main__img--banner {
+    position: block;
+    width: 100%;
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.26);
+    border-radius: 10px; }
+  .main__img--bannerphone {
+    display: none !important; }
+  .main--index {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 11% 13% 33%;
+    gap: 1%; }
+  .main__text--index {
+    padding: 4%;
+    text-align: center !important; }
+  .title--section {
+    font-size: 3.6rem;
+    font-family: "Lobster", cursive;
+    color: rgba(253, 247, 247, 0.9);
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+  .main__minishop {
+    display: flex;
+    flex-direction: column;
+    align-items: center; }
+  .section--minishop {
+    display: flex;
+    justify-content: space-around;
     align-items: center;
-    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.05);
-    border-radius: 5px;
-    border: 1px solid rgba(255, 255, 255, 0.25);
-    border-top: 1px solid rgba(255, 255, 255, 0.5);
-    border-left: 1px solid rgba(255, 255, 255, 0.5); }
-  .footer__element--title,
-  .footer__element--titleespecial {
-    font-size: 1.7rem;
-    font-family: "Ubuntu", sans-serif; }
-  .footer__element--titleespecial {
-    align-items: start; }
-  .footer__element--text {
-    font-size: 2rem;
-    font-family: "Ubuntu", sans-serif; }
-  .medialinks a {
-    display: flex; }
-  .iconsmedia svg {
+    margin-top: 1%;
+    flex-wrap: wrap; }
+  .minishop__container {
+    position: relative;
     display: inline-flex;
-    width: 100px;
-    height: 100px; }
-  .redes {
-    grid-area: redes; }
-  .redesdata {
-    grid-area: redesdata; }
-  .mail {
-    grid-area: mail; }
-  .maildata {
-    grid-area: maildata; }
-  .tel {
-    grid-area: tel; }
-  .teldata {
-    grid-area: teldata; }
-  .copyright {
-    grid-area: copyright; } }
+    justify-content: center;
+    align-items: center; }
+    .minishop__container .card {
+      position: relative;
+      width: 300px;
+      height: 400px;
+      padding-top: 5%;
+      margin: 100px 100px 80px 100px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      background-color: rgba(255, 255, 255, 0.25);
+      box-shadow: 0 15px 25px rgba(0, 0, 0, 0.05);
+      border-radius: 10px;
+      backdrop-filter: blur(15px);
+      border: 1px solid rgba(255, 255, 255, 0.5);
+      border-top: 1px solid rgba(255, 255, 255, 0.25);
+      border-left: 1px solid rgba(255, 255, 255, 0.25); }
+      .minishop__container .card:hover .imgBx img {
+        transform: translate(0px, -30px); }
+      .minishop__container .card:hover .minishop--subtitles {
+        transform: translate(0px, -15px);
+        color: rgba(253, 247, 247, 0.9); }
+      .minishop__container .card .imgBx {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column; }
+        .minishop__container .card .imgBx img {
+          max-width: 100%;
+          position: relative;
+          transition: 0.5s ease-in-out; }
+  .minishop__container .card a {
+    position: relative;
+    top: -20px;
+    display: inline-block;
+    padding: 3% 6%;
+    background-color: rgba(65, 65, 65, 0.25);
+    backdrop-filter: blur(2px);
+    border-radius: 3px;
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.05);
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 1.55rem;
+    color: rgba(253, 247, 247, 0.9);
+    font-family: "Lobster", cursive;
+    transition: all 150ms ease-out; }
+    .minishop__container .card a:hover {
+      background-color: rgba(253, 247, 247, 0.9);
+      color: #be99d4;
+      letter-spacing: 0.5rem; }
+  .section--minishop .minishop--imgleft,
+  .minishop--imgright {
+    width: 50%;
+    border-radius: 5%; }
+  .minishop--subtitles {
+    transition: 0.5s ease-in-out;
+    color: rgba(0, 0, 0, 0);
+    font-family: "Lobster", cursive;
+    font-size: 1.55rem; }
+  .titles {
+    grid-area: titles;
+    margin: 10% 0%;
+    margin: 0%;
+    justify-content: center;
+    align-items: center;
+    color: rgba(253, 247, 247, 0.9);
+    font-family: "Lobster", cursive;
+    font-size: 3.6rem; }
+  .texts {
+    grid-area: texts;
+    font-family: "Ubuntu";
+    color: #eee0e3;
+    margin: 10% 0%;
+    font-size: 1.55rem; } }
 
 @media (max-width: 767px) {
   .body--index {
     display: grid;
     flex-direction: column;
     grid-template-columns: auto;
-    grid-template-rows: 7% 110% 23%; }
+    grid-template-rows: 7% 105% 10%; }
   .main__img--banner {
     display: none !important; }
   .main__img--bannerphone {
@@ -380,15 +639,15 @@ html {
     border-radius: 10px; }
   .main--index {
     display: grid;
-    grid-template-rows: 20% 20% 38%;
+    grid-template-rows: 17% 20% 38%;
     row-gap: 3%; }
   .main__text--index {
     padding: 4%;
     text-align: center !important; }
   .title--section {
-    font-size: 2.5rem;
+    font-size: 2.7rem;
     font-family: "Lobster", cursive;
-    color: var(--blancoespecial);
+    color: rgba(253, 247, 247, 0.9);
     display: flex;
     justify-content: center;
     text-align: center;
@@ -398,14 +657,14 @@ html {
     grid-area: titles;
     font-family: "Lobster", cursive;
     margin: 0%;
-    color: var(--blancoespecial);
-    font-size: 2.5rem; }
+    color: rgba(253, 247, 247, 0.9);
+    font-size: 2.7rem; }
   .texts {
     grid-area: texts;
     margin: 10% 0%;
     color: #eee0e3;
-    font-family: "Ubuntu", sans-serif;
-    font-size: 1.5rem; }
+    font-family: "Ubuntu", sans-serif "Ubuntu";
+    font-size: 1.45rem; }
   .main__minishop {
     display: flex;
     flex-direction: column;
@@ -445,6 +704,11 @@ html {
       border: 1px solid rgba(255, 255, 255, 0.5);
       border-top: 1px solid rgba(255, 255, 255, 0.25);
       border-left: 1px solid rgba(255, 255, 255, 0.25); }
+      .minishop__container .card:hover .imgBx img {
+        transform: translate(0px, -30px); }
+      .minishop__container .card:hover .minishop--subtitles {
+        transform: translate(0px, -15px);
+        color: rgba(253, 247, 247, 0.9); }
       .minishop__container .card .imgBx {
         position: relative;
         width: 100%;
@@ -457,83 +721,29 @@ html {
           max-width: 90%;
           position: relative;
           transition: 0.5s ease-in-out; }
-  .minishop__container .card:hover .imgBx img {
-    transform: translate(0px, -20px); }
   .minishop__container .card a {
     position: relative;
     top: -20px;
     display: inline-block;
     padding: 3% 6%;
-    background-color: rgba(255, 255, 255, 0.842);
+    background-color: rgba(65, 65, 65, 0.25);
     backdrop-filter: blur(2px);
     border-radius: 3px;
     text-decoration: none;
     box-shadow: 0 15px 25px rgba(0, 0, 0, 0.05);
     text-transform: uppercase;
-    color: var(--lila);
-    font-family: "Ubuntu", sans-serif;
-    font-size: 2.5rem; }
+    color: rgba(253, 247, 247, 0.9);
+    font-family: "Lobster", cursive;
+    font-size: 1.45rem; }
   .section--minishop .minishop--imgleft,
   .minishop--imgright {
     width: 50%;
     border-radius: 5%; }
   .minishop--subtitles {
-    color: var(--blancoespecial);
+    transition: 0.5s ease-in-out;
     font-family: "Lobster", cursive;
-    font-size: 1.5rem; }
-  .footer {
-    display: grid;
-    grid-template-areas: "redes redes" "redesdata redesdata" "teldata maildata" "copyright copyright";
-    grid-template-columns: 50% 50%;
-    grid-template-rows: 25% 25% 25% 25%;
-    background-color: rgba(253, 247, 247, 0.76);
-    height: 50%;
-    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.575);
-    border-radius: 5px;
-    border: 1px solid rgba(255, 255, 255, 0.25);
-    border-top: 1px solid rgba(255, 255, 255, 0.5);
-    border-left: 1px solid rgba(255, 255, 255, 0.5); }
-  .footer__element--title {
-    display: flex;
-    margin: 0%;
-    justify-items: flex-start;
-    align-items: center;
-    font-family: "Lobster", cursive;
-    font-size: 1.5rem; }
-  .footer__element--titleespecial {
-    text-align: center;
-    align-items: center;
-    font-size: 1.5rem;
-    font-family: "Lobster", cursive; }
-  .medialinks a {
-    display: flex; }
-  .iconsmedia svg {
-    display: inline-flex;
-    width: 70px;
-    height: 70px; }
-  .redesdata {
-    display: flex;
-    justify-content: space-between; }
-  .footer__element--text {
-    display: flex;
-    text-align: center;
-    align-items: center;
-    font-size: 1.5rem;
-    font-family: "Ubuntu", sans-serif; }
-  .redes {
-    grid-area: redes; }
-  .redesdata {
-    grid-area: redesdata; }
-  .mail {
-    grid-area: mail; }
-  .maildata {
-    grid-area: maildata; }
-  .tel {
-    grid-area: tel; }
-  .teldata {
-    grid-area: teldata; }
-  .copyright {
-    grid-area: copyright; } }
+    color: rgba(0, 0, 0, 0);
+    font-size: 1.45rem; } }
 
 @media (min-width: 1024px) {
   .body--shop {
@@ -541,7 +751,12 @@ html {
     flex-direction: column;
     grid-template-columns: 100%;
     row-gap: 3%;
-    grid-template-rows: 5% 90% 15%; }
+    grid-template-rows: 6.5% 90% 11%; }
+  .main--shop {
+    display: grid;
+    grid-template-rows: 30.5% 7% 60%;
+    grid-template-columns: 100%;
+    row-gap: 1%; }
   .section--filters {
     background-color: rgba(26, 26, 26, 0.295);
     box-shadow: 0 15px 25px rgba(0, 0, 0, 0.288);
@@ -573,69 +788,87 @@ html {
   .titles {
     grid-area: titles;
     font-family: "Lobster", cursive;
-    color: var(--blancoespecial);
+    color: rgba(253, 247, 247, 0.9);
     margin: 10% 0%;
     font-size: 4rem;
     margin: 0%; }
   .texts {
     grid-area: texts;
     color: #eee0e3;
-    font-family: "Ubuntu", sans-serif;
-    font-size: 2rem; }
-  .footer {
+    font-family: "Ubuntu";
+    font-size: 2rem; } }
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .body--shop {
     display: grid;
-    grid-template-areas: "redes     redes     redes" "redesdata teldata   maildata" "copyright copyright copyright";
-    grid-template-columns: 33% 33% 33%;
-    grid-template-rows: 25% 25% 25%;
-    background-color: rgba(253, 247, 247, 0.76);
-    justify-items: center;
-    align-items: center;
-    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.05);
-    border-radius: 5px;
-    border: 1px solid rgba(255, 255, 255, 0.25);
-    border-top: 1px solid rgba(255, 255, 255, 0.5);
-    border-left: 1px solid rgba(255, 255, 255, 0.5); }
-  .footer__element--title,
-  .footer__element--titleespecial {
-    font-size: 1.7rem;
-    font-family: "Lobster", cursive; }
-  .footer__element--titleespecial {
-    align-items: start; }
-  .footer__element--text {
-    font-size: 2rem;
-    font-family: "Ubuntu", sans-serif; }
-  .medialinks a {
-    display: flex; }
-  .iconsmedia svg {
-    display: inline-flex;
-    width: 100px;
-    height: 100px; }
-  .redes {
-    grid-area: redes; }
-  .redesdata {
-    grid-area: redesdata; }
-  .mail {
-    grid-area: mail; }
-  .maildata {
-    grid-area: maildata; }
-  .tel {
-    grid-area: tel; }
-  .teldata {
-    grid-area: teldata; }
-  .copyright {
-    grid-area: copyright; } }
+    flex-direction: column;
+    grid-template-columns: 100%;
+    row-gap: 3%;
+    grid-template-rows: 6.5% 90% 13%; }
+  .main--shop {
+    display: grid;
+    grid-template-rows: 27.5% 8% 60%;
+    grid-template-columns: 100%;
+    row-gap: 1%; }
+  .section--filters {
+    background-color: rgba(26, 26, 26, 0.295);
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.288);
+    border-radius: 10px; }
+  .btn--select {
+    background-color: rgba(255, 255, 255, 0.25);
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.288);
+    border-radius: 10px;
+    color: rgba(255, 255, 255, 0.5); }
+  .section--shop {
+    background-color: rgba(238, 238, 238, 0.295);
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.288);
+    border-radius: 10px; }
+    .section--shop article {
+      display: inline;
+      box-sizing: content-box; }
+  .card__shop {
+    box-sizing: content-box;
+    overflow: visible;
+    width: 110%; }
+    .card__shop .card__product {
+      width: 100%;
+      border-radius: 5px; }
+  .displaytablet {
+    display: none !important; }
+  .titles {
+    grid-area: titles;
+    font-family: "Lobster", cursive;
+    color: rgba(253, 247, 247, 0.9);
+    margin: 10% 0%;
+    font-size: 4rem 3.6rem;
+    margin: 0%; }
+  .texts {
+    grid-area: texts;
+    color: #eee0e3;
+    font-family: "Ubuntu";
+    font-size: 2rem 1.55rem; } }
 
 @media (max-width: 767px) {
   .body--shop {
     display: grid;
     flex-direction: column;
     grid-template-columns: 100%;
-    row-gap: 0%;
-    grid-template-rows: 7% 95% 23%; }
+    row-gap: 2.5%;
+    grid-template-rows: 7% 95% 25%; }
+  .main--shop {
+    display: grid;
+    grid-template-rows: 23% 10% 64%;
+    grid-template-columns: 100%;
+    row-gap: 1%; }
   .section--filters {
     background-color: rgba(26, 26, 26, 0.295);
     box-shadow: 0 15px 25px rgba(0, 0, 0, 0.288);
     border-radius: 10px; }
+  .btn--select {
+    background-color: rgba(255, 255, 255, 0.25);
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.288);
+    border-radius: 10px;
+    color: rgba(255, 255, 255, 0.5); }
   .section--shop {
     background-color: rgba(238, 238, 238, 0.295);
     box-shadow: 0 15px 25px rgba(0, 0, 0, 0.288);
@@ -649,6 +882,8 @@ html {
       border-radius: 5px; }
   .card__product {
     width: 50%; }
+  .displaytablet {
+    display: auto; }
   .displayphone {
     display: none; } }
 
@@ -658,7 +893,7 @@ html {
     flex-direction: column;
     grid-template-columns: 100%;
     row-gap: 0%;
-    grid-template-rows: 7.5% 100% 10%; }
+    grid-template-rows: 7.5% 100% 8.5%; }
   .main__img--bannerphone {
     display: none !important; }
   .main__img--banner {
@@ -680,7 +915,7 @@ html {
     border-radius: 5px;
     padding: 2%;
     background-color: aliceblue;
-    color: var(--lila); }
+    color: map #be99d4; }
   .main--about {
     display: grid;
     grid-template-columns: 100%;
@@ -718,7 +953,7 @@ html {
     display: grid;
     grid-area: titles;
     padding: 3%;
-    color: var(--blancoespecial);
+    color: rgba(253, 247, 247, 0.9);
     font-family: "Lobster", cursive;
     font-size: 4rem; }
   .texts {
@@ -727,62 +962,91 @@ html {
     grid-area: texts;
     color: #eee0e3;
     font-size: 2rem;
-    font-family: "Ubuntu", sans-serif; }
+    font-family: "Ubuntu"; }
   .titlestexts {
-    grid-area: titlestexts; }
-  .footer {
-    display: grid;
-    grid-template-areas: "redes     redes     redes" "redesdata teldata   maildata" "copyright copyright copyright";
-    grid-template-columns: 33% 33% 33%;
-    grid-template-rows: 25% 25% 25%;
-    background-color: rgba(253, 247, 247, 0.76);
-    justify-items: center;
-    align-items: center;
-    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.05);
-    border-radius: 5px;
-    border: 1px solid rgba(255, 255, 255, 0.25);
-    border-top: 1px solid rgba(255, 255, 255, 0.5);
-    border-left: 1px solid rgba(255, 255, 255, 0.5);
-    position: static;
-    bottom: 0%; }
-  .footer__element--title {
-    font-size: 2rem;
-    font-family: "Ubuntu", sans-serif; }
-  .footer__element--titleespecial {
-    font-size: 2rem;
-    font-family: "Ubuntu", sans-serif;
-    align-items: start; }
-  .footer__element--text {
-    font-size: 2rem;
-    font-family: "Ubuntu", sans-serif; }
-  .medialinks a {
-    display: flex; }
-  .iconsmedia svg {
-    display: inline-flex;
-    width: 100px;
-    height: 100px; }
-  .redes {
-    grid-area: redes; }
-  .redesdata {
-    grid-area: redesdata; }
-  .mail {
-    grid-area: mail; }
-  .maildata {
-    grid-area: maildata; }
-  .tel {
-    grid-area: tel; }
-  .teldata {
-    grid-area: teldata; }
-  .copyright {
-    grid-area: copyright; } }
+    grid-area: titlestexts; } }
 
-@media (max-width: 767px) {
+@media (min-width: 768px) and (max-width: 1023px) {
   .body--about {
-    grid-template-rows: 7.5% 96% 19%; }
+    display: grid;
+    flex-direction: column;
+    grid-template-columns: 100%;
+    row-gap: 2.25%;
+    grid-template-rows: 5% 95% 10%; }
   .main--about {
     display: grid;
     grid-template-columns: 100%;
-    grid-template-rows: 22% 6% 80%;
+    grid-template-rows: 20% 6% 66%;
+    row-gap: 1%; }
+  .section__atajos {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    position: relative;
+    text-decoration: none;
+    list-style: none;
+    height: 50px;
+    font-size: 1.6rem; }
+  .atajos {
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.26);
+    border-radius: 5px;
+    padding: 2%;
+    background-color: rgba(253, 247, 247, 0.9);
+    color: #be99d4; }
+  .titles {
+    display: grid;
+    grid-area: titles;
+    padding: 3%;
+    color: rgba(253, 247, 247, 0.9);
+    font-family: "Lobster", cursive;
+    font-size: 3.6rem; }
+  .texts {
+    display: grid;
+    padding: 3%;
+    grid-area: texts;
+    color: #eee0e3;
+    font-size: 1.55rem;
+    font-family: "Ubuntu" !important; }
+  .section--1 {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-areas: "img  titlestexts" "img  titlestexts";
+    gap: 0%;
+    margin-bottom: 5%;
+    background-color: rgba(0, 0, 0, 0.05); }
+  .section--2 {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-areas: "titlestexts  img" "titlestexts  img";
+    gap: 0%;
+    margin-top: 5%;
+    background-color: rgba(0, 0, 0, 0.05);
+    border-radius: 10px; }
+  .correction-2 {
+    position: relative;
+    right: 9%; }
+  .section--3 {
+    grid-template-columns: 50% 50%;
+    grid-template-areas: "titles" "texts";
+    gap: 0%;
+    text-align: center; }
+  .section--img {
+    grid-area: img;
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.26);
+    border-radius: 10px;
+    width: 110%; } }
+
+@media (max-width: 767px) {
+  .body--about {
+    display: grid;
+    flex-direction: column;
+    grid-template-columns: 100%;
+    row-gap: 2.5%;
+    grid-template-rows: 5% 95% 11%; }
+  .main--about {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 19% 6% 80%;
     row-gap: 1%; }
   .main__img--banner {
     display: none !important; }
@@ -809,16 +1073,16 @@ html {
   .titles {
     grid-area: titles;
     font-family: "Lobster", cursive;
-    color: var(--blancoespecial);
     margin: 10% 0%;
-    font-size: 2.5rem;
-    margin: 0%; }
+    margin: 0%;
+    color: rgba(253, 247, 247, 0.9);
+    font-size: 2.7rem; }
   .texts {
     grid-area: texts;
-    font-family: "Ubuntu", sans-serif;
-    color: #eee0e3;
     margin: 10% 0%;
-    font-size: 1.5rem; }
+    color: #eee0e3;
+    font-family: "Ubuntu";
+    font-size: 1.45rem; }
   .section--1, .section--2 {
     display: grid;
     grid-template-columns: 100%;
@@ -830,8 +1094,8 @@ html {
     padding: 5%; }
   .section--1 h3, p, .section--2 h3, p, .section--3 h3, p {
     text-align: center;
-    font-size: 1.5rem;
-    width: 100%; }
+    width: 100%;
+    font-size: 1.45rem; }
   .section--3 {
     grid-template-columns: 50% 50%;
     grid-template-areas: "titles" "texts";
@@ -846,66 +1110,11 @@ html {
     position: relative;
     left: 20px; }
   .atajos {
-    color: var(--lila);
     background-color: aliceblue;
     box-shadow: 0 5px 5px rgba(0, 0, 0, 0.26);
     border-radius: 5px;
-    padding: 2%; }
-  .footer {
-    display: grid;
-    grid-template-areas: "redes redes" "redesdata redesdata" "teldata maildata" "copyright copyright";
-    grid-template-columns: 50% 50%;
-    grid-template-rows: 25% 25% 25% 25%;
-    background-color: rgba(253, 247, 247, 0.76);
-    height: 50%;
-    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.575);
-    border-radius: 5px;
-    border: 1px solid rgba(255, 255, 255, 0.25);
-    border-top: 1px solid rgba(255, 255, 255, 0.5);
-    border-left: 1px solid rgba(255, 255, 255, 0.5); }
-  .footer__element--title {
-    display: flex;
-    margin: 0%;
-    justify-items: flex-start;
-    align-items: center;
-    color: var(--lila);
-    font-size: 2.5rem;
-    font-family: "Ubuntu", sans-serif; }
-  .footer__element--titleespecial {
-    align-items: center;
-    text-align: center;
-    color: var(--lila);
-    font-size: 1.6rem;
-    font-family: "Ubuntu", sans-serif; }
-  .medialinks a {
-    display: flex; }
-  .iconsmedia svg {
-    display: inline-flex;
-    width: 70px;
-    height: 70px; }
-  .redesdata {
-    display: flex;
-    justify-content: space-between; }
-  .footer__element--text {
-    font-size: 1.5rem;
-    font-family: "Ubuntu", sans-serif;
-    display: flex;
-    text-align: center;
-    align-items: center; }
-  .redes {
-    grid-area: redes; }
-  .redesdata {
-    grid-area: redesdata; }
-  .mail {
-    grid-area: mail; }
-  .maildata {
-    grid-area: maildata; }
-  .tel {
-    grid-area: tel; }
-  .teldata {
-    grid-area: teldata; }
-  .copyright {
-    grid-area: copyright; } }
+    padding: 2%;
+    color: #be99d4; } }
 
 @media (min-width: 1024px) {
   .body--more {
@@ -913,7 +1122,7 @@ html {
     flex-direction: column;
     grid-template-columns: 100%;
     row-gap: 0%;
-    grid-template-rows: 20% 70% 25%; }
+    grid-template-rows: 20% 70% 30%; }
   .main--more {
     display: flex;
     align-items: center;
@@ -940,65 +1149,69 @@ html {
   .flags {
     width: 100%; }
   .flags h1 {
-    font-size: 4rem;
-    font-family: "Lobster", cursive;
+    flex-wrap: nowrap;
     border-radius: 20px;
-    flex-wrap: nowrap; }
+    font-family: "Lobster", cursive;
+    font-size: 4rem; }
   .titles {
     grid-area: titles;
-    font-family: "Lobster", cursive;
-    color: var(--blancoespecial);
     margin: 10% 0%;
+    margin: 0%;
+    font-family: "Lobster", cursive;
     font-size: 4rem;
-    margin: 0%; }
+    color: rgba(253, 247, 247, 0.9); }
   .texts {
     grid-area: texts;
-    font-family: "Ubuntu", sans-serif;
-    color: #eee0e3;
     margin: 10% 0%;
-    font-size: 2rem; }
-  .footer {
+    color: #eee0e3;
+    font-family: "Ubuntu", sans-serif "Ubuntu";
+    font-size: 2rem; } }
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .body--more {
     display: grid;
-    grid-template-areas: "redes     redes     redes" "redesdata teldata   maildata" "copyright copyright copyright";
-    grid-template-columns: 33% 33% 33%;
-    grid-template-rows: 25% 25% 25%;
-    background-color: rgba(253, 247, 247, 0.76);
+    flex-direction: column;
+    grid-template-columns: 100%;
+    row-gap: 0%;
+    grid-template-rows: 17% 70% 25%; }
+  .container__flag {
+    display: grid;
+    box-sizing: border-box;
+    grid-template-columns: 100%;
+    grid-template-rows: 25% 25% 25% 25%;
     justify-items: center;
-    align-items: center;
-    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.05);
-    border-radius: 5px;
-    border: 1px solid rgba(255, 255, 255, 0.25);
-    border-top: 1px solid rgba(255, 255, 255, 0.5);
-    border-left: 1px solid rgba(255, 255, 255, 0.5); }
-  .footer__element--title,
-  .footer__element--titleespecial {
-    font-size: 1.7rem;
-    font-family: "Lobster", cursive; }
-  .footer__element--titleespecial {
-    align-items: start; }
-  .footer__element--text {
-    font-size: 2rem;
-    font-family: "Ubuntu", sans-serif; }
-  .medialinks a {
-    display: flex; }
-  .iconsmedia svg {
-    display: inline-flex;
-    width: 100px;
-    height: 100px; }
-  .redes {
-    grid-area: redes; }
-  .redesdata {
-    grid-area: redesdata; }
-  .mail {
-    grid-area: mail; }
-  .maildata {
-    grid-area: maildata; }
-  .tel {
-    grid-area: tel; }
-  .teldata {
-    grid-area: teldata; }
-  .copyright {
-    grid-area: copyright; } }
+    row-gap: 2%; }
+  .container__flag a {
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    padding: 6% 50%;
+    background-color: rgba(255, 255, 255, 0.25);
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.05);
+    border-radius: 10px;
+    backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-top: 1px solid rgba(255, 255, 255, 0.25); }
+  .flags {
+    width: 100%; }
+  .flags h1 {
+    flex-wrap: nowrap;
+    border-radius: 20px;
+    font-family: "Lobster", cursive;
+    font-size: 4rem; }
+  .titles {
+    grid-area: titles;
+    margin: 0%;
+    font-family: "Lobster", cursive;
+    color: rgba(253, 247, 247, 0.9);
+    font-size: 3.6rem; }
+  .texts {
+    grid-area: texts;
+    margin: 10% 0%;
+    color: #eee0e3;
+    font-family: "Ubuntu";
+    font-size: 2rem 1.55rem; } }
 
 @media (max-width: 767px) {
   .body--more {
@@ -1006,7 +1219,7 @@ html {
     flex-direction: column;
     grid-template-columns: 100%;
     row-gap: 9%;
-    grid-template-rows: 25% 75% 75%; }
+    grid-template-rows: 25% 75% 65%; }
   .main--more {
     display: flex;
     align-items: center;
@@ -1016,8 +1229,8 @@ html {
     box-sizing: border-box;
     grid-template-columns: 100%;
     grid-template-rows: 25% 25% 25% 25%;
-    justify-items: center;
-    row-gap: 2%; }
+    row-gap: 2%;
+    justify-items: center; }
   .container__flag a {
     text-decoration: none;
     display: flex;
@@ -1033,7 +1246,7 @@ html {
   .flags {
     width: 100%; }
   .flags h1 {
-    font-size: 4rem;
-    font-family: "Lobster", cursive;
+    flex-wrap: nowrap;
     border-radius: 20px;
-    flex-wrap: nowrap; } }
+    font-family: "Lobster", cursive;
+    font-size: 4rem 2.7rem; } }

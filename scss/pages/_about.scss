@@ -4,8 +4,9 @@
 @media (min-width:1024px) {
     .body--about {
         @include grid-column-gap--0;
-        grid-template-rows: 7.5% 100% 10%;
+        grid-template-rows: 7.5% 100% 8.5%;
     }
+
     .main__img--bannerphone {
         display: none !important
     }
@@ -27,12 +28,13 @@
         height: 50px;
         font-size: $specialsize__font;
     }
+
     .atajos {
         box-shadow: 0 5px 5px rgba(0, 0, 0, 0.26);
         border-radius: 5px;
         padding: 2%;
         background-color: aliceblue;
-        color: var(--lila);
+        color: map map-get($colors, lila );
     }
 
     .main--about {
@@ -41,11 +43,13 @@
         grid-template-rows: 24% 6% 66%;
         row-gap: 1%;
     }
+
     .section--backgroundcolor{
         background-color: rgba(0, 0, 0, 0.05);
         border-radius: 10px;
 
     }
+
     .section--1 {
         display: grid;
         grid-template-columns: 1fr 2fr;
@@ -91,9 +95,9 @@
         display: grid;
         grid-area: titles;
         padding: 3%;
-        color: var(--blancoespecial);
+        color: map-get($colors,blancoespecial );
         font-family: $title__font;
-        font-size: $titlesize__font;
+        font-size: map-get($style-desktop, titlesize );
     }
 
     .texts {
@@ -101,96 +105,123 @@
         padding: 3%;
         grid-area: texts;
         color: #eee0e3;
-        font-size: $textsize__font;
-        font-family: $text__font;
+        font-size: map-get($style-desktop,textsize );
+        font-family: map-get($style-desktop, text__font );
     }
+    
     .titlestexts {
         grid-area: titlestexts;
     }
 
-    .footer {
-        display: grid;
-        grid-template-areas:
-        "redes     redes     redes"
-        "redesdata teldata   maildata"
-        "copyright copyright copyright";
-    grid-template-columns: 33% 33% 33%;
-    grid-template-rows: 25% 25% 25%;
-        background-color: rgba(253, 247, 247, 0.76);
-        justify-items: center;
-        align-items: center;
-        box-shadow: 0 15px 35px rgba(0, 0, 0, 0.05);
-        border-radius: 5px;
-        border: 1px solid rgba(255, 255, 255, 0.25);
-        border-top: 1px solid rgba(255, 255, 255, 0.5);
-        border-left: 1px solid rgba(255, 255, 255, 0.5);
-        position: static;
-        bottom: 0%;
-    }
-
-    .footer__element--title {
-        font-size: $textsize__font;
-        font-family: $text__font;
-    }
-
-    .footer__element--titleespecial {
-        font-size: $textsize__font;
-        font-family:$text__font ;
-        align-items: start;
-    }
-
-    .footer__element--text {
-        font-size: $textsize__font;
-        font-family: $text__font;
-    }
-
-    .medialinks a {
-        display: flex;
-    }
-
-    .iconsmedia svg {
-        display: inline-flex;
-        width: 100px;
-        height: 100px;
-    }
-
-    .redes {
-        grid-area: redes;
-    }
-
-    .redesdata {
-        grid-area: redesdata;
-    }
-
-    .mail {
-        grid-area: mail;
-    }
-
-    .maildata {
-        grid-area: maildata;
-    }
-
-    .tel {
-        grid-area: tel;
-    }
-
-    .teldata {
-        grid-area: teldata;
-    }
-
-    .copyright {
-        grid-area: copyright
-    }
 }
-@media (max-width: 767px) {
+@media (min-width:768px) and (max-width:1023px){
     .body--about {
-        grid-template-rows: 7.5% 96% 19%;
+        @include grid-column-gap(2.25%);
+        grid-template-rows: 5% 95% 10%;
     }
 
     .main--about {
         display: grid;
         grid-template-columns: 100%;
-        grid-template-rows: 22% 6% 80%;
+        grid-template-rows: 20% 6% 66%;
+        row-gap: 1%;
+    }
+
+    .section__atajos {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        position: relative;
+        text-decoration: none;
+        list-style: none;
+        height: 50px;
+        font-size: $specialsize__font;
+    }
+
+    .atajos {
+        box-shadow: 0 5px 5px rgba(0, 0, 0, 0.26);
+        border-radius: 5px;
+        padding: 2%;
+        background-color:map-get($colors, blancoespecial );
+        color: map-get($colors , lila );
+    }
+
+    .titles {
+        display: grid;
+        grid-area: titles;
+        padding: 3%;
+        color: map-get($colors, blancoespecial );
+        font-family: $title__font;
+        font-size: map-get($style-tablet, titlesize-t );
+    }
+
+    .texts {
+        display: grid;
+        padding: 3%;
+        grid-area: texts;
+        color: #eee0e3;
+        font-size: map-get($style-tablet, textsize-t );
+        font-family: map-get($style-desktop,text__font) !important ;
+    }
+
+    .section--1 {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        grid-template-areas:
+            "img  titlestexts"
+            "img  titlestexts";
+        gap: 0%;
+        margin-bottom: 5%;
+        background-color: rgba(0, 0, 0, 0.05);
+
+    }
+
+    .section--2 {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        grid-template-areas:
+            "titlestexts  img"
+            "titlestexts  img";
+        gap: 0%;
+        margin-top: 5%;
+
+        background-color: rgba(0, 0, 0, 0.05);
+        border-radius: 10px;
+
+    }
+
+    .correction-2{
+        position: relative;
+        right: 9%;
+    }
+
+    .section--3 {
+        grid-template-columns: 50% 50%;
+        grid-template-areas:
+            "titles"
+            "texts";
+        gap: 0%;
+        text-align: center;
+    }
+
+    .section--img {
+        grid-area: img;
+        box-shadow: 0 15px 25px rgba(0, 0, 0, 0.26);
+        border-radius: 10px;
+        width: 110%;
+    }
+
+}
+@media (max-width: 767px) {
+    .body--about {
+        @include grid-column-gap(2.5%);
+        grid-template-rows: 5% 95% 11%;
+    }
+
+    .main--about {
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: 19% 6% 80%;
         row-gap: 1%;
     }
 
@@ -204,6 +235,7 @@
         box-shadow: 0 15px 25px rgba(0, 0, 0, 0.26);
         border-radius: 10px;
     }
+
     .section__atajos {
         display: flex;
         align-items: flex-start;
@@ -226,20 +258,20 @@
     .titles {
         grid-area: titles;
         font-family: $title__font;
-        color: var(--blancoespecial);
         margin: 10% 0%;
-        font-size: $titlesize__font--phone;
         margin: 0%;
+        color: map-get($colors, blancoespecial );
+        font-size: map-get($style-phone, titlesize-p );
 
 
     }
 
     .texts {
         grid-area: texts;
-        font-family: $text__font;
-        color: #eee0e3;
         margin: 10% 0%;
-        font-size: $textsize__font--phone;
+        color: #eee0e3;
+        font-family: map-get($style-desktop, text__font );
+        font-size: map-get($style-phone,textsize-p );
     }
 
     .section--1, .section--2 {
@@ -258,8 +290,8 @@
 
     .section--1 h3, p, .section--2 h3, p, .section--3 h3, p {
         text-align: center;
-        font-size: $textsize__font--phone;
         width: 100%;
+        font-size: map-get($style-phone,textsize-p );
     }
 
     .section--3 {
@@ -282,99 +314,10 @@
     }
 
     .atajos {
-        color: var(--lila);
         background-color: aliceblue;
         box-shadow: 0 5px 5px rgba(0, 0, 0, 0.26);
         border-radius: 5px;
         padding: 2%;
-    }
-    
-    .footer {
-        display: grid;
-        grid-template-areas:
-            "redes redes"
-            "redesdata redesdata"
-            "teldata maildata"
-            "copyright copyright";
-        grid-template-columns: 50% 50%;
-        grid-template-rows: 25% 25% 25% 25%;
-        background-color: rgba(253, 247, 247, 0.76);
-        height: 50%;
-        box-shadow: 0 15px 35px rgba(0, 0, 0, 0.575);
-        border-radius: 5px;
-        border: 1px solid rgba(255, 255, 255, 0.25);
-        border-top: 1px solid rgba(255, 255, 255, 0.5);
-        border-left: 1px solid rgba(255, 255, 255, 0.5);
-
-    }
-
-    .footer__element--title {
-        display: flex;
-        margin: 0%;
-        justify-items: flex-start;
-        align-items: center;
-        color: var(--lila);
-        font-size: $titlesize__font--phone;
-        font-family: $text__font;
-    }
-
-    .footer__element--titleespecial {
-        align-items: center;
-        text-align: center;
-        color: var(--lila);
-        font-size: $specialsize__font;
-        font-family: $text__font;
-    }
-
-    .medialinks a {
-        display: flex;
-
-    }
-
-    .iconsmedia svg {
-        display: inline-flex;
-        width: 70px;
-        height: 70px;
-    }
-
-    .redesdata {
-        display: flex;
-        justify-content: space-between;
-    }
-
-    .footer__element--text {
-        font-size: $textsize__font--phone;
-        font-family: $text__font;
-        display: flex;
-        text-align: center;
-        align-items: center;
-    }
-
-    .redes {
-        grid-area: redes;
-    }
-
-    .redesdata {
-        grid-area: redesdata;
-    }
-
-    .mail {
-        grid-area: mail;
-    }
-
-    .maildata {
-        grid-area: maildata;
-    }
-
-    .tel {
-        grid-area: tel;
-    }
-
-    .teldata {
-        grid-area: teldata;
-    }
-
-    .copyright {
-        grid-area: copyright
+        color: map-get($colors, lila );
     }
 }

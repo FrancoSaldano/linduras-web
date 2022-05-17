@@ -4,7 +4,7 @@
 @media (min-width:1024px) {
     .body--index {
         @include grid-column-gap--0;
-        grid-template-rows: 7% 90% 10%;
+        grid-template-rows: 7% 90% 8%;
     }
 
     .main__img--banner {
@@ -26,7 +26,7 @@
     }
 
     .title--section {
-        font-size: map-get($fontsdesktop ,titlesize);
+        font-size: map-get($style-desktop ,titlesize);
         font-family: $title__font;
         color: map-get($colors,blancoespecial);
         display: flex;
@@ -74,6 +74,10 @@
 
             &:hover .imgBx img {
                 transform: translate(0px, -30px);
+            } 
+            &:hover .minishop--subtitles{
+                transform: translate(0px, -15px);
+                color: map-get($colors, blancoespecial );
             }
 
             .imgBx {
@@ -99,14 +103,21 @@
         top: -20px;
         display: inline-block;
         padding: 3% 6%;
-        background-color: rgba(255, 255, 255, 0.342);
+        background-color:map-get($colors, grisespecial );
         backdrop-filter: blur(2px);
         border-radius: 3px;
         box-shadow: 0 15px 25px rgba(0, 0, 0, 0.05);
         text-decoration: none;
         text-transform: uppercase;
-        font-size: map-get($fontsdesktop ,textsize);
-        font-family: $text__font;
+        color: map-get($colors, blancoespecial );
+        font-size: map-get($style-desktop ,textsize);
+        font-family: $title__font;
+        transition: all 150ms ease-out;
+            &:hover{
+                background-color:map-get($colors, blancoespecial );
+                color: map-get($colors, lila );
+                letter-spacing: 0.5rem;
+            }
     }
     .section--minishop .minishop--imgleft,
     .minishop--imgright {
@@ -115,12 +126,11 @@
     }
 
     .minishop--subtitles {
-        color: map-get($colors,blancoespecial);
+        transition: 0.5s ease-in-out;
         font-family: $subtitle__font;
-        font-size: map-get($fontsdesktop ,subtitlesize);
+        color: map-get($colors,transparente);
+        font-size: map-get($style-desktop ,subtitlesize);
     }
-
-
     .titles {
         grid-area: titles;
         margin: 10% 0%;
@@ -128,7 +138,7 @@
         justify-content: center;
         color: map-get($colors, blancoespecial);
         font-family:$title__font;
-        font-size: map-get($fontsdesktop ,titlesize);
+        font-size: map-get($style-desktop ,titlesize);
     }
 
     .texts {
@@ -136,78 +146,160 @@
         font-family: $text__font;
         color: #eee0e3;
         margin: 10% 0%;
-        font-size: map-get($fontsdesktop ,textsize);
+        font-size: map-get($style-desktop ,textsize);
     }
 
-    .footer {
+}
+@media (min-width:768px) and (max-width:1023px){
+    .body--index {
+        @include grid-column-gap(1%);
+        grid-template-rows: 3% 95% 5.5%;
+    }
+    .main__img--banner {
+        position: block;
+        width: 100%;
+        box-shadow: 0 15px 25px rgba(0, 0, 0, 0.26);
+        border-radius: 10px;
+    }
+
+    .main__img--bannerphone {
+        display: none !important;
+    }
+
+    .main--index {
         display: grid;
-        grid-template-areas:
-            "redes     redes     redes"
-            "redesdata teldata   maildata"
-            "copyright copyright copyright";
-        grid-template-columns: 33% 33% 33%;
-        grid-template-rows: 25% 25% 25%;
-        background-color: rgba(253, 247, 247, 0.76);
-        justify-items: center;
-        align-items: center;
-        box-shadow: 0 15px 35px rgba(0, 0, 0, 0.05);
-        border-radius: 5px;
-        border: 1px solid rgba(255, 255, 255, 0.25);
-        border-top: 1px solid rgba(255, 255, 255, 0.5);
-        border-left: 1px solid rgba(255, 255, 255, 0.5);
+        grid-template-columns: 100%;
+        grid-template-rows: 11% 13% 33%;
+        gap: 1%;
+    }
+    .main__text--index {
+        padding: 4%;
+        text-align: center !important
     }
 
-    .footer__element--title,
-    .footer__element--titleespecial {
-        font-size: $subtitlesize__font;
-        font-family: $text__font;
-    }
-
-    .footer__element--titleespecial {
-        align-items: start;
-    }
-
-    .footer__element--text {
-        font-size: $textsize__font;
-        font-family: $text__font;
-    }
-
-    .medialinks a {
+    .title--section {
+        font-size: map-get($style-tablet ,titlesize-t);
+        font-family: $title__font;
+        color: map-get($colors,blancoespecial);
         display: flex;
+        justify-content: center;
+        align-items: center;
     }
 
-    .iconsmedia svg {
+    .main__minishop {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .section--minishop {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        margin-top: 1%;
+        flex-wrap: wrap;
+    }
+
+    .minishop__container {
+        position: relative;
         display: inline-flex;
-        width: 100px;
-        height: 100px;
+        justify-content: center;
+        align-items: center;
+         .card {
+            position: relative;
+            width: 300px;
+            height: 400px;
+            padding-top: 5%;
+            margin: 100px 100px 80px 100px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-color: rgba(255, 255, 255, 0.25);
+            box-shadow: 0 15px 25px rgba(0, 0, 0, 0.05);
+            border-radius: 10px;
+            backdrop-filter: blur(15px);
+            border: 1px solid rgba(255, 255, 255, 0.5);
+            border-top: 1px solid rgba(255, 255, 255, 0.25);
+            border-left: 1px solid rgba(255, 255, 255, 0.25);
+
+            &:hover .imgBx img {
+                transform: translate(0px, -30px);
+            } 
+            &:hover .minishop--subtitles{
+                transform: translate(0px, -15px);
+                color: map-get($colors, blancoespecial );
+            }
+
+            .imgBx {
+                position: relative;
+                width: 100%;
+                height: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+
+                img {
+                    max-width: 100%;
+                    position: relative;
+                    transition: 0.5s ease-in-out;
+                }
+            }
+        }
     }
 
-    .redes {
-        grid-area: redes;
+    .minishop__container .card a {
+        position: relative;
+        top: -20px;
+        display: inline-block;
+        padding: 3% 6%;
+        background-color: map-get($colors, grisespecial );
+        backdrop-filter: blur(2px);
+        border-radius: 3px;
+        box-shadow: 0 15px 25px rgba(0, 0, 0, 0.05);
+        text-decoration: none;
+        text-transform: uppercase;
+        font-size: map-get($style-tablet ,subtitlesize-t);
+        color: map-get($colors, blancoespecial );
+        font-family: $title__font;
+        transition: all 150ms ease-out;
+            &:hover{
+                background-color:map-get($colors, blancoespecial );
+                color: map-get($colors, lila );
+                letter-spacing: 0.5rem;
+            }
+    }
+    .section--minishop .minishop--imgleft,
+    .minishop--imgright {
+        width: 50%;
+        border-radius: 5%;
     }
 
-    .redesdata {
-        grid-area: redesdata;
+    .minishop--subtitles {
+        transition: 0.5s ease-in-out;
+        color: map-get($colors,transparente);
+        font-family: $subtitle__font;
+        font-size: map-get($style-tablet ,subtitlesize-t);
     }
 
-    .mail {
-        grid-area: mail;
+    .titles {
+        grid-area: titles;
+        margin: 10% 0%;
+        margin: 0%;
+        justify-content: center;
+        align-items: center;
+        color: map-get($colors, blancoespecial);
+        font-family:$title__font;
+        font-size: map-get($style-tablet ,titlesize-t);
     }
 
-    .maildata {
-        grid-area: maildata;
-    }
-
-    .tel {
-        grid-area: tel;
-    }
-
-    .teldata {
-        grid-area: teldata;
-    }
-
-    .copyright {
-        grid-area: copyright
+    .texts {
+        grid-area: texts;
+        font-family: map-get($style-desktop , text__font );
+        color: #eee0e3;
+        margin: 10% 0%;
+        font-size: map-get($style-tablet ,textsize-t);
     }
 }
 @media (max-width: 767px) {
@@ -215,7 +307,7 @@
         display: grid;
         flex-direction: column;
         grid-template-columns: auto;
-        grid-template-rows: 7% 110% 23%;
+        grid-template-rows: 7% 105% 10%;
     }
     .main__img--banner {
         display: none !important;
@@ -230,9 +322,8 @@
 
     .main--index {
         display: grid;
-        grid-template-rows: 20% 20% 38%;
+        grid-template-rows: 17% 20% 38%;
         row-gap: 3%;
-
     }
 
     .main__text--index {
@@ -241,9 +332,9 @@
     }
 
     .title--section {
-        font-size: $titlesize__font--phone;
+        font-size: map-get($style-phone,titlesize-p);
         font-family: $title__font;
-        color: var(--blancoespecial);
+        color: map-get($colors, blancoespecial);
         display: flex;
         justify-content: center;
         text-align: center;
@@ -255,16 +346,16 @@
         grid-area: titles;
         font-family: $title__font;
         margin: 0%;
-        color: var(--blancoespecial);
-        font-size: $titlesize__font--phone;
+        color: map-get($colors, blancoespecial);
+        font-size: map-get($style-phone, titlesize-p );
     }
 
     .texts {
         grid-area: texts;
         margin: 10% 0%;
         color: #eee0e3;
-        font-family: $text__font;
-        font-size: $textsize__font--phone;
+        font-family: $text__font map-get($style-desktop, text__font );
+        font-size: map-get($style-phone, textsize-p );
     }
 
     .main__minishop {
@@ -314,6 +405,14 @@
             border-top: 1px solid rgba(255, 255, 255, 0.25);
             border-left: 1px solid rgba(255, 255, 255, 0.25);
 
+            &:hover .imgBx img {
+                transform: translate(0px, -30px);
+            } 
+            &:hover .minishop--subtitles{
+                transform: translate(0px, -15px);
+                color: map-get($colors, blancoespecial );
+            }
+
             .imgBx {
                 position: relative;
                 width: 100%;
@@ -333,24 +432,20 @@
 
     }
 
-    .minishop__container .card:hover .imgBx img {
-        transform: translate(0px, -20px);
-    }
-
     .minishop__container .card a {
         position: relative;
         top: -20px;
         display: inline-block;
         padding: 3% 6%;
-        background-color: rgba(255, 255, 255, 0.842);
+        background-color: map-get($colors, grisespecial );
         backdrop-filter: blur(2px);
         border-radius: 3px;
         text-decoration: none;
         box-shadow: 0 15px 25px rgba(0, 0, 0, 0.05);
         text-transform: uppercase;
-        color: var(--lila);
-        font-family: $text__font;
-        font-size: $titlesize__font--phone;
+        color: map-get($colors , blancoespecial );
+        font-family: $title__font;
+        font-size: map-get($style-phone,subtitlesize-p);
     }
 
     .section--minishop .minishop--imgleft,
@@ -360,94 +455,10 @@
     }
 
     .minishop--subtitles {
-        color: var(--blancoespecial);
-        font-family: $subtitle__font;
-        font-size: $subtitlesize__font--phone;
+        transition: 0.5s ease-in-out;
+        font-family: $title__font;
+        color: map-get($colors,transparente);
+        font-size: map-get($style-phone,subtitlesize-p);
     }
 
-    .footer {
-        display: grid;
-        grid-template-areas:
-            "redes redes"
-            "redesdata redesdata"
-            "teldata maildata"
-            "copyright copyright";
-        grid-template-columns: 50% 50%;
-        grid-template-rows: 25% 25% 25% 25%;
-        background-color: rgba(253, 247, 247, 0.76);
-        height: 50%;
-        box-shadow: 0 15px 35px rgba(0, 0, 0, 0.575);
-        border-radius: 5px;
-        border: 1px solid rgba(255, 255, 255, 0.25);
-        border-top: 1px solid rgba(255, 255, 255, 0.5);
-        border-left: 1px solid rgba(255, 255, 255, 0.5);
-
-    }
-
-    .footer__element--title {
-        display: flex;
-        margin: 0%;
-        justify-items: flex-start;
-        align-items: center;
-        font-family: $subtitle__font;
-        font-size: $subtitlesize__font--phone;
-    }
-
-    .footer__element--titleespecial {
-        text-align: center;
-        align-items: center;
-        font-size: $subtitlesize__font--phone;
-        font-family: $subtitle__font;
-    }
-
-    .medialinks a {
-        display: flex;
-    }
-
-    .iconsmedia svg {
-        display: inline-flex;
-        width: 70px;
-        height: 70px;
-    }
-
-    .redesdata {
-        display: flex;
-        justify-content: space-between;
-    }
-
-    .footer__element--text {
-        display: flex;
-        text-align: center;
-        align-items: center;
-        font-size: $textsize__font--phone;
-        font-family: $text__font;
-    }
-
-    .redes {
-        grid-area: redes;
-    }
-
-    .redesdata {
-        grid-area: redesdata;
-    }
-
-    .mail {
-        grid-area: mail;
-    }
-
-    .maildata {
-        grid-area: maildata;
-    }
-
-    .tel {
-        grid-area: tel;
-    }
-
-    .teldata {
-        grid-area: teldata;
-    }
-
-    .copyright {
-        grid-area: copyright
-    }
 }

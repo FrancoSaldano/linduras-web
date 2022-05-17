@@ -1,30 +1,36 @@
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Lobster&family=Ubuntu:wght@300&display=swap');
 
-$title__font: 'Lobster', cursive;
+$title__font: 'Lobster',
+cursive;
 $titlesize__font: 4rem;
 $titlesize__font--phone: 2.5rem;
 
-$subtitle__font: 'Lobster', cursive;
+$subtitle__font: 'Lobster',
+cursive;
 $subtitlesize__font: 1.7rem;
 $subtitlesize__font--phone: 1.5rem;
 
-$text__font:'Ubuntu', sans-serif;
+$text__font:'Ubuntu',
+sans-serif;
 $textsize__font: 2rem;
 $textsize__font--phone: 1.5rem;
 
 $specialsize__font: 1.6rem;
 $specialsize__font--phone: 1.3rem;
-
-$fontsdesktop: (
+$style-desktop: (
   'titlesize': 4rem,
   'subtitlesize': 1.7rem,
   'textsize': 2rem,
   'text__font':'Ubuntu', sans-serif:\,
-);
+  );
+
+$style-tablet:(
+   'titlesize-t':(map-get($style-desktop, 'titlesize'))-0.4,
+  'subtitlesize-t':(map-get($style-desktop, 'subtitlesize'))-0.15,
+  'textsize-t':(map-get($style-desktop, 'textsize'))-0.45,
+  );
 $style-phone:(
-    'titlesize-p': 2.5rem,
-    'subtitlesize-p': 1.5rem,
-    'textsize-p': 1.5rem
-);
-
-
+  'titlesize-p': (map-get($style-tablet, 'titlesize-t'))-0.9,
+  'subtitlesize-p': (map-get($style-tablet, 'subtitlesize-t'))-0.1,
+  'textsize-p': (map-get($style-tablet, 'textsize-t'))-0.1
+  )
