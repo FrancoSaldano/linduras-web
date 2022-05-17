@@ -131,7 +131,7 @@
 @media (max-width: 767px) {
     .body--shop {
         @include grid-column-gap(2.5%);
-        grid-template-rows: 7% 95% 25%;
+        grid-template-rows: 7% 95% 15%;
     }
     .main--shop {
         display: grid;

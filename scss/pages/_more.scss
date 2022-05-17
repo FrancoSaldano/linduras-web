@@ -119,7 +119,7 @@
 @media (max-width: 767px) {
     .body--more {
         @include grid-column-gap(9%);
-        grid-template-rows: 25% 75% 65%;
+        grid-template-rows: 25% 75% 60%;
     }
     
     .main--more {
